@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 4 章 · 上傳照片與影片 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 上傳教學：拖放上傳、上傳狀態、重複偵測與失敗處理。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/ch4_upload.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="第 4 章 · 上傳照片與影片 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 上傳教學：拖放上傳、上傳狀態、重複偵測與失敗處理。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/ch4_upload.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="第 4 章 · 上傳照片與影片 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 上傳教學：拖放上傳、上傳狀態、重複偵測與失敗處理。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <h2>章節</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li><a href="ch1_overview.html">開始前</a></li>
+      <li><a href="ch2_login.html">登入與帳號</a></li>
+      <li><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li><a href="ch4_upload.html" class="active">上傳照片影片</a></li>
+      <li><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li><a href="ch6_albums.html">相簿管理</a></li>
+      <li><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li><a href="ch11_security.html">安全檢查</a></li>
+      <li><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>本章</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">上傳觀念</a>
+      <a href="#steps">上傳步驟</a>
+      <a href="#duplicates">重複偵測</a>
+      <a href="#troubleshoot">上傳卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="chapter-header">
+      <div class="kicker">第 4 章</div>
+      <h1>上傳照片與影片</h1>
+      <p class="lead">把電腦或手機裡的照片、影片放進 Immich。讀完這章，你會用拖放或上傳鈕把回憶送進伺服器，並看懂上傳進度、重複偵測與失敗重試。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">照片要先進來，後面才談得上整理</h2>
+      <p>Immich 的價值從「把照片集中進來」開始。無論是從相機記憶卡、電腦資料夾還是手機，只要照片進到伺服器，後面的時間軸、相簿、AI 搜尋才派得上用場。這章先學會最直接的 Web 上傳。</p>
+      <div class="callout"><strong>本章任務：</strong>用瀏覽器上傳一批照片，看懂上傳進度與結果。手機自動備份是第 9 章，這章先掌握 Web 上傳的基本功。</div>
+    </section>
+
+    <section id="concept" data-nav="上傳觀念">
+      <h2 data-icon="concept">上傳的兩種方式與背後的動作</h2>
+      <table class="data-table">
+        <thead><tr><th>方式</th><th>怎麼做</th><th>適合情境</th></tr></thead>
+        <tbody>
+          <tr><td><strong>拖放（Drag &amp; drop）</strong></td><td>把檔案從資料夾直接拖進瀏覽器視窗</td><td>一次丟很多張、從相機記憶卡整理</td></tr>
+          <tr><td><strong>上傳鈕（Upload）</strong></td><td>點頂欄右側的 Upload，再選檔案</td><td>不習慣拖放、或想精準選檔</td></tr>
+        </tbody>
+      </table>
+      <p>上傳時，Immich 會做幾件事：讀取照片的 <strong>EXIF</strong>（拍攝時間、地點、相機型號）、產生縮圖、做重複偵測。照片上傳後，會依「拍攝時間」出現在時間軸上，而不是依上傳時間。</p>
+      <div class="callout tip"><strong>時間是以拍攝時間排的：</strong>如果你發現照片「跑到」過去某個日期，通常是 EXIF 裡的拍攝時間所致，屬正常現象。</div>
+    </section>
+
+    <section id="steps" data-nav="上傳步驟">
+      <h2 data-icon="upload">六步完成一次 Web 上傳</h2>
+      <ol class="steps">
+        <li><h3>登入並停在 Photos 頁</h3><p>照第 2 章登入，確認停在照片主畫面（<code>/photos</code>）。</p></li>
+        <li><h3>準備好要上傳的檔案</h3><p>在電腦上開好放照片的資料夾，可以一次選多個檔案或整個資料夾。</p></li>
+        <li><h3>拖進視窗，或點 Upload</h3><p>把檔案拖進瀏覽器畫面；或點頂欄右側的 Upload 按鈕，從對話框選檔。</p></li>
+        <li><h3>看進度</h3><p>上傳中通常會顯示進度條或計數。大檔或大量照片需要時間，不要急著關視窗。</p></li>
+        <li><h3>等待完成</h3><p>完成後，照片會出現在時間軸上。若顯示「重複」或略過，表示之前已傳過相同檔案。</p></li>
+        <li><h3>抽查結果</h3><p>點開幾張確認畫面、拍攝日期都正常。有問題先記下來，再對照第 12 章排錯。</p></li>
+      </ol>
+      <div class="callout warn"><strong>上傳中別關瀏覽器：</strong>上傳是即時進行的，關掉分頁會中斷未完成的上傳。等進度走完再離開。</div>
+    </section>
+
+    <section id="duplicates" data-nav="重複偵測">
+      <h2 data-icon="compare">重複偵測：同樣的照片不會傳兩次</h2>
+      <p>Immich 預設會做<strong>重複偵測</strong>：如果伺服器上已經有一模一樣的檔案，再次上傳時會被略過，避免浪費空間。這對「重複拖同一個資料夾」的情況很有幫助。</p>
+      <div class="callout"><strong>注意：</strong>重複偵測是比對檔案內容（雜湊值），不是比對「看起來像不像」。同一張照片被後製過、改過尺寸，就會被當成不同檔案。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="上傳卡關">
+      <h2 data-icon="troubleshoot">上傳常見卡關</h2>
+      <ol class="steps">
+        <li><h3>上傳到一半失敗</h3><p>先確認網路穩定，再重試。大檔影片失敗機率較高，可以分批上傳。</p></li>
+        <li><h3>照片沒出現在時間軸</h3><p>先到搜尋或相簿看看，可能是拍攝日期把它排到過去。用第 7 章的搜尋找找看。</p></li>
+        <li><h3>顯示儲存空間不足</h3><p>表示伺服器快滿了。先清理重複、回收桶，或聯絡管理員（第 10 章）。</p></li>
+        <li><h3>影片上傳很慢</h3><p>影片檔案大、需要轉碼產生縮圖，本來就慢。耐心等待，或改用第 9 章的手機 App 背景備份。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">上傳常見問題</h2>
+      <details class="faq"><summary>支援哪些檔案格式？</summary><div class="body">常見的 JPG、PNG、HEIC、GIF、WebP，以及 MP4、MOV 等影片格式都可上傳。完整清單以官方文件為準。</div></details>
+      <details class="faq"><summary>一次可以傳多少張？</summary><div class="body">沒有硬性張數限制，但一次傳太多會拉長上傳時間、佔用記憶體。建議分批，每批幾百張為宜。</div></details>
+      <details class="faq"><summary>上傳後可以刪掉電腦上的原始檔嗎？</summary><div class="body">可以，但建議先確認照片都正確上傳、並有伺服器端的備份，再刪本機原始檔，避免兩頭落空。</div></details>
+      <details class="faq"><summary>會壓縮我的照片嗎？</summary><div class="body">Immich 預設保留原檔，同時另產生縮圖與轉碼檔供快速瀏覽，不會為了節省空間而破壞原圖品質。</div></details>
+      <details class="faq"><summary>為什麼有些照片的日期不對？</summary><div class="body">通常是原始檔的 EXIF 拍攝時間缺失或被改過。可以在照片資訊面板檢查與修正，見第 5 章。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/features/upload" rel="noopener">Immich 文件：Upload</a></td><td>上傳方式、支援格式與限制</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/libraries" rel="noopener">Immich 文件：Libraries</a></td><td>資料庫與外部儲存的概念</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch3_first_open.html">
+        <span class="label"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> 上一章</span>
+        <span class="title">03 · 第一次開啟</span>
+      </a>
+      <a class="next" href="ch5_timeline.html">
+        <span class="label">下一章 <i class="mdi mdi-arrow-right" aria-hidden="true"></i></span>
+        <span class="title">05 · 時間軸與瀏覽</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> 製作，以 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a> 授權釋出 — 可自由分享與改作，請保留出處。</p>
+      <p class="footer-meta">截圖取自 Home Assistant 與 Cloudflared Web GUI。Home Assistant 與 Cloudflare 為其各自權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">原始碼與勘誤</a></p>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/toc.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.env
+node_modules/
+storage_state.json
+assets/screenshots/**/*.raw.png
+package.json
+package-lock.json
+
+# 除錯產物
+scripts/probe_login.png
+sitemap.xml.bak
+
+# 本地依賴 symlink（playwright 等，用 npm install 安裝）
+node_modules

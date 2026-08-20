@@ -1,0 +1,39 @@
+{
+  "_readme": [
+    "Immich Web UI read-only captures. Never upload, delete, rename, share, or change any photo/account/server state.",
+    "Login page and empty-library overview only. Account identity (avatar/name/email) is redacted.",
+    "The library is empty in this environment, so no personal photos appear in captures."
+  ],
+  "shots": [
+    {
+      "chapter": "ch2",
+      "filename": "01_login_page.png",
+      "url": "/auth/login",
+      "login": false,
+      "waitMs": 4000,
+      "viewport": { "width": 1440, "height": 900 },
+      "annotations": [
+        { "type": "callout", "at": { "x": 720, "y": 470 }, "number": 1, "text": "Email：輸入帳號電子郵件" },
+        { "type": "callout", "at": { "x": 720, "y": 554 }, "number": 2, "text": "Password：輸入密碼" },
+        { "type": "callout", "at": { "x": 720, "y": 638 }, "number": 3, "text": "Login：按下去登入" }
+      ]
+    },
+    {
+      "chapter": "ch3",
+      "filename": "01_webui_overview.png",
+      "url": "/photos",
+      "login": true,
+      "dismissVersionModal": true,
+      "waitMs": 6000,
+      "viewport": { "width": 1440, "height": 900 },
+      "redact": [
+        { "at": { "x": 1360, "y": 10 }, "w": 80, "h": 56, "text": "帳號已遮罩" }
+      ],
+      "annotations": [
+        { "type": "callout", "at": { "x": 128, "y": 300 }, "number": 1, "text": "左側導覽：Photos／Explore／Map／Sharing／Library" },
+        { "type": "callout", "at": { "x": 760, "y": 40 }, "number": 2, "text": "頂欄：搜尋、上傳、主題、通知、頭像" },
+        { "type": "callout", "at": { "x": 128, "y": 780 }, "number": 3, "text": "左下：儲存空間與伺服器狀態" }
+      ]
+    }
+  ]
+}

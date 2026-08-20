@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 11 章 · 安全與最小暴露 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 安全檢查：HTTPS、帳號安全、分享與公開範圍最小化。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/ch11_security.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="第 11 章 · 安全與最小暴露 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 安全檢查：HTTPS、帳號安全、分享與公開範圍最小化。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/ch11_security.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="第 11 章 · 安全與最小暴露 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 安全檢查：HTTPS、帳號安全、分享與公開範圍最小化。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <h2>章節</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li><a href="ch1_overview.html">開始前</a></li>
+      <li><a href="ch2_login.html">登入與帳號</a></li>
+      <li><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li><a href="ch6_albums.html">相簿管理</a></li>
+      <li><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li><a href="ch11_security.html" class="active">安全檢查</a></li>
+      <li><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>本章</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">安全觀念</a>
+      <a href="#steps">檢查步驟</a>
+      <a href="#habits">好習慣</a>
+      <a href="#troubleshoot">安全卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="chapter-header">
+      <div class="kicker">第 11 章</div>
+      <h1>安全與最小暴露</h1>
+      <p class="lead">從入口、帳號、分享到公開範圍，做一次系統性的安全檢查。讀完這章，你會知道哪些習慣能保護回憶，哪些「方便」其實是過度公開，並學會把暴露範圍縮到最小。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">相簿是最不該外洩的資料</h2>
+      <p>照片裡有人、有地點、有生活細節，一旦外洩，後果比密碼外洩更難收拾。安全不是「設定一次就好」，而是幾個習慣長期守住。這章把檢查項目整理成清單，照做就能把風險壓到很低。</p>
+      <div class="callout"><strong>本章任務：</strong>逐項檢查入口、帳號、分享與公開範圍，把不必要暴露的地方收起來。全程不刪資料，只做「收緊」。</div>
+    </section>
+
+    <section id="concept" data-nav="安全觀念">
+      <h2 data-icon="concept">安全的三道防線</h2>
+      <table class="data-table">
+        <thead><tr><th>防線</th><th>守什麼</th><th>你的責任</th></tr></thead>
+        <tbody>
+          <tr><td><strong>傳輸（HTTPS）</strong></td><td>你到伺服器之間的資料加密</td><td>確認網址是 https，遇到警告就停</td></tr>
+          <tr><td><strong>身份（帳號密碼）</strong></td><td>誰能登入</td><td>強密碼、不共用、公用裝置登出</td></tr>
+          <tr><td><strong>授權（分享範圍）</strong></td><td>登入後能看到什麼</td><td>只分享必要相簿、用完收回</td></tr>
+        </tbody>
+      </table>
+      <div class="callout tip"><strong>最小暴露原則：</strong>任何東西，預設不公開；要公開，只開到「剛好夠用」的程度，並保留收回的能力。</div>
+    </section>
+
+    <section id="steps" data-nav="檢查步驟">
+      <h2 data-icon="security">六步安全檢查清單</h2>
+      <ol class="steps">
+        <li><h3>檢查入口是 https</h3><p>瀏覽器網址列必須是 <code>https://woowtech-immich.woowtech.io</code>，且有鎖頭。出現「不安全」警告就停。</p></li>
+        <li><h3>檢查密碼強度</h3><p>密碼要夠長、不與其他服務共用。太久沒改，就改一次。</p></li>
+        <li><h3>盤點帳號</h3><p>管理員到第 10 章 Users 盤點：有沒有停用的帳號還開著？有沒有多餘的 Admin？</p></li>
+        <li><h3>盤點分享</h3><p>到 Sharing 區塊，把不再需要的分享停用；檢查每個公開連結的權限與期限。</p></li>
+        <li><h3>檢查公開範圍</h3><p>確認沒有把管理介面、整個相簿牆公開。需要公開的只留必要的相簿。</p></li>
+        <li><h3>養成收回習慣</h3><p>臨時分享用完就收回；定期（例如每月）重跑這張清單。</p></li>
+      </ol>
+      <div class="callout danger"><strong>遇到憑證警告：</strong>瀏覽器顯示「你的連線不是私人連線」時，不要按「繼續前往」。這可能是網路被劫持的訊號，先聯絡管理員。</div>
+    </section>
+
+    <section id="habits" data-nav="好習慣">
+      <h2 data-icon="todo">日常安全好習慣</h2>
+      <ul>
+        <li>公用／共享電腦用完一定登出，並關瀏覽器。</li>
+        <li>分享連結不貼公開群組、不轉傳給無關的人。</li>
+        <li>收到「重設密碼」「更新」的可疑通知，先查證來源，不要亂點連結。</li>
+        <li>定期看左側儲存用量與 Sharing 清單，掌握現況。</li>
+        <li>手機 App 也套用同樣的登出與密碼原則。</li>
+      </ul>
+      <div class="callout tip"><strong>安全是習慣不是事件：</strong>與其等出事再補救，不如把這張清單變成每月一次的例行檢查。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="安全卡關">
+      <h2 data-icon="troubleshoot">安全相關卡關</h2>
+      <ol class="steps">
+        <li><h3>懷疑帳號被盜</h3><p>立刻改密碼，並請管理員檢查該帳號最近的活動；必要時先停用帳號。</p></li>
+        <li><h3>發現分享連結外流</h3><p>立刻停用該連結，重新產生新的（若有需要），並評估外流範圍。</p></li>
+        <li><h3>瀏覽器一直警告不安全</h3><p>停下來，檢查網址拼法與 https。持續出現就聯絡管理員，不要硬闖。</p></li>
+        <li><h3>不確定某個東西該不該公開</h3><p>預設「不公開」。拿不準就先收起來，需要時再開。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">安全常見問題</h2>
+      <details class="faq"><summary>照片存在自架伺服器，真的比雲端安全嗎？</summary><div class="body">資料掌控權在你，但安全責任也在你。自架的好處是資料不外流到第三方，前提是帳號、密碼、分享都守住。</div></details>
+      <details class="faq"><summary>需要開兩步驟驗證嗎？</summary><div class="body">如果 Immich 或入口支援，強烈建議對管理員帳號開啟。這是提升帳號安全最有效的一步。</div></details>
+      <details class="faq"><summary>分享連結設密碼有用嗎？</summary><div class="body">有，多一層保護。但連結仍是鑰匙，最好同時設期限並控制範圍，不要只靠密碼。</div></details>
+      <details class="faq"><summary>上鎖資料夾能保護最敏感的照片嗎？</summary><div class="body">它能防止旁人隨手翻看，但不是真正的檔案加密。真正機敏的內容，別只靠它。</div></details>
+      <details class="faq"><summary>多久檢查一次安全比較好？</summary><div class="body">建議每月一次快速盤點（帳號、分享、儲存），有異常（如收到可疑通知）時立刻檢查。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/administration/security" rel="noopener">Immich 文件：Security</a></td><td>安全設定與最佳實踐</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/authentication" rel="noopener">Immich 文件：Authentication</a></td><td>驗證與密碼相關</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch10_admin.html">
+        <span class="label"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> 上一章</span>
+        <span class="title">10 · 管理員設定</span>
+      </a>
+      <a class="next" href="ch12_troubleshooting.html">
+        <span class="label">下一章 <i class="mdi mdi-arrow-right" aria-hidden="true"></i></span>
+        <span class="title">12 · 排錯與維護</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> 製作，以 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a> 授權釋出 — 可自由分享與改作，請保留出處。</p>
+      <p class="footer-meta">截圖取自 Home Assistant 與 Cloudflared Web GUI。Home Assistant 與 Cloudflare 為其各自權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">原始碼與勘誤</a></p>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/toc.js"></script>
+</body>
+</html>

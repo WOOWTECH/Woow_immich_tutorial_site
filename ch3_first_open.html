@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 3 章 · 第一次開啟 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich Web UI 首次導覽：Timeline、Albums、Search、Admin 與個人選單。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/ch3_first_open.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="第 3 章 · 第一次開啟 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich Web UI 首次導覽：Timeline、Albums、Search、Admin 與個人選單。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/ch3_first_open.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="第 3 章 · 第一次開啟 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich Web UI 首次導覽：Timeline、Albums、Search、Admin 與個人選單。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <h2>章節</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li><a href="ch1_overview.html">開始前</a></li>
+      <li><a href="ch2_login.html">登入與帳號</a></li>
+      <li><a href="ch3_first_open.html" class="active">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li><a href="ch6_albums.html">相簿管理</a></li>
+      <li><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li><a href="ch11_security.html">安全檢查</a></li>
+      <li><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>本章</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">三大區塊</a>
+      <a href="#steps">走一遍導覽</a>
+      <a href="#sidebar">側欄速查</a>
+      <a href="#troubleshoot">畫面卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="chapter-header">
+      <div class="kicker">第 3 章</div>
+      <h1>第一次開啟：認識畫面</h1>
+      <p class="lead">登入後的第一件事，是認識這套相簿的畫面：頂欄、左側導覽與中間的內容區。讀完這章，你會知道每個按鈕在哪、每個區塊負責什麼，不會再迷路。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">先認識地圖，再開始整理照片</h2>
+      <p>Immich 的介面很清爽，但第一次打開容易「找不到東西在哪」。這章把畫面拆成三塊講清楚：<strong>頂欄</strong>、<strong>左側導覽</strong>、<strong>中間內容</strong>。看懂之後，後面上傳、整理、搜尋都會順很多。</p>
+      <div class="callout"><strong>本章任務：</strong>登入後照著走一遍導覽，能指出每個區塊的位置與用途。全程唯讀，不點上傳、不刪任何東西。</div>
+    </section>
+
+    <section id="concept" data-nav="三大區塊">
+      <h2 data-icon="concept">畫面三大區塊的心智模型</h2>
+      <table class="data-table">
+        <thead><tr><th>區塊</th><th>位置</th><th>負責什麼</th></tr></thead>
+        <tbody>
+          <tr><td><strong>頂欄（Top bar）</strong></td><td>畫面最上方一條</td><td>搜尋、上傳、主題切換、通知、你的帳號頭像</td></tr>
+          <tr><td><strong>左側導覽（Sidebar）</strong></td><td>畫面左邊一列</td><td>Photos、Explore、Map、Sharing 與 Library 分類</td></tr>
+          <tr><td><strong>內容區（Content）</strong></td><td>中間最大塊</td><td>照片牆、相簿、搜尋結果等實際內容</td></tr>
+        </tbody>
+      </table>
+      <div class="callout tip"><strong>導覽列可以收合：</strong>左側導覽下方通常有「Collapse」可以收合，螢幕小時能騰出空間給照片牆。</div>
+    </section>
+
+    <section id="steps" data-nav="走一遍導覽">
+      <h2 data-icon="tabs">六步走一遍主要導覽</h2>
+      <ol class="steps">
+        <li><h3>先看頂欄</h3><p>最上方有搜尋框「Search your photos」、右側的 Upload 上傳鈕、主題切換、通知鈴鐺，以及最右邊你的頭像。</p></li>
+        <li><h3>看左側「Photos」</h3><p>這是照片主牆（時間軸），登入後預設就停在這裡。第 5 章會深入。</p></li>
+        <li><h3>看「Explore」</h3><p>搜尋、人物、地點等探索功能都收在這裡，第 7 章會用。</p></li>
+        <li><h3>看「Map」與「Sharing」</h3><p>Map 是地圖檢視（有地點資訊的照片會標在地圖上）；Sharing 是分享出去的相簿。</p></li>
+        <li><h3>看「Library」分類</h3><p>下面有 Favorites（我的最愛）、Albums（相簿）、Utilities（工具，含人物與地點）、Archive（封存）、Locked Folder（上鎖資料夾）、Trash（回收桶）。</p></li>
+        <li><h3>看左下角儲存狀態</h3><p>「Storage space」顯示已用／總容量，例如「61.3 GiB of 916.2 GiB used」；下方「Server Online」與版本號表示伺服器狀態。</p></li>
+      </ol>
+      <figure class="shot"><img src="assets/screenshots/ch3/01_webui_overview.png" alt="Immich 主畫面的左側導覽與頂欄" /><figcaption><strong>圖 3-1</strong>登入後的主畫面分三塊：頂欄（搜尋／上傳／頭像）、左側導覽（Photos／Explore／Map／Sharing／Library）與中間照片牆。</figcaption></figure>
+      <div class="callout warn"><strong>不要亂點：</strong>認識導覽時，先別急著按 Upload、刪除或任何會改變資料的按鈕。後面章節會一步步帶。</div>
+    </section>
+
+    <section id="sidebar" data-nav="側欄速查">
+      <h2 data-icon="compare">左側導覽速查表</h2>
+      <table class="data-table">
+        <thead><tr><th>項目</th><th>裡面是什麼</th><th>對應章節</th></tr></thead>
+        <tbody>
+          <tr><td>Photos</td><td>照片時間軸主牆</td><td>第 5 章</td></tr>
+          <tr><td>Explore</td><td>搜尋、人物、地點等探索</td><td>第 7 章</td></tr>
+          <tr><td>Map</td><td>地圖檢視</td><td>第 5 章</td></tr>
+          <tr><td>Sharing</td><td>你分享出去、與別人分享給你的相簿</td><td>第 8 章</td></tr>
+          <tr><td>Favorites</td><td>標記「最愛」的照片</td><td>第 5 章</td></tr>
+          <tr><td>Albums</td><td>手動整理的相簿</td><td>第 6 章</td></tr>
+          <tr><td>Utilities</td><td>人物、地點、重複偵測等工具</td><td>第 7 章</td></tr>
+          <tr><td>Archive</td><td>封存（收起來但不刪）的照片</td><td>第 6 章</td></tr>
+          <tr><td>Locked Folder</td><td>需要密碼才能看的敏感照片</td><td>第 6 章</td></tr>
+          <tr><td>Trash</td><td>刪除後暫存，可還原或清空</td><td>第 6 章</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="troubleshoot" data-nav="畫面卡關">
+      <h2 data-icon="troubleshoot">第一次開啟常見卡關</h2>
+      <ol class="steps">
+        <li><h3>登入後畫面一片空白</h3><p>重新整理一次；仍空白可能是伺服器忙碌或前端載入慢，稍等再試，或改用無痕視窗。</p></li>
+        <li><h3>左側導覽不見了</h3><p>可能是被收合了，找「Collapse／Expand」按鈕展開；或把視窗拉寬。</p></li>
+        <li><h3>照片牆顯示「Click to upload your first photo」</h3><p>這是正常的空相簿提示，表示還沒有照片。上傳方式見第 4 章。</p></li>
+        <li><h3>出現「NEW VERSION AVAILABLE」提示</h3><p>表示伺服器版本比官方最新版舊。這是給管理員的提醒，一般使用者按「Acknowledge」關掉即可，第 12 章會談更新。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">第一次開啟常見問題</h2>
+      <details class="faq"><summary>登入後為什麼直接停在 Photos 頁？</summary><div class="body">Photos 是 Immich 的預設首頁（照片時間軸），方便你一進來就看到照片。要換頁就點左側導覽。</div></details>
+      <details class="faq"><summary>左側「Library」下面那些項目是什麼？</summary><div class="body">它們是照片的組織方式：Favorites 最愛、Albums 相簿、Utilities 工具、Archive 封存、Locked Folder 上鎖、Trash 回收桶。各自在第 5、6 章細講。</div></details>
+      <details class="faq"><summary>左下角的 Storage space 是什麼？</summary><div class="body">顯示這個 Immich 伺服器已用與總共的儲存空間，例如「61.3 GiB of 916.2 GiB used」。空間滿了會影響上傳，見第 10、12 章。</div></details>
+      <details class="faq"><summary>「Server Online」和版本號代表什麼？</summary><div class="body">表示伺服器正在運作，以及目前跑的 Immich 版本。若顯示離線（Offline），表示伺服器暫時連不上，稍後再試。</div></details>
+      <details class="faq"><summary>右上角的鈴鐺是做什麼的？</summary><div class="body">通知中心，顯示伺服器訊息、更新提醒等。有紅點時點開看看即可。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/overview/introduction" rel="noopener">Immich 文件：Introduction</a></td><td>介面與功能總覽</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/search" rel="noopener">Immich 文件：Search</a></td><td>Explore／搜尋相關功能</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch2_login.html">
+        <span class="label"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> 上一章</span>
+        <span class="title">02 · 登入與帳號</span>
+      </a>
+      <a class="next" href="ch4_upload.html">
+        <span class="label">下一章 <i class="mdi mdi-arrow-right" aria-hidden="true"></i></span>
+        <span class="title">04 · 上傳照片與影片</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> 製作，以 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a> 授權釋出 — 可自由分享與改作，請保留出處。</p>
+      <p class="footer-meta">截圖取自 Home Assistant 與 Cloudflared Web GUI。Home Assistant 與 Cloudflare 為其各自權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">原始碼與勘誤</a></p>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/toc.js"></script>
+</body>
+</html>

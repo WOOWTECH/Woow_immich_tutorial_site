@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 7 章 · 搜尋與 AI 智慧 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich AI 功能教學：語意搜尋、臉孔辨識、人物與智慧標籤。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/ch7_search_ai.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="第 7 章 · 搜尋與 AI 智慧 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich AI 功能教學：語意搜尋、臉孔辨識、人物與智慧標籤。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/ch7_search_ai.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="第 7 章 · 搜尋與 AI 智慧 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich AI 功能教學：語意搜尋、臉孔辨識、人物與智慧標籤。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <h2>章節</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li><a href="ch1_overview.html">開始前</a></li>
+      <li><a href="ch2_login.html">登入與帳號</a></li>
+      <li><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li><a href="ch6_albums.html">相簿管理</a></li>
+      <li><a href="ch7_search_ai.html" class="active">搜尋與 AI</a></li>
+      <li><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li><a href="ch11_security.html">安全檢查</a></li>
+      <li><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>本章</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">AI 怎麼運作</a>
+      <a href="#steps">搜尋步驟</a>
+      <a href="#people">人物命名</a>
+      <a href="#troubleshoot">搜尋卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="chapter-header">
+      <div class="kicker">第 7 章</div>
+      <h1>搜尋與 AI 智慧</h1>
+      <p class="lead">用關鍵字、人物、地點，甚至一句話就找到照片。讀完這章，你會知道 Immich 的 AI 能幫你自動整理出人物與語意搜尋，讓幾萬張照片瞬間可被找到。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">照片多了，搜尋比翻找快</h2>
+      <p>照片超過幾千張後，「記得在哪」就不可靠了。Immich 的搜尋與 AI 讓你可以用「海邊」、「生日蛋糕」、某個人的名字，或一句描述就直接命中目標。這是自架相簿最有感的升級之一。</p>
+      <div class="callout"><strong>本章任務：</strong>用關鍵字搜尋、認識人物與地點整理。搜尋是唯讀操作，不會改動照片。</div>
+    </section>
+
+    <section id="concept" data-nav="AI 怎麼運作">
+      <h2 data-icon="ai">AI 搜尋背後在做什麼</h2>
+      <p>Immich 的 AI 由幾個「智慧功能」組成，它們在照片上傳後由伺服器的背景任務自動分析：</p>
+      <table class="data-table">
+        <thead><tr><th>功能</th><th>它做什麼</th><th>你怎麼用</th></tr></thead>
+        <tbody>
+          <tr><td><strong>臉孔辨識（Faces）</strong></td><td>找出照片裡的人臉，把同一人歸到「人物」</td><td>為人物命名，之後點名字就能找到他</td></tr>
+          <tr><td><strong>語意搜尋（Semantic search）</strong></td><td>理解畫面內容，用自然語言找照片</td><td>搜尋「沙灘上的狗」這類描述</td></tr>
+          <tr><td><strong>物件偵測（Object detection）</strong></td><td>辨識照片中的物品、場景</td><td>搜尋「車」「貓」「山」等</td></tr>
+          <tr><td><strong>地點（Places）</strong></td><td>讀取 GPS 資訊，整理成地點</td><td>用地點找「沖繩」的照片</td></tr>
+        </tbody>
+      </table>
+      <div class="callout tip"><strong>需要時間：</strong>AI 分析是背景任務，上傳大量照片後不會立刻就能語意搜尋，等 jobs 跑完才完整（見第 10 章）。</div>
+    </section>
+
+    <section id="steps" data-nav="搜尋步驟">
+      <h2 data-icon="search">五步完成一次搜尋</h2>
+      <ol class="steps">
+        <li><h3>進 Explore 或直接用頂欄搜尋框</h3><p>點左側 Explore，或用頂欄「Search your photos」輸入框。</p></li>
+        <li><h3>輸入關鍵字</h3><p>試試「海」、「蛋糕」、「貓」，或一句描述。搜尋會即時給結果。</p></li>
+        <li><h3>用人物找</h3><p>在 Explore 的 People 區，點某個人物頭像，看到所有有他的照片。</p></li>
+        <li><h3>用地點找</h3><p>在 Places 區選地點，或在地圖（Map）上點位置。</p></li>
+        <li><h3>組合條件</h3><p>依版本可組合「人物＋地點＋關鍵字」縮小範圍，快速鎖定目標。</p></li>
+      </ol>
+    </section>
+
+    <section id="people" data-nav="人物命名">
+      <h2 data-icon="persons">為人物命名，讓搜尋更好用</h2>
+      <p>臉孔辨識會先把同一張臉歸類成「未命名人物」，你可以幫他命名。命名後，這個人的照片就能用名字搜尋、也更容易整理。</p>
+      <div class="callout warn"><strong>命名是私人的：</strong>人物名稱只存在你的相簿裡，不會公開。命名時用你能辨識的名字即可。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="搜尋卡關">
+      <h2 data-icon="troubleshoot">搜尋常見卡關</h2>
+      <ol class="steps">
+        <li><h3>搜不到剛上傳的照片</h3><p>AI 分析需要時間，等背景 jobs 完成後再試。可到第 10 章看 jobs 狀態。</p></li>
+        <li><h3>人物辨識把不同人混在一起</h3><p>臉孔辨識偶爾會誤判。可以在人物頁手動合併或拆分，修正歸類。</p></li>
+        <li><h3>語意搜尋結果很怪</h3><p>AI 搜尋是「近似」不是「精確」，換個說法或用關鍵字、地點組合會更準。</p></li>
+        <li><h3>地點資訊缺失</h3><p>照片沒有 GPS 就不會有地點。可以在資訊面板補上地點。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">搜尋常見問題</h2>
+      <details class="faq"><summary>AI 分析會不會把我的照片傳到雲端？</summary><div class="body">不會。Immich 的 AI 在你自己的伺服器上執行，照片不會因此外傳到第三方。這正是自架相簿的優點。</div></details>
+      <details class="faq"><summary>語意搜尋支援中文嗎？</summary><div class="body">依使用的 AI 模型而定，多數模型支援多語言。實際效果以你的伺服器設定為準，可先用簡單關鍵字測試。</div></details>
+      <details class="faq"><summary>臉孔辨識可以關掉嗎？</summary><div class="body">可以，由管理員在設定中開關（第 10 章）。關掉後就不會自動辨識人臉。</div></details>
+      <details class="faq"><summary>人物命名後可以改嗎？</summary><div class="body">可以。到人物頁點該人物，即可重新命名或合併。</div></details>
+      <details class="faq"><summary>為什麼有些照片沒被 AI 分析？</summary><div class="body">可能是 jobs 尚未跑到、或檔案格式不支援。等 jobs 完成，或檢查第 12 章的排錯。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/features/search" rel="noopener">Immich 文件：Search</a></td><td>搜尋與語意搜尋</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/face-recognition" rel="noopener">Immich 文件：Face Recognition</a></td><td>臉孔辨識與人物整理</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch6_albums.html">
+        <span class="label"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> 上一章</span>
+        <span class="title">06 · 相簿管理</span>
+      </a>
+      <a class="next" href="ch8_sharing.html">
+        <span class="label">下一章 <i class="mdi mdi-arrow-right" aria-hidden="true"></i></span>
+        <span class="title">08 · 分享相簿</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> 製作，以 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a> 授權釋出 — 可自由分享與改作，請保留出處。</p>
+      <p class="footer-meta">截圖取自 Home Assistant 與 Cloudflared Web GUI。Home Assistant 與 Cloudflare 為其各自權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">原始碼與勘誤</a></p>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/toc.js"></script>
+</body>
+</html>

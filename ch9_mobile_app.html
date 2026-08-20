@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 9 章 · 行動 App 備份 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 行動 App 教學：安裝、連線伺服器、自動與背景備份。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/ch9_mobile_app.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="第 9 章 · 行動 App 備份 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 行動 App 教學：安裝、連線伺服器、自動與背景備份。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/ch9_mobile_app.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="第 9 章 · 行動 App 備份 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 行動 App 教學：安裝、連線伺服器、自動與背景備份。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <h2>章節</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li><a href="ch1_overview.html">開始前</a></li>
+      <li><a href="ch2_login.html">登入與帳號</a></li>
+      <li><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li><a href="ch6_albums.html">相簿管理</a></li>
+      <li><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li><a href="ch9_mobile_app.html" class="active">行動 App</a></li>
+      <li><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li><a href="ch11_security.html">安全檢查</a></li>
+      <li><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>本章</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">備份觀念</a>
+      <a href="#steps">安裝步驟</a>
+      <a href="#settings">備份設定</a>
+      <a href="#troubleshoot">App 卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="chapter-header">
+      <div class="kicker">第 9 章</div>
+      <h1>行動 App 備份</h1>
+      <p class="lead">在手機上裝 Immich App，連到你的伺服器，讓手機照片自動備份到 Immich。讀完這章，你手機裡的回憶會自動、持續地收進自己家，不再只存在一台隨時可能壞掉的手機裡。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">手機是照片最多的地方，也是最容易弄丟的</h2>
+      <p>現在大部分照片都在手機上。手機可能遺失、損壞或換機，照片就沒了。把 App 裝好、開自動備份，就能讓手機照片持續同步到 Immich 伺服器，多一層保障。</p>
+      <div class="callout"><strong>本章任務：</strong>安裝 App、登入伺服器、開啟自動備份。安裝 App 只影響你自己的手機，不影響伺服器。</div>
+    </section>
+
+    <section id="concept" data-nav="備份觀念">
+      <h2 data-icon="concept">自動備份 vs 手動上傳</h2>
+      <table class="data-table">
+        <thead><tr><th>方式</th><th>做法</th><th>適合</th></tr></thead>
+        <tbody>
+          <tr><td><strong>自動備份</strong></td><td>App 在背景持續把新照片傳上伺服器</td><td>日常使用，裝好就忘了它</td></tr>
+          <tr><td><strong>手動上傳</strong></td><td>在 App 或 Web 手動選照片上傳</td><td>補傳舊照片、控制上傳時機</td></tr>
+        </tbody>
+      </table>
+      <div class="callout tip"><strong>背景備份有條件：</strong>手機系統（iOS／Android）會限制背景運作，App 需要相應權限才能自動備份。第一次設定時把權限開好，之後才順。</div>
+    </section>
+
+    <section id="steps" data-nav="安裝步驟">
+      <h2 data-icon="app">六步裝好手機備份</h2>
+      <ol class="steps">
+        <li><h3>下載 Immich App</h3><p>到 App Store（iOS）或 Google Play（Android）搜尋「Immich」安裝。</p></li>
+        <li><h3>輸入伺服器網址</h3><p>開啟 App，輸入伺服器地址 <code>https://woowtech-immich.woowtech.io</code>。注意要完整、含 https。</p></li>
+        <li><h3>登入帳號</h3><p>用第 2 章的電子郵件與密碼登入。同一個帳號可同時在手機與網頁使用。</p></li>
+        <li><h3>開啟自動備份</h3><p>在 App 的備份設定裡，開啟自動備份，選擇要備份的相簿（例如「所有照片」）。</p></li>
+        <li><h3>授權相簿與通知權限</h3><p>系統會要求存取照片、背景重新整理等權限，都允許，備份才會順。</p></li>
+        <li><h3>確認開始備份</h3><p>回到 Web 的時間軸，確認手機照片開始出現，代表備份生效。</p></li>
+      </ol>
+      <div class="callout warn"><strong>第一次備份很花時間：</strong>手機裡若已有大量照片，第一次全量備份可能要跑很久、耗流量。建議連 Wi-Fi 再開始，並保持 App 在前景一段時間。</div>
+    </section>
+
+    <section id="settings" data-nav="備份設定">
+      <h2 data-icon="compare">值得調整的備份設定</h2>
+      <ul>
+        <li><strong>只備份新照片</strong>：避免重複傳舊照片。</li>
+        <li><strong>只在 Wi-Fi 備份</strong>：省行動流量。</li>
+        <li><strong>背景備份</strong>：讓 App 在背景持續同步。</li>
+        <li><strong>排除某些相簿</strong>：例如截圖、下載資料夾，避免備份雜訊。</li>
+      </ul>
+      <div class="callout tip"><strong>先傳重要的：</strong>第一次可先備份「相機相簿」這類重點，跑完再考慮其他相簿，避免一次塞太多。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="App 卡關">
+      <h2 data-icon="troubleshoot">App 常見卡關</h2>
+      <ol class="steps">
+        <li><h3>連不上伺服器</h3><p>確認網址完整（含 https）、網路正常。用瀏覽器開同一網址測試，若瀏覽器也打不開就是伺服器或網路問題。</p></li>
+        <li><h3>背景備份不跑</h3><p>檢查 App 的權限（照片、背景重新整理、通知）是否都開；把手機省電模式對 Immich 設為例外。</p></li>
+        <li><h3>備份到一半停住</h3><p>切回 Wi-Fi、確認手機有電、把 App 開到前景讓它繼續。大檔影片容易卡，可先備份照片。</p></li>
+        <li><h3>照片重複備份</h3><p>確認重複偵測有開；若手動重傳同一批，Immich 通常會自動略過重複。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">App 常見問題</h2>
+      <details class="faq"><summary>App 和 Web 的資料是一樣的嗎？</summary><div class="body">一樣。App 與 Web 連到同一個伺服器、同一個帳號，照片資料互通。</div></details>
+      <details class="faq"><summary>備份會用掉很多行動流量嗎？</summary><div class="body">會，尤其第一次全量備份。建議設「只在 Wi-Fi 備份」，或在 Wi-Fi 環境下先跑完第一次。</div></details>
+      <details class="faq"><summary>換手機後備份會重來嗎？</summary><div class="body">登入同一個帳號即可，已備份的照片不會重複上傳；新手機的新照片會繼續備份。</div></details>
+      <details class="faq"><summary>刪手機照片，伺服器上的也會刪嗎？</summary><div class="body">視備份設定而定。要謹慎，先確認設定再刪手機照片，避免誤刪唯一的備份。</div></details>
+      <details class="faq"><summary>可以備份影片嗎？</summary><div class="body">可以，但影片檔案大，備份較慢也較佔空間。可視需要決定是否納入自動備份。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/features/mobile-app" rel="noopener">Immich 文件：Mobile App</a></td><td>App 安裝與備份設定</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/backup" rel="noopener">Immich 文件：Backup</a></td><td>備份行為與選項</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch8_sharing.html">
+        <span class="label"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> 上一章</span>
+        <span class="title">08 · 分享相簿</span>
+      </a>
+      <a class="next" href="ch10_admin.html">
+        <span class="label">下一章 <i class="mdi mdi-arrow-right" aria-hidden="true"></i></span>
+        <span class="title">10 · 管理員設定</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> 製作，以 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a> 授權釋出 — 可自由分享與改作，請保留出處。</p>
+      <p class="footer-meta">截圖取自 Home Assistant 與 Cloudflared Web GUI。Home Assistant 與 Cloudflare 為其各自權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">原始碼與勘誤</a></p>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/toc.js"></script>
+</body>
+</html>

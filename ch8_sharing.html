@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 8 章 · 分享相簿 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 分享教學：分享連結、權限設定與公開相簿安全。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/ch8_sharing.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="第 8 章 · 分享相簿 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 分享教學：分享連結、權限設定與公開相簿安全。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/ch8_sharing.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="第 8 章 · 分享相簿 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 分享教學：分享連結、權限設定與公開相簿安全。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <h2>章節</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li><a href="ch1_overview.html">開始前</a></li>
+      <li><a href="ch2_login.html">登入與帳號</a></li>
+      <li><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li><a href="ch6_albums.html">相簿管理</a></li>
+      <li><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li><a href="ch8_sharing.html" class="active">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li><a href="ch11_security.html">安全檢查</a></li>
+      <li><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>本章</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">分享觀念</a>
+      <a href="#steps">分享步驟</a>
+      <a href="#revoke">收回與管理</a>
+      <a href="#troubleshoot">分享卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="chapter-header">
+      <div class="kicker">第 8 章</div>
+      <h1>分享相簿</h1>
+      <p class="lead">把一本相簿安全地分享給親友：產生分享連結、設定權限與期限、以及如何收回。讀完這章，你可以在不交出帳號密碼的前提下，讓別人看到你選定的照片。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">分享是「給一把鑰匙」，不是「給一扇門」</h2>
+      <p>想讓親友看照片，最笨的方法是給帳號密碼——那等於把整個相簿都交出去。正確做法是用<strong>分享連結</strong>，只開你想開的那一本相簿，還能設期限、控制能不能下載。學會它，分享才不會變成洩漏。</p>
+      <div class="callout"><strong>本章任務：</strong>為一本相簿產生分享連結、設定權限，並學會收回。分享會「對外開放」，操作前先想清楚範圍。</div>
+    </section>
+
+    <section id="concept" data-nav="分享觀念">
+      <h2 data-icon="concept">分享的兩種對象與安全界線</h2>
+      <table class="data-table">
+        <thead><tr><th>對象</th><th>方式</th><th>風險</th></tr></thead>
+        <tbody>
+          <tr><td><strong>站內其他使用者</strong></td><td>把相簿分享給同一個 Immich 的其他帳號</td><td>低，對方仍需登入</td></tr>
+          <tr><td><strong>外部的人（無帳號）</strong></td><td>產生公開分享連結，任何人拿到連結就能看</td><td>中，連結等於鑰匙，要控管</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn"><strong>連結就是鑰匙：</strong>公開連結一旦流出，任何拿到連結的人都能看。分享前先確認相簿裡沒有不想公開的照片。</div>
+    </section>
+
+    <section id="steps" data-nav="分享步驟">
+      <h2 data-icon="remote">六步完成一次分享</h2>
+      <ol class="steps">
+        <li><h3>選好要分享的相簿</h3><p>在 Albums 找到目標相簿，確認內容就是你想給對方看的。</p></li>
+        <li><h3>開啟分享</h3><p>在相簿的分享（Share）選單，選擇分享方式。</p></li>
+        <li><h3>選對象或產生連結</h3><p>站內使用者：選對方帳號；外部：產生分享連結。</p></li>
+        <li><h3>設定權限與期限</h3><p>依版本可設定能否下載、連結有效期限、是否要密碼等。</p></li>
+        <li><h3>送出連結</h3><p>把連結傳給對方（用你信任的管道）。提醒對方這是私密連結，勿轉傳。</p></li>
+        <li><h3>用完收回</h3><p>對方看完後，回到分享設定停用或刪除連結，鑰匙就失效了。</p></li>
+      </ol>
+      <div class="callout danger"><strong>停止線：</strong>不要把分享連結貼到公開的社群、群組或網頁上。需要長期公開展示，才考慮更正式的公開方式，且要另外評估風險。</div>
+    </section>
+
+    <section id="revoke" data-nav="收回與管理">
+      <h2 data-icon="security">管理與收回分享</h2>
+      <p>左側的 <strong>Sharing</strong> 區塊會列出你分享出去、以及別人分享給你的相簿。你可以在這裡：</p>
+      <ul>
+        <li>查看每個分享的對象與權限。</li>
+        <li>停用或刪除某個分享連結，讓它立刻失效。</li>
+        <li>調整權限（例如把「可下載」關掉）。</li>
+      </ul>
+      <div class="callout tip"><strong>養成收回習慣：</strong>分享連結像借出去的鑰匙，事後記得收回。尤其是臨時分享給廠商、活動單位的情況。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="分享卡關">
+      <h2 data-icon="troubleshoot">分享常見卡關</h2>
+      <ol class="steps">
+        <li><h3>對方說連結打不開</h3><p>確認連結完整、沒被截斷；確認分享未被停用或過期。</p></li>
+        <li><h3>對方看不到某幾張照片</h3><p>檢查那幾張是否在分享的相簿裡；分享是以「相簿」為單位，不在相簿裡的自然看不到。</p></li>
+        <li><h3>想讓對方只能看不能下載</h3><p>在分享設定裡關閉「下載」權限（依版本而定）。</p></li>
+        <li><h3>忘了分享過什麼</h3><p>到 Sharing 區塊盤點，把不用的分享停用。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">分享常見問題</h2>
+      <details class="faq"><summary>分享連結有期限嗎？</summary><div class="body">可以設定有效期限（依版本而定）。到期後連結自動失效，需重新產生。臨時分享建議設期限。</div></details>
+      <details class="faq"><summary>對方需要註冊 Immich 帳號嗎？</summary><div class="body">看分享方式。公開連結不需要帳號，有連結就能看；站內分享則需要對方已有帳號。</div></details>
+      <details class="faq"><summary>分享出去的照片，對方能刪除或修改嗎？</summary><div class="body">預設不行。分享通常是「唯讀」瀏覽，對方不能動你的原始照片。</div></details>
+      <details class="faq"><summary>我可以收回分享嗎？</summary><div class="body">可以，隨時停用或刪除分享連結即可，效果立刻生效。</div></details>
+      <details class="faq"><summary>別人分享給我的相簿在哪看？</summary><div class="body">在左側 Sharing 區塊，會列出分享給你的相簿。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/features/albums#sharing" rel="noopener">Immich 文件：Sharing</a></td><td>相簿分享與權限</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch7_search_ai.html">
+        <span class="label"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> 上一章</span>
+        <span class="title">07 · 搜尋與 AI</span>
+      </a>
+      <a class="next" href="ch9_mobile_app.html">
+        <span class="label">下一章 <i class="mdi mdi-arrow-right" aria-hidden="true"></i></span>
+        <span class="title">09 · 行動 App 備份</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> 製作，以 <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a> 授權釋出 — 可自由分享與改作，請保留出處。</p>
+      <p class="footer-meta">截圖取自 Home Assistant 與 Cloudflared Web GUI。Home Assistant 與 Cloudflare 為其各自權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">原始碼與勘誤</a></p>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/toc.js"></script>
+</body>
+</html>
