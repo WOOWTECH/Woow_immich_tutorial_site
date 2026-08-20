@@ -11,6 +11,11 @@
     "ogImage": "assets/screenshots/ch3/01_webui_overview.png",
     "license": {"name":"CC BY 4.0","url":"https://creativecommons.org/licenses/by/4.0/deed.zh-hant","holder":"woowtech"}
   },
+  "hub": {
+    "catalog": "tutorial.html",
+    "navLabel": "資源總覽",
+    "pages": ["sales.html", "prompts.html", "skills.html"]
+  },
   "chapters": [
     {"file":"ch1_overview.html","num":"01","navLabel":"開始前","title":"開始前","pagerTitle":"01 · 需求與安全邊界","card":"先確認 Immich 的角色、自架相簿的價值，以及帳號與公開範圍的安全邊界。","description":"Immich 自架相簿使用前規劃：自架價值、帳號角色、公開範圍與安全邊界。","part":"基礎：認識與登入"},
     {"file":"ch2_login.html","num":"02","navLabel":"登入與帳號","title":"登入與帳號","pagerTitle":"02 · 登入與帳號","card":"開啟 Web UI 登入，認識管理員帳號與個人資料設定。","description":"Immich 登入教學：開啟 Web UI、登入、管理員帳號與個人資料設定。","part":"基礎：認識與登入"},
