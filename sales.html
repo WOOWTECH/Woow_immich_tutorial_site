@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Immich 自架相簿方案 · 銷售手冊 · WoowTech 渥屋科技</title>
+  <meta name="description" content="把全家人的照片影片收進自己家：Immich 自架相簿方案完整介紹 — 手機自動備份、AI 人臉搜尋、相簿分享，兩種部署方案（HAOS 內建 + 代設定／雲端 PaaS 租用），資料永遠留在你家。" />
+  <meta name="author" content="WoowTech" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/sales.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Yellowtail&display=swap" />
+  <style>
+:root {
+  --ww-blue: #6183FC; --ww-blue-600: #4A6DE8; --ww-blue-700: #3F63E8; --ww-blue-050: #EEF2FF;
+  --ink-900: #1B2033; --ink-700: #3A4054; --ink-500: #6B7186; --ink-300: #A5AAB9; --ink-100: #E7E9F0;
+  --paper: #F7F8FC; --surface: #FFFFFF; --surface-alt: #F1F3FA; --hairline: #E2E5EF;
+  --tip: #8CD37F; --warn: #E66D3E; --danger: #F45D6D;
+  --radius: 20px; --radius-sm: 12px; --radius-xs: 8px; --radius-pill: 999px;
+  --shadow-sm: 0 2px 6px rgba(27,32,51,0.05), 0 1px 2px rgba(27,32,51,0.04);
+  --shadow-md: 0 8px 24px rgba(27,32,51,0.08), 0 2px 6px rgba(27,32,51,0.04);
+  --shadow-float: 0 26px 60px -18px rgba(97,131,252,0.28);
+  --font-display: "Outfit", "Poppins", -apple-system, "Noto Sans TC", "PingFang TC", sans-serif;
+  --font-body: "Poppins", -apple-system, "Noto Sans TC", "PingFang TC", sans-serif;
+  --font-script: "Yellowtail", cursive;
+  --sidebar-w: 268px; --max-content: 780px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: var(--font-body); color: var(--ink-900); background: var(--paper); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.005em; }
+a { color: var(--ww-blue-600); text-decoration: none; }
+a:hover { color: var(--ww-blue-700); text-decoration: underline; }
+.layout { display: grid; grid-template-columns: var(--sidebar-w) 1fr; min-height: 100vh; }
+.sidebar { background: var(--surface); border-right: 1px solid var(--hairline); padding: 28px 22px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+.sidebar h2 { font-size: 12px; color: var(--ink-500); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin: 0 0 12px; }
+.sidebar .brand { display: block; font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--ink-900); margin-bottom: 4px; }
+.sidebar .brand-sub { font-size: 13px; color: var(--ink-500); margin-bottom: 6px; }
+.sidebar .hub-link { display: inline-block; font-size: 12.5px; color: var(--ink-500); margin-bottom: 22px; }
+.sidebar .hub-link:hover { color: var(--ww-blue-700); text-decoration: none; }
+.sidebar .toc-in-chapter { border-top: 1px solid var(--hairline); padding-top: 16px; margin-top: 8px; }
+.sidebar .toc-in-chapter:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.sidebar .toc-in-chapter a { display: block; padding: 7px 12px; border-radius: var(--radius-xs); color: var(--ink-700); font-size: 13.5px; }
+.sidebar .toc-in-chapter a:hover { background: var(--surface-alt); text-decoration: none; }
+.content { padding: 56px 64px 96px; max-width: calc(var(--max-content) + 128px); }
+.chapter-header { margin-bottom: 40px; }
+.chapter-header .kicker-script { font-family: var(--font-script); font-size: 30px; color: var(--ww-blue); line-height: 1; margin-bottom: 10px; display: block; }
+.chapter-header .kicker { color: var(--ww-blue); font-family: var(--font-display); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+.chapter-header h1 { font-family: "Noto Sans TC", var(--font-display); font-size: 38px; font-weight: 700; margin: 0 0 14px; line-height: 1.25; }
+.chapter-header .lead { font-size: 17px; color: var(--ink-700); margin: 0; max-width: var(--max-content); }
+.kpi-frame { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); box-shadow: var(--shadow-float); margin: 28px 0 8px; overflow: hidden; }
+.kpi { padding: 22px 20px; text-align: center; }
+.kpi + .kpi { border-left: 1px solid var(--hairline); }
+.kpi .num { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--ww-blue); }
+.kpi .cap { font-size: 13px; color: var(--ink-500); margin-top: 4px; }
+section { margin-bottom: 56px; scroll-margin-top: 24px; }
+section h2 { font-family: var(--font-display); font-size: 24px; font-weight: 700; margin: 0 0 20px; display: flex; align-items: center; gap: 14px; }
+section h2[data-icon]::before { content: ""; display: inline-flex; flex-shrink: 0; width: 40px; height: 40px; border-radius: var(--radius-sm); background-color: var(--ww-blue-050); background-repeat: no-repeat; background-position: center; background-size: 22px 22px; }
+section h2[data-icon="why"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z'/%3E%3C/svg%3E"); }
+section h2[data-icon="what"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M6,2A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6M6,4H13V9H18V20H6V4M8,12V14H16V12H8M8,16V18H13V16H8Z'/%3E%3C/svg%3E"); }
+section h2[data-icon="ai"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M12,1L9,9L1,12L9,15L12,23L15,15L23,12L15,9L12,1Z'/%3E%3C/svg%3E"); }
+section h2[data-icon="security"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M11,13H13V16H16V11H18L12,6L6,11H8V16H11V13M12,1L21,5V11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1Z'/%3E%3C/svg%3E"); }
+section h2[data-icon="compare"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M9,17H7V10H5V12H3V5H7V7H9V5H12V9H9V7H7V17M14,5V8H16V6H18V8H20V5H14M21,12H19V10H16V12H19V14H21V12M7,19H3V15H7V19Z'/%3E%3C/svg%3E"); }
+section h2[data-icon="faq"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,7V9H13V7H11M11,11V17H13V11H11Z'/%3E%3C/svg%3E"); }
+section h2[data-icon="handshake"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F63E8' d='M11,6H14L17.29,2.7A1,1 0 0,1 18.71,2.7L21.29,5.29A1,1 0 0,1 21.29,6.7L19,9H11V11A1,1 0 0,1 10,12A1,1 0 0,1 9,11V8A2,2 0 0,1 11,6M5,11V15L2.71,17.29A1,1 0 0,0 2.71,18.7L5.29,21.29A1,1 0 0,0 6.71,21.29L11,17H15A1,1 0 0,0 16,16V15H17A1,1 0 0,0 18,14V13H19A1,1 0 0,0 20,12V11H13V12A2,2 0 0,1 11,14H9A2,2 0 0,1 7,12V9Z'/%3E%3C/svg%3E"); }
+.callout { padding: 14px 18px; border-radius: var(--radius-sm); background: var(--surface-alt); border: 1px solid var(--hairline); margin: 18px 0; font-size: 14.5px; }
+.callout.tip { background: #F0FAEE; border-color: rgba(140,211,127,0.4); }
+.callout.warn { background: #FEF3EE; border-color: rgba(230,109,62,0.35); }
+.callout.danger { background: #FEEEEF; border-color: rgba(244,93,109,0.35); }
+.data-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px; background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-sm); overflow: hidden; }
+.data-table th, .data-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--hairline); }
+.data-table th { background: var(--ww-blue-050); font-weight: 600; color: var(--ink-900); }
+.data-table tr:last-child td { border-bottom: 0; }
+.steps { list-style: none; counter-reset: s; margin: 18px 0; padding: 0; }
+.steps li { counter-increment: s; position: relative; padding: 0 0 16px 52px; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--ww-blue); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+.steps h3 { margin: 0 0 4px; font-size: 16px; }
+.steps p { margin: 0; color: var(--ink-700); font-size: 14.5px; }
+.cta-box { background: linear-gradient(135deg, #6183FC 0%, #4A6DE8 100%); color: #fff; border-radius: var(--radius); padding: 36px 34px; box-shadow: var(--shadow-float); }
+.cta-box h2 { color: #fff; }
+.cta-box p { color: rgba(255,255,255,0.92); }
+.cta-box a.btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--ww-blue-700); font-weight: 700; padding: 12px 26px; border-radius: var(--radius-pill); text-decoration: none; margin-top: 10px; }
+.cta-box a.btn:hover { background: var(--ww-blue-050); text-decoration: none; }
+footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 13px; color: var(--ink-500); }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } .content { padding: 32px 20px 64px; } .kpi-frame { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="tutorial.html">Immich 指南</a>
+      <div class="brand-sub">把回憶收在自己家</div>
+      <a class="hub-link" href="index.html">◂ 資源總覽</a>
+      <h2>本頁</h2>
+      <div class="toc-in-chapter">
+        <a href="#why">為什麼需要它</a>
+        <a href="#what">它是什麼</a>
+        <a href="#abilities">三大核心能力</a>
+        <a href="#privacy">資料在你家</a>
+        <a href="#day">一天的生活</a>
+        <a href="#compare">兩種方案比一比</a>
+        <a href="#faq">常見問題</a>
+        <a href="#cta">下一步</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="chapter-header">
+        <span class="kicker-script">your memories, your home</span>
+        <div class="kicker">WoowTech 渥屋科技 · 銷售手冊</div>
+        <h1>把全家人的照片影片，收進自己家</h1>
+        <p class="lead">Immich 自架相簿方案：手機自動備份、AI 人臉搜尋、相簿分享，兩種部署方式任你選，而你家人的回憶，永遠留在你家。</p>
+      </div>
+
+      <div class="kpi-frame">
+        <div class="kpi"><div class="num">100%</div><div class="cap">資料留在自己家</div></div>
+        <div class="kpi"><div class="num">自動</div><div class="cap">手機照片背景備份</div></div>
+        <div class="kpi"><div class="num">AI</div><div class="cap">人臉辨識＋語意搜尋</div></div>
+      </div>
+
+      <section id="why" data-nav="為什麼需要它">
+        <h2 data-icon="why">為什麼你家需要自架相簿</h2>
+        <p>手機相簿是全家最大的數位資產：小孩成長、家族聚會、旅行紀錄，動輒幾萬張。交給雲端服務，要付月費、照片放別人機房、服務改規則時只能跟著走。手機一旦遺失或損壞，回憶可能就此消失。</p>
+        <p>自架相簿把「Google 相簿的體驗」搬回自己家：照片存在你自己的機器，介面一樣好用，差別是資料在你手上。</p>
+        <div class="callout tip"><strong>一句話講給客戶聽：</strong>「雲端相簿是租別人的保險箱，自架相簿是買自己的保險箱。東西都是你的，差在鑰匙在誰手上。」</div>
+      </section>
+
+      <section id="what" data-nav="它是什麼">
+        <h2 data-icon="what">Immich 是什麼</h2>
+        <p>Immich 是開源的自架相片與影片管理平台，功能對應你熟悉的雲端相簿：</p>
+        <table class="data-table">
+          <thead><tr><th>能力</th><th>對應功能</th></tr></thead>
+          <tbody>
+            <tr><td>備份</td><td>手機 App 自動備份、Web 拖放上傳</td></tr>
+            <tr><td>整理</td><td>時間軸、相簿、最愛、封存</td></tr>
+            <tr><td>搜尋</td><td>AI 語意搜尋、人臉辨識、地點、時間</td></tr>
+            <tr><td>分享</td><td>相簿分享連結、權限控制</td></tr>
+            <tr><td>管理</td><td>多使用者、儲存空間、背景任務</td></tr>
+          </tbody>
+        </table>
+        <p>WoowTech 把它與 Home Assistant 智慧家庭整合，讓你的照片庫成為家中數位基礎設施的一環。</p>
+      </section>
+
+      <section id="abilities" data-nav="三大核心能力">
+        <h2 data-icon="ai">三大核心能力</h2>
+        <table class="data-table">
+          <thead><tr><th>能力</th><th>客戶看到的價值</th></tr></thead>
+          <tbody>
+            <tr><td><strong>手機自動備份</strong></td><td>照片拍完就自動收進家裡，換手機、摔手機都不怕</td></tr>
+            <tr><td><strong>AI 搜尋</strong></td><td>用人名、地點、一句話（「去年海邊的照片」）秒找，不用翻幾萬張</td></tr>
+            <tr><td><strong>相簿分享</strong></td><td>聚會照片一個連結傳給親友，不用壓縮、不用群組洗版</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="privacy" data-nav="資料在你家">
+        <h2 data-icon="security">資料在你家，隱私你自己做主</h2>
+        <p>自架相簿最核心的賣點是「掌控」：</p>
+        <ul>
+          <li>照片與影片存在你自己的伺服器，不經第三方雲端。</li>
+          <li>AI 分析（人臉、語意搜尋）也在你家機器上跑，照片不外流。</li>
+          <li>分享連結由你控管，隨時收回。</li>
+        </ul>
+        <div class="callout warn"><strong>誠實提醒：</strong>自架的好處是掌控，責任也在你。WoowTech 負責把備份、更新、安全這三件事幫你顧好，讓你只要享受掌控感，不用揹維護的壓力。</div>
+      </section>
+
+      <section id="day" data-nav="一天的生活">
+        <h2 data-icon="compare">有了它的一天</h2>
+        <div class="steps">
+          <li><h3>早上出門</h3><p>手機裡的昨晚照片，已經趁 Wi-Fi 自動備份進家裡的 Immich。</p></li>
+          <li><h3>午休回顧</h3><p>打開網頁，用「上個月跟阿嬤的合照」一句話就找到照片。</p></li>
+          <li><h3>晚上分享</h3><p>把今天的聚會相簿產生一個連結，傳給家人，看完就收回。</p></li>
+        </div>
+      </section>
+
+      <section id="compare" data-nav="兩種方案比一比">
+        <h2 data-icon="compare">兩種部署方案</h2>
+        <table class="data-table">
+          <thead><tr><th></th><th>HAOS 內建 + 代設定</th><th>雲端 PaaS 租用</th></tr></thead>
+          <tbody>
+            <tr><td><strong>適合</strong></td><td>已有 Home Assistant 主機的家庭</td><td>不想維護硬體、要外網隨時可用的家庭</td></tr>
+            <tr><td><strong>硬體</strong></td><td>用你現有的 HA 主機</td><td>WoowTech 雲端主機</td></tr>
+            <tr><td><strong>設定</strong></td><td>WoowTech 代設定（人臉模型、家人帳號、備份）</td><td>WoowTech 代管</td></tr>
+            <tr><td><strong>維護</strong></td><td>自己顧硬體，WoowTech 協助</td><td>WoowTech 全權代管</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><strong>費用：</strong>建置費一次 ＋ 依方案不同（AI 用量費或月租），詳洽經銷商。</div>
+      </section>
+
+      <section id="faq" data-nav="常見問題">
+        <h2 data-icon="faq">常見問題</h2>
+        <div class="callout"><strong>照片會不會被看到？</strong><br>不會。資料在你自己的機器（或你的專屬雲端主機），AI 分析也在本機跑，不外流。</div>
+        <div class="callout"><strong>跟 Google 相簿比，差在哪？</strong><br>體驗很像，但照片在你手上、不用月費、不受服務改規則影響。</div>
+        <div class="callout"><strong>需要會架伺服器嗎？</strong><br>不用。使用端只要會開網頁、裝 App；架設與維護由 WoowTech 負責。</div>
+        <div class="callout"><strong>儲存空間不夠怎麼辦？</strong><br>視方案可擴充儲存。雲端 PaaS 方案內建 S3 儲存，可隨用量擴充。</div>
+        <div class="callout"><strong>手機照片會自動備份嗎？</strong><br>會。裝好 App、開自動備份，之後拍的照片會在 Wi-Fi 下自動收進家裡。</div>
+      </section>
+
+      <section id="cta" data-nav="下一步">
+        <div class="cta-box">
+          <h2 data-icon="handshake">下一步</h2>
+          <p>想親眼看看自架相簿長什麼樣、要評估你家適合哪種方案，歡迎聯絡 WoowTech 或您的經銷商，我們安排實機展示與方案建議。</p>
+          <a class="btn" href="#">聯絡 WoowTech 或您的經銷商</a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">WoowTech</a> 製作，以 CC BY 4.0 授權釋出。Immich 為其權利人的商標，本站與其無隸屬關係。</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
