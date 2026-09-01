@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 10 · 管理員設定 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 管理員設定：使用者、儲存、背景 jobs 與容量管理。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/en/ch10_admin.html" />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:title" content="Chapter 10 · 管理員設定 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 管理員設定：使用者、儲存、背景 jobs 與容量管理。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/en/ch10_admin.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.en.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chapter 10 · 管理員設定 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 管理員設定：使用者、儲存、背景 jobs 與容量管理。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.en.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.en" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/i18n.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="tutorial.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <nav class="lang-switch" aria-label="Language"><a href="../ch10_admin.html" lang="zh-Hant" hreflang="zh-Hant">中文</a><a class="active" href="ch10_admin.html" lang="en" aria-current="page">EN</a></nav>
+    <a class="hub-link" href="index.html">◂ 資源總覽</a>
+    <h2>Chapters</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li data-i18n="pending"><a href="ch1_overview.html">開始前</a></li>
+      <li data-i18n="pending"><a href="ch2_login.html">登入與帳號</a></li>
+      <li data-i18n="pending"><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li data-i18n="pending"><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li data-i18n="pending"><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li data-i18n="pending"><a href="ch6_albums.html">相簿管理</a></li>
+      <li data-i18n="pending"><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li data-i18n="pending"><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li data-i18n="pending"><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li data-i18n="pending"><a href="ch10_admin.html" class="active">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li data-i18n="pending"><a href="ch11_security.html">安全檢查</a></li>
+      <li data-i18n="pending"><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>This chapter</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">後台有哪些</a>
+      <a href="#steps">開帳號步驟</a>
+      <a href="#jobs">背景任務</a>
+      <a href="#troubleshoot">管理卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+    <div class="toc-in-chapter">
+      <h2>Appendices</h2>
+
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch10_admin.html" hreflang="zh-Hant">Open the Chinese version</a></div>
+    <div class="chapter-header">
+      <div class="kicker">Chapter 10</div>
+      <h1>管理員設定</h1>
+      <p class="lead">認識管理員後台：使用者、儲存空間與背景任務（jobs）。讀完這章，管理員能開帳號、重設密碼、看容量，並理解 AI 分析與備份這些背景工作怎麼跑。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">這章是給「管理員」的</h2>
+      <p>Immich 是多人相簿，總要有人負責開帳號、看容量、盯伺服器健康。這章是給管理員（Admin）的實務參考，一般使用者可以跳過，或讀個概念就好。</p>
+      <div class="callout warn"><strong>管理動作會影響所有人：</strong>新增／停用使用者、改儲存、跑 jobs 都會影響整台伺服器。操作前先確認範圍，拿不準的不要亂改。</div>
+    </section>
+
+    <section id="concept" data-nav="後台有哪些">
+      <h2 data-icon="concept">後台管理哪些東西</h2>
+      <p>管理員入口在右上角頭像選單裡的「Administration」。進去後主要分幾大塊：</p>
+      <table class="data-table">
+        <thead><tr><th>區塊</th><th>管理什麼</th><th>常見動作</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Users 使用者</strong></td><td>帳號建立、角色、停用、密碼重設</td><td>開新帳號、幫人重設密碼</td></tr>
+          <tr><td><strong>Storage 儲存</strong></td><td>容量用量、儲存位置</td><td>看空間夠不夠、清理</td></tr>
+          <tr><td><strong>Jobs 背景任務</strong></td><td>縮圖、AI 分析、備份等排程</td><td>看任務是否卡住、手動觸發</td></tr>
+          <tr><td><strong>Settings 設定</strong></td><td>AI、分享、驗證等站台設定</td><td>開關臉孔辨識等（第 7 章）</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="steps" data-nav="開帳號步驟">
+      <h2 data-icon="persons">六步開一個新使用者</h2>
+      <ol class="steps">
+        <li><h3>進入後台</h3><p>點右上角頭像 → Administration，確認你有管理員權限。</p></li>
+        <li><h3>到 Users</h3><p>進入使用者管理，看到現有帳號列表。</p></li>
+        <li><h3>新增使用者</h3><p>點「Create user」或「Add user」，輸入對方的電子郵件與顯示名稱。</p></li>
+        <li><h3>設定初始密碼</h3><p>給一組臨時密碼，並要求對方第一次登入後修改（如系統支援）。</p></li>
+        <li><h3>確認角色</h3><p>一般使用者給 User；只有確定需要才給 Admin。角色越大，出錯影響越大。</p></li>
+        <li><h3>把登入資訊安全交給對方</h3><p>用私下管道（不要貼群組）把網址、帳號、密碼交給對方，並提醒第 2 章的登入注意事項。</p></li>
+      </ol>
+      <div class="callout danger"><strong>最小權限：</strong>預設只給 User。Admin 能刪帳號、改站台設定，給太多人 Admin 會增加風險。</div>
+    </section>
+
+    <section id="jobs" data-nav="背景任務">
+      <h2 data-icon="advanced">背景任務（Jobs）是什麼</h2>
+      <p>照片上傳後，很多工作不會「立刻」完成，而是排進背景任務佇列，由伺服器在背景慢慢跑：</p>
+      <ul>
+        <li><strong>縮圖（Thumbnails）</strong>：產生各種大小的預覽圖，讓瀏覽變快。</li>
+        <li><strong>AI 分析（Face recognition、Semantic search）</strong>：第 7 章的臉孔與語意搜尋，靠這些 job 產生。</li>
+        <li><strong>轉碼（Transcoding）</strong>：把影片轉成可線上播放的格式。</li>
+        <li><strong>備份（Backup）</strong>：資料庫備份（若伺服器有設定）。</li>
+      </ul>
+      <div class="callout tip"><strong>大量上傳後要等 jobs：</strong>一次傳幾千張後，縮圖和 AI 分析要跑一陣子。Jobs 頁可以看到佇列狀態，卡住時見第 12 章。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="管理卡關">
+      <h2 data-icon="troubleshoot">管理常見卡關</h2>
+      <ol class="steps">
+        <li><h3>找不到 Administration 入口</h3><p>表示你的帳號不是管理員，或入口在頭像選單較下方。確認角色，或請其他管理員處理。</p></li>
+        <li><h3>幫人重設密碼</h3><p>在 Users 找到該使用者，編輯並設定新密碼，再把新密碼私下交給他。</p></li>
+        <li><h3>儲存空間快滿</h3><p>先看用量、清理回收桶與重複檔案，再評估是否擴充儲存。</p></li>
+        <li><h3>Jobs 卡住不動</h3><p>重新整理 jobs 頁；若長時間卡住，可能是資源不足或佇列積壓，見第 12 章。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">管理常見問題</h2>
+      <details class="faq"><summary>一般使用者看得到後台嗎？</summary><div class="body">看不到。只有 Admin 角色的帳號，頭像選單裡才會有 Administration 入口。</div></details>
+      <details class="faq"><summary>可以停用帳號而不刪除嗎？</summary><div class="body">可以。在 Users 把帳號停用（disable），對方就無法登入，但資料保留。比直接刪除安全。</div></details>
+      <details class="faq"><summary>刪除使用者會刪掉他的照片嗎？</summary><div class="body">要非常小心。刪除使用者可能連帶處理其資料，操作前務必確認，避免誤刪別人的回憶。</div></details>
+      <details class="faq"><summary>Jobs 可以手動跑嗎？</summary><div class="body">可以。Jobs 頁通常能手動觸發某類任務（如重新產生縮圖），適合修正特定問題時用。</div></details>
+      <details class="faq"><summary>更新 Immich 版本要注意什麼？</summary><div class="body">更新前先看官方 release notes（尤其重大版本），確認無破壞性變更，並先備份。見第 12 章。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/administration/user-management" rel="noopener">Immich 文件：User Management</a></td><td>使用者與角色管理</td></tr>
+          <tr><td><a href="https://immich.app/docs/administration/jobs" rel="noopener">Immich 文件：Jobs</a></td><td>背景任務的種類與管理</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch9_mobile_app.html">
+        <span class="label">← Previous</span>
+        <span class="title">09 · 行動 App 備份</span>
+      </a>
+      <a class="next" href="ch11_security.html">
+        <span class="label">Next →</span>
+        <span class="title">11 · 安全與最小暴露</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>Immich 自架相簿指南 is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> and released under <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> — share and adapt freely, with attribution.</p>
+      <p class="footer-meta">截圖取自 Immich 官方介面。Immich 為其權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">Source &amp; errata</a></p>
+    </footer>
+  </main>
+</div>
+<script id="ui-strings" type="application/json">{"tocToggle":"Contents","tocExpand":"Expand chapter navigation","tocCollapse":"Collapse chapter navigation"}</script>
+<script src="../assets/js/toc.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 2 · 登入與帳號 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 登入教學：開啟 Web UI、登入、管理員帳號與個人資料設定。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/en/ch2_login.html" />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:title" content="Chapter 2 · 登入與帳號 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 登入教學：開啟 Web UI、登入、管理員帳號與個人資料設定。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/en/ch2_login.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch2/01_login_page.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chapter 2 · 登入與帳號 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 登入教學：開啟 Web UI、登入、管理員帳號與個人資料設定。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch2/01_login_page.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.en" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/i18n.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="tutorial.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <nav class="lang-switch" aria-label="Language"><a href="../ch2_login.html" lang="zh-Hant" hreflang="zh-Hant">中文</a><a class="active" href="ch2_login.html" lang="en" aria-current="page">EN</a></nav>
+    <a class="hub-link" href="index.html">◂ 資源總覽</a>
+    <h2>Chapters</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li data-i18n="pending"><a href="ch1_overview.html">開始前</a></li>
+      <li data-i18n="pending"><a href="ch2_login.html" class="active">登入與帳號</a></li>
+      <li data-i18n="pending"><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li data-i18n="pending"><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li data-i18n="pending"><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li data-i18n="pending"><a href="ch6_albums.html">相簿管理</a></li>
+      <li data-i18n="pending"><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li data-i18n="pending"><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li data-i18n="pending"><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li data-i18n="pending"><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li data-i18n="pending"><a href="ch11_security.html">安全檢查</a></li>
+      <li data-i18n="pending"><a href="ch12_troubleshooting.html">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>This chapter</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">帳號觀念</a>
+      <a href="#steps">登入步驟</a>
+      <a href="#profile">個人資料</a>
+      <a href="#troubleshoot">登入卡關</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+    <div class="toc-in-chapter">
+      <h2>Appendices</h2>
+
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch2_login.html" hreflang="zh-Hant">Open the Chinese version</a></div>
+    <div class="chapter-header">
+      <div class="kicker">Chapter 2</div>
+      <h1>登入與帳號</h1>
+      <p class="lead">用瀏覽器打開 Immich 入口、登入你的帳號，並認識登入後看到的帳號資訊。讀完這章，你就能安全地進出這套相簿，也知道登入卡住時該往哪查。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">登入是這套相簿的門</h2>
+      <p>Immich 是一套多人相簿：每個人有自己的帳號，登入後才看得到自己的照片。這道「門」同時保護你的回憶，也決定你之後能用到哪些功能。學會正確登入，是後面所有章節的起點。</p>
+      <p>登入本身很簡單，但細節藏在安全上：網址要對、密碼要保管好、用完要登出。這章把這些一起講清楚。</p>
+      <div class="callout"><strong>本章任務：</strong>完成一次登入、確認自己的帳號資訊、學會登出。全程不變更任何帳號或伺服器設定。</div>
+    </section>
+
+    <section id="concept" data-nav="帳號觀念">
+      <h2 data-icon="concept">帳號從哪裡來、有什麼角色</h2>
+      <p>Immich 的帳號不是你自己註冊的，而是由<strong>管理員</strong>在伺服器端建立（見第 10 章）。你拿到的會是一組「電子郵件 ＋ 密碼」。</p>
+      <table class="data-table">
+        <thead><tr><th>項目</th><th>說明</th><th>注意</th></tr></thead>
+        <tbody>
+          <tr><td>電子郵件</td><td>登入用的唯一識別，例如 <code>you@example.com</code></td><td>不是拿來收信的，主要是登入識別</td></tr>
+          <tr><td>密碼</td><td>你設定的登入憑證</td><td>保管好，不要寫在公開處</td></tr>
+          <tr><td>角色</td><td>管理員（Admin）或一般使用者</td><td>角色決定你能不能用第 10 章的管理功能</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn"><strong>密碼別共用：</strong>Immich 密碼不要跟你其他服務的密碼一樣。萬一某處外洩，其他帳號才不會一起遭殃。</div>
+    </section>
+
+    <section id="steps" data-nav="登入步驟">
+      <h2 data-icon="login">五步完成登入</h2>
+      <ol class="steps">
+        <li><h3>打開瀏覽器，輸入入口網址</h3><p>在網址列輸入 <code>https://woowtech-immich.woowtech.io</code>。注意是 <code>https</code>，且拼法要完整。看到 Immich 的登入畫面即可。</p></li>
+        <li><h3>輸入電子郵件</h3><p>在「Email」欄位輸入你的帳號電子郵件。欄位通常有提示文字「Email」。</p></li>
+        <li><h3>輸入密碼</h3><p>在「Password」欄位輸入密碼。密碼會以黑點顯示，避免旁人看到。</p></li>
+        <li><h3>按下登入</h3><p>按「Login」按鈕（或直接按 Enter）。成功後會跳轉到照片主畫面 <code>/photos</code>，左側出現導覽列。</p></li>
+        <li><h3>確認是自己的帳號</h3><p>點右上角的頭像，確認顯示的是你的名字與電子郵件。確認無誤，登入就完成了。</p></li>
+      </ol>
+      <figure class="shot"><img src="../assets/screenshots/ch2/01_login_page.png" alt="Immich 登入頁面的 Email、Password 與 Login 按鈕" /><figcaption><strong>圖 2-1</strong>登入頁只有三個關鍵：Email、Password 與 Login；先確認網址是 https 再輸入帳號密碼。</figcaption></figure>
+      <div class="callout tip"><strong>記住登入：</strong>登入頁有「Remember me」之類的選項時，勾選後瀏覽器會幫你記住登入狀態，短時間內不用重打密碼。公用電腦則不要勾。</div>
+    </section>
+
+    <section id="profile" data-nav="個人資料">
+      <h2 data-icon="profile">登入後的帳號資訊與登出</h2>
+      <p>登入後，右上角的頭像就是你的帳號入口。點開它，你會看到：</p>
+      <ul>
+        <li><strong>帳號名稱與電子郵件</strong>：確認是不是你的帳號。</li>
+        <li><strong>個人設定（Account settings）</strong>：可以改顯示名稱、密碼、外觀等（依版本而定）。</li>
+        <li><strong>登出（Sign out / Logout）</strong>：離開這台裝置的登入狀態。</li>
+        <li><strong>管理員才有的入口</strong>：如果是管理員，會看到「Administration」進入後台（第 10 章）。</li>
+      </ul>
+      <div class="callout danger"><strong>公用電腦必登出：</strong>在圖書館、公司共用電腦用完，一定要從頭像選單登出，並關閉瀏覽器。否則下一個人可能直接進你的相簿。</div>
+    </section>
+
+    <section id="troubleshoot" data-nav="登入卡關">
+      <h2 data-icon="troubleshoot">登入常見卡關</h2>
+      <ol class="steps">
+        <li><h3>網址打不開</h3><p>確認網址完整無誤、網路正常。若顯示「無法連線」或「不安全」，先停下來，可能是網路或憑證問題，聯絡管理員。</p></li>
+        <li><h3>密碼錯誤</h3><p>檢查大小寫、鍵盤輸入法是否誤開全形、前後有沒有多餘空格。連錯太多次可能被暫時鎖定，稍等再試。</p></li>
+        <li><h3>忘了密碼</h3><p>Immich 沒有自助重設，需要請管理員在後台幫你重設密碼（第 10 章）。不要自行猜密碼。</p></li>
+        <li><h3>登入後畫面空白或轉圈</h3><p>重新整理一次；仍不行可能是伺服器忙碌或正在更新。稍等幾分鐘，或從 App 試試（第 9 章）。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">登入常見問題</h2>
+      <details class="faq"><summary>為什麼我沒有帳號，要怎麼申請？</summary><div class="body">Immich 帳號由管理員建立，不能自己註冊。需要帳號時，向管理員提供你想用的電子郵件，由管理員在後台開通並給你初始密碼。</div></details>
+      <details class="faq"><summary>可以在手機上也登入同一個帳號嗎？</summary><div class="body">可以。同一個帳號可以在瀏覽器與手機 App 同時登入。手機 App 的設定方式見第 9 章。</div></details>
+      <details class="faq"><summary>「Remember me」要勾嗎？</summary><div class="body">自己的私人裝置可以勾，省去每次重打密碼；公用或共享裝置不要勾，用完記得登出。</div></details>
+      <details class="faq"><summary>登出後照片會不見嗎？</summary><div class="body">不會。登出只是離開這台裝置的登入狀態，照片仍存在伺服器上，下次登入就會看到。</div></details>
+      <details class="faq"><summary>我能自己改密碼嗎？</summary><div class="body">在右上角頭像 → 個人設定（Account settings）裡通常可以改密碼。若找不到，請管理員協助重設。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/features/authentication" rel="noopener">Immich 文件：Authentication</a></td><td>登入方式、密碼與帳號管理</td></tr>
+          <tr><td><a href="https://immich.app/docs/administration/user-management" rel="noopener">Immich 文件：User Management</a></td><td>使用者與角色的建立、停用與密碼重設</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch1_overview.html">
+        <span class="label">← Previous</span>
+        <span class="title">01 · 需求與安全邊界</span>
+      </a>
+      <a class="next" href="ch3_first_open.html">
+        <span class="label">Next →</span>
+        <span class="title">03 · 第一次開啟</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>Immich 自架相簿指南 is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> and released under <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> — share and adapt freely, with attribution.</p>
+      <p class="footer-meta">截圖取自 Immich 官方介面。Immich 為其權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">Source &amp; errata</a></p>
+    </footer>
+  </main>
+</div>
+<script id="ui-strings" type="application/json">{"tocToggle":"Contents","tocExpand":"Expand chapter navigation","tocCollapse":"Collapse chapter navigation"}</script>
+<script src="../assets/js/toc.js"></script>
+</body>
+</html>

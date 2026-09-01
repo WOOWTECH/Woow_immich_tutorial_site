@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 12 · 排錯與維護 · Immich 自架相簿指南</title>
+  <meta name="description" content="Immich 排錯教學：上傳失敗、縮圖、jobs、更新與備份。" />
+  <meta name="author" content="woowtech" />
+  <link rel="canonical" href="https://immich-guide.woowtech.io/en/ch12_troubleshooting.html" />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:title" content="Chapter 12 · 排錯與維護 · Immich 自架相簿指南" />
+  <meta property="og:description" content="Immich 排錯教學：上傳失敗、縮圖、jobs、更新與備份。" />
+  <meta property="og:url" content="https://immich-guide.woowtech.io/en/ch12_troubleshooting.html" />
+  <meta property="og:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.en.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chapter 12 · 排錯與維護 · Immich 自架相簿指南" />
+  <meta name="twitter:description" content="Immich 排錯教學：上傳失敗、縮圖、jobs、更新與備份。" />
+  <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/screenshots/ch3/01_webui_overview.en.png" />
+  <meta name="theme-color" content="#6183FC" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.en" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Yellowtail&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/i18n.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="tutorial.html">Immich 指南</a>
+    <div class="brand-sub">把回憶收在自己家</div>
+    <nav class="lang-switch" aria-label="Language"><a href="../ch12_troubleshooting.html" lang="zh-Hant" hreflang="zh-Hant">中文</a><a class="active" href="ch12_troubleshooting.html" lang="en" aria-current="page">EN</a></nav>
+    <a class="hub-link" href="index.html">◂ 資源總覽</a>
+    <h2>Chapters</h2>
+    <ol>
+      <li class="part-label">基礎：認識與登入</li>
+      <li data-i18n="pending"><a href="ch1_overview.html">開始前</a></li>
+      <li data-i18n="pending"><a href="ch2_login.html">登入與帳號</a></li>
+      <li data-i18n="pending"><a href="ch3_first_open.html">第一次開啟</a></li>
+      <li class="part-label">使用：整理與分享</li>
+      <li data-i18n="pending"><a href="ch4_upload.html">上傳照片影片</a></li>
+      <li data-i18n="pending"><a href="ch5_timeline.html">時間軸瀏覽</a></li>
+      <li data-i18n="pending"><a href="ch6_albums.html">相簿管理</a></li>
+      <li data-i18n="pending"><a href="ch7_search_ai.html">搜尋與 AI</a></li>
+      <li data-i18n="pending"><a href="ch8_sharing.html">分享相簿</a></li>
+      <li class="part-label">進階：App 與管理</li>
+      <li data-i18n="pending"><a href="ch9_mobile_app.html">行動 App</a></li>
+      <li data-i18n="pending"><a href="ch10_admin.html">管理員設定</a></li>
+      <li class="part-label">維護：安全與排錯</li>
+      <li data-i18n="pending"><a href="ch11_security.html">安全檢查</a></li>
+      <li data-i18n="pending"><a href="ch12_troubleshooting.html" class="active">排錯與維護</a></li>
+    </ol>
+    <div class="toc-in-chapter">
+      <h2>This chapter</h2>
+      <a href="#why">為什麼要學</a>
+      <a href="#concept">排錯觀念</a>
+      <a href="#steps">排錯步驟</a>
+      <a href="#cases">常見案例</a>
+      <a href="#update">更新與備份</a>
+      <a href="#faq">FAQ</a>
+      <a href="#sources">官方來源</a>
+    </div>
+    <div class="toc-in-chapter">
+      <h2>Appendices</h2>
+
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch12_troubleshooting.html" hreflang="zh-Hant">Open the Chinese version</a></div>
+    <div class="chapter-header">
+      <div class="kicker">Chapter 12</div>
+      <h1>排錯與維護</h1>
+      <p class="lead">遇到上傳失敗、縮圖模糊、jobs 卡住、版本更新等問題時，照順序排查並留下可交接的記錄。讀完這章，你不會再靠「重開看看」碰運氣，而是有系統地找到問題所在。</p>
+    </div>
+
+    <section id="why" data-nav="為什麼要學">
+      <h2 data-icon="why">先找證據，再動手修</h2>
+      <p>相簿出問題時，最常見的錯誤就是「重開」「重傳」「亂刪」碰運氣。這些動作往往把最有用的線索洗掉。正確做法是：先冷靜記錄現象，分層排查，找到證據再動手。</p>
+      <div class="callout"><strong>本章任務：</strong>學會一套分層排錯流程，處理上傳、縮圖、jobs、更新等常見問題，並留下可交接的記錄。</div>
+    </section>
+
+    <section id="concept" data-nav="排錯觀念">
+      <h2 data-icon="concept">從外到內分層排查</h2>
+      <table class="data-table">
+        <thead><tr><th>層</th><th>檢查什麼</th><th>常見訊號</th></tr></thead>
+        <tbody>
+          <tr><td><strong>你的裝置</strong></td><td>網路、瀏覽器、App 版本</td><td>只有你打不開、別人正常</td></tr>
+          <tr><td><strong>入口（Tunnel）</strong></td><td>網址能不能開、有沒有憑證警告</td><td>顯示「無法連線」或「不安全」</td></tr>
+          <tr><td><strong>Immich 伺服器</strong></td><td>伺服器狀態、jobs、儲存空間</td><td>「Server Offline」、jobs 卡住、空間滿</td></tr>
+          <tr><td><strong>資料層</strong></td><td>縮圖、AI 分析、備份</td><td>縮圖模糊、搜不到、備份不跑</td></tr>
+        </tbody>
+      </table>
+      <div class="callout tip"><strong>先縮小範圍：</strong>問「只有我這樣，還是大家都這樣？」能立刻把問題定位到「我的裝置」還是「伺服器」。</div>
+    </section>
+
+    <section id="steps" data-nav="排錯步驟">
+      <h2 data-icon="steps">六步排錯流程</h2>
+      <ol class="steps">
+        <li><h3>記錄現象與時間</h3><p>記下「什麼時候、做什麼、看到什麼錯誤訊息」。有時間才有線索。</p></li>
+        <li><h3>確認範圍</h3><p>換個裝置或請別人試試，判斷是個人裝置問題還是全站問題。</p></li>
+        <li><h3>從外到內逐層查</h3><p>網路 → 入口 → 伺服器狀態 → 資料層，一層層排除。</p></li>
+        <li><h3>找第一個明確錯誤</h3><p>錯誤訊息、jobs 狀態、儲存用量，找到「第一個」出錯的點，不要被後續連鎖錯誤帶走。</p></li>
+        <li><h3>做最小修正</h3><p>只改最可能的那一個變數，改完驗證。不要一次動很多東西。</p></li>
+        <li><h3>留下記錄</h3><p>把「現象 → 判斷 → 動作 → 結果」記下來，方便日後交接或復發時參考。</p></li>
+      </ol>
+    </section>
+
+    <section id="cases" data-nav="常見案例">
+      <h2 data-icon="compare">常見問題速查</h2>
+      <table class="data-table">
+        <thead><tr><th>現象</th><th>較可能原因</th><th>先做什麼</th></tr></thead>
+        <tbody>
+          <tr><td>上傳失敗</td><td>網路不穩、檔案過大、空間不足</td><td>重試、分批、看儲存用量</td></tr>
+          <tr><td>縮圖模糊或空白</td><td>縮圖 jobs 未完成或積壓</td><td>到 jobs 頁看狀態，等它跑完</td></tr>
+          <tr><td>語意搜尋找不到新照片</td><td>AI jobs 尚未分析完</td><td>等 jobs 完成，再搜一次</td></tr>
+          <tr><td>伺服器顯示離線</td><td>伺服器重開、更新中、或故障</td><td>稍等幾分鐘，再請管理員確認</td></tr>
+          <tr><td>出現更新提示</td><td>伺服器版本比官方舊</td><td>看 release notes，安排更新（管理員）</td></tr>
+          <tr><td>空間快滿</td><td>照片累積、回收桶未清</td><td>清回收桶、刪重複、評估擴充</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="update" data-nav="更新與備份">
+      <h2 data-icon="restore">更新與備份</h2>
+      <p><strong>更新（管理員）</strong>：右上角出現「NEW VERSION AVAILABLE」表示有新版。更新前務必：</p>
+      <ul>
+        <li>先讀官方 release notes，確認沒有破壞性變更（尤其跨大版本，如 v2 → v3）。</li>
+        <li>先備份資料庫與設定，再更新。</li>
+        <li>選離峰時間更新，避免影響家人使用。</li>
+      </ul>
+      <p><strong>備份</strong>：自架相簿最怕伺服器出事。管理員應定期確認備份機制（資料庫、照片檔案）有在運作，必要時做一次還原演練。</p>
+      <div class="callout danger"><strong>更新前必備份：</strong>「更新後才發現壞掉」是最痛的情境。沒有備份就不要動大版本更新。</div>
+    </section>
+
+    <section id="faq" data-nav="FAQ">
+      <h2 data-icon="faq">排錯常見問題</h2>
+      <details class="faq"><summary>問題復發，怎麼避免？</summary><div class="body">把上次的「現象 → 判斷 → 動作 → 結果」記錄留下來。復發時對照記錄，通常能快速定位，而不是重新瞎子摸象。</div></details>
+      <details class="faq"><summary>可以自己重開伺服器嗎？</summary><div class="body">要看你有沒有伺服器權限。一般使用者沒有，也不該亂重開；請管理員處理，並先留下現象記錄。</div></details>
+      <details class="faq"><summary>jobs 卡住要等多久？</summary><div class="body">先看 jobs 頁是否還在動（有進度）。大量照片時跑幾小時正常；完全停住不動才需要介入。</div></details>
+      <details class="faq"><summary>如何回報問題給管理員？</summary><div class="body">附上「時間、做了什麼、看到的錯誤訊息（截圖遮掉敏感資訊）、影響範圍（只有我還是所有人）」，越完整越好處理。</div></details>
+      <details class="faq"><summary>更新後介面變了找不到功能，怎麼辦？</summary><div class="body">介面改版是常態。先看官方 release notes 與最新文件，本教學以 v2.5.x 為準，若有出入以最新版本為準。</div></details>
+    </section>
+
+    <section id="sources" data-nav="官方來源">
+      <h2 data-icon="records">官方來源</h2>
+      <table class="data-table">
+        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://immich.app/docs/administration/backup" rel="noopener">Immich 文件：Backup &amp; Restore</a></td><td>備份與還原</td></tr>
+          <tr><td><a href="https://github.com/immich-app/immich/releases" rel="noopener">Immich Releases</a></td><td>版本更新日誌與破壞性變更</td></tr>
+          <tr><td><a href="https://github.com/immich-app/immich/issues" rel="noopener">Immich Issues</a></td><td>已知問題與社群解法</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="pager">
+      <a class="prev" href="ch11_security.html">
+        <span class="label">← Previous</span>
+        <span class="title">11 · 安全與最小暴露</span>
+      </a>
+      <a class="next" href="tutorial.html">
+        <span class="label">Contents →</span>
+        <span class="title">You made it — all chapters done!</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>Immich 自架相簿指南 is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> and released under <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> — share and adapt freely, with attribution.</p>
+      <p class="footer-meta">截圖取自 Immich 官方介面。Immich 為其權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">Source &amp; errata</a></p>
+    </footer>
+  </main>
+</div>
+<script id="ui-strings" type="application/json">{"tocToggle":"Contents","tocExpand":"Expand chapter navigation","tocCollapse":"Collapse chapter navigation"}</script>
+<script src="../assets/js/toc.js"></script>
+</body>
+</html>
