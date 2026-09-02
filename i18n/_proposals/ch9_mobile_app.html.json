@@ -1,0 +1,11 @@
+{
+  "file": "ch9_mobile_app.html",
+  "_note": "Localize substitution per /home/user/out/terms_immich.txt (hosted-instance hostname -> your-immich.example). The zh block occurs exactly once in en/ch9_mobile_app.html (#steps step 2). Needs policy=localize on ch9_mobile_app.html#steps (policy.json owner). If the orchestrator decides the en site targets the same hosted instance, drop this file and remove the 'Note: replace this with the URL…' sentence from en/ch9_mobile_app.html #steps step 2.",
+  "entries": [
+    {
+      "unit": "#steps",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    }
+  ]
+}

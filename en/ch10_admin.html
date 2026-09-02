@@ -57,13 +57,13 @@
     </ol>
     <div class="toc-in-chapter">
       <h2>This chapter</h2>
-      <a href="#why">為什麼要學</a>
-      <a href="#concept">後台有哪些</a>
-      <a href="#steps">開帳號步驟</a>
-      <a href="#jobs">背景任務</a>
-      <a href="#troubleshoot">管理卡關</a>
+      <a href="#why">Why this matters</a>
+      <a href="#concept">What admins manage</a>
+      <a href="#steps">Create-user steps</a>
+      <a href="#jobs">Background jobs</a>
+      <a href="#troubleshoot">Admin problems</a>
       <a href="#faq">FAQ</a>
-      <a href="#sources">官方來源</a>
+      <a href="#sources">Official sources</a>
     </div>
     <div class="toc-in-chapter">
       <h2>Appendices</h2>
@@ -75,81 +75,81 @@
     <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch10_admin.html" hreflang="zh-Hant">Open the Chinese version</a></div>
     <div class="chapter-header">
       <div class="kicker">Chapter 10</div>
-      <h1>管理員設定</h1>
-      <p class="lead">認識管理員後台：使用者、儲存空間與背景任務（jobs）。讀完這章，管理員能開帳號、重設密碼、看容量，並理解 AI 分析與備份這些背景工作怎麼跑。</p>
+      <h1>Admin settings</h1>
+      <p class="lead">Get to know the admin panel: users, storage space and background jobs. By the end of this chapter, you'll be able to create accounts, reset passwords and check capacity as an admin, and you'll understand how background jobs such as AI analysis and backups run.</p>
     </div>
 
-    <section id="why" data-nav="為什麼要學">
-      <h2 data-icon="why">這章是給「管理員」的</h2>
-      <p>Immich 是多人相簿，總要有人負責開帳號、看容量、盯伺服器健康。這章是給管理員（Admin）的實務參考，一般使用者可以跳過，或讀個概念就好。</p>
-      <div class="callout warn"><strong>管理動作會影響所有人：</strong>新增／停用使用者、改儲存、跑 jobs 都會影響整台伺服器。操作前先確認範圍，拿不準的不要亂改。</div>
+    <section id="why" data-nav="Why this matters">
+      <h2 data-icon="why">This chapter is for admins</h2>
+      <p>Immich is a multi-user photo library, so someone has to create the accounts, keep an eye on capacity and watch the server's health. This chapter is a practical reference for admins (the Admin role); regular users can skip it, or just read it for the concepts.</p>
+      <div class="callout warn"><strong>Admin actions affect everyone:</strong> creating or disabling a user, changing storage and running jobs all affect the whole server. Confirm the scope before you act, and when in doubt, do not touch it.</div>
     </section>
 
-    <section id="concept" data-nav="後台有哪些">
-      <h2 data-icon="concept">後台管理哪些東西</h2>
-      <p>管理員入口在右上角頭像選單裡的「Administration」。進去後主要分幾大塊：</p>
+    <section id="concept" data-nav="What admins manage">
+      <h2 data-icon="concept">What the admin panel manages</h2>
+      <p>The admin entry point is "Administration" in the avatar menu in the top right. Inside, it is split into a few main areas:</p>
       <table class="data-table">
-        <thead><tr><th>區塊</th><th>管理什麼</th><th>常見動作</th></tr></thead>
+        <thead><tr><th>Area</th><th>What it manages</th><th>Common actions</th></tr></thead>
         <tbody>
-          <tr><td><strong>Users 使用者</strong></td><td>帳號建立、角色、停用、密碼重設</td><td>開新帳號、幫人重設密碼</td></tr>
-          <tr><td><strong>Storage 儲存</strong></td><td>容量用量、儲存位置</td><td>看空間夠不夠、清理</td></tr>
-          <tr><td><strong>Jobs 背景任務</strong></td><td>縮圖、AI 分析、備份等排程</td><td>看任務是否卡住、手動觸發</td></tr>
-          <tr><td><strong>Settings 設定</strong></td><td>AI、分享、驗證等站台設定</td><td>開關臉孔辨識等（第 7 章）</td></tr>
+          <tr><td><strong>Users</strong></td><td>Creating accounts, roles, disabling, password resets</td><td>Create a new account, reset someone's password</td></tr>
+          <tr><td><strong>Storage</strong></td><td>Capacity usage, storage location</td><td>Check whether there is enough space, clean up</td></tr>
+          <tr><td><strong>Jobs</strong></td><td>Schedules for thumbnails, AI analysis, backups and so on</td><td>Check whether a job is stuck, trigger it manually</td></tr>
+          <tr><td><strong>Settings</strong></td><td>Server settings for AI, sharing, authentication and so on</td><td>Turn face recognition and similar features on or off (Chapter 7)</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section id="steps" data-nav="開帳號步驟">
-      <h2 data-icon="persons">六步開一個新使用者</h2>
+    <section id="steps" data-nav="Create-user steps">
+      <h2 data-icon="persons">Six steps to create a new user</h2>
       <ol class="steps">
-        <li><h3>進入後台</h3><p>點右上角頭像 → Administration，確認你有管理員權限。</p></li>
-        <li><h3>到 Users</h3><p>進入使用者管理，看到現有帳號列表。</p></li>
-        <li><h3>新增使用者</h3><p>點「Create user」或「Add user」，輸入對方的電子郵件與顯示名稱。</p></li>
-        <li><h3>設定初始密碼</h3><p>給一組臨時密碼，並要求對方第一次登入後修改（如系統支援）。</p></li>
-        <li><h3>確認角色</h3><p>一般使用者給 User；只有確定需要才給 Admin。角色越大，出錯影響越大。</p></li>
-        <li><h3>把登入資訊安全交給對方</h3><p>用私下管道（不要貼群組）把網址、帳號、密碼交給對方，並提醒第 2 章的登入注意事項。</p></li>
+        <li><h3>Open the admin panel</h3><p>Click the avatar in the top right → Administration, and confirm that you have admin permissions.</p></li>
+        <li><h3>Go to Users</h3><p>Open user management; you'll see the list of existing accounts.</p></li>
+        <li><h3>Create a user</h3><p>Click "Create user" or "Add user", and enter the person's email and display name.</p></li>
+        <li><h3>Set an initial password</h3><p>Give them a temporary password, and ask them to change it after their first login (if the system supports it).</p></li>
+        <li><h3>Confirm the role</h3><p>Give regular users the User role; give Admin only when you are sure it is needed. The bigger the role, the bigger the impact of a mistake.</p></li>
+        <li><h3>Hand over the login details safely</h3><p>Give the person the URL, account and password through a private channel (do not paste them in a group chat), and remind them of the login precautions in Chapter 2.</p></li>
       </ol>
-      <div class="callout danger"><strong>最小權限：</strong>預設只給 User。Admin 能刪帳號、改站台設定，給太多人 Admin 會增加風險。</div>
+      <div class="callout danger"><strong>Least privilege:</strong> give only User by default. An Admin can delete accounts and change server settings, so giving Admin to too many people increases the risk.</div>
     </section>
 
-    <section id="jobs" data-nav="背景任務">
-      <h2 data-icon="advanced">背景任務（Jobs）是什麼</h2>
-      <p>照片上傳後，很多工作不會「立刻」完成，而是排進背景任務佇列，由伺服器在背景慢慢跑：</p>
+    <section id="jobs" data-nav="Background jobs">
+      <h2 data-icon="advanced">What background jobs are</h2>
+      <p>After a photo is uploaded, much of the work is not finished "right away"; it is queued as background jobs, and the server works through them in the background:</p>
       <ul>
-        <li><strong>縮圖（Thumbnails）</strong>：產生各種大小的預覽圖，讓瀏覽變快。</li>
-        <li><strong>AI 分析（Face recognition、Semantic search）</strong>：第 7 章的臉孔與語意搜尋，靠這些 job 產生。</li>
-        <li><strong>轉碼（Transcoding）</strong>：把影片轉成可線上播放的格式。</li>
-        <li><strong>備份（Backup）</strong>：資料庫備份（若伺服器有設定）。</li>
+        <li><strong>Thumbnails</strong>: generates preview images in various sizes so that browsing is faster.</li>
+        <li><strong>AI analysis (Face recognition, Semantic search)</strong>: the faces and semantic search from Chapter 7 are produced by these jobs.</li>
+        <li><strong>Transcoding</strong>: converts videos into a format that can be played online.</li>
+        <li><strong>Backup</strong>: database backups (if the server is set up for them).</li>
       </ul>
-      <div class="callout tip"><strong>大量上傳後要等 jobs：</strong>一次傳幾千張後，縮圖和 AI 分析要跑一陣子。Jobs 頁可以看到佇列狀態，卡住時見第 12 章。</div>
+      <div class="callout tip"><strong>Wait for jobs after a bulk upload:</strong> after you upload a few thousand photos at once, thumbnails and AI analysis take a while to run. The Jobs page shows the state of the queue; if it gets stuck, see Chapter 12.</div>
     </section>
 
-    <section id="troubleshoot" data-nav="管理卡關">
-      <h2 data-icon="troubleshoot">管理常見卡關</h2>
+    <section id="troubleshoot" data-nav="Admin problems">
+      <h2 data-icon="troubleshoot">Common admin pitfalls</h2>
       <ol class="steps">
-        <li><h3>找不到 Administration 入口</h3><p>表示你的帳號不是管理員，或入口在頭像選單較下方。確認角色，或請其他管理員處理。</p></li>
-        <li><h3>幫人重設密碼</h3><p>在 Users 找到該使用者，編輯並設定新密碼，再把新密碼私下交給他。</p></li>
-        <li><h3>儲存空間快滿</h3><p>先看用量、清理回收桶與重複檔案，再評估是否擴充儲存。</p></li>
-        <li><h3>Jobs 卡住不動</h3><p>重新整理 jobs 頁；若長時間卡住，可能是資源不足或佇列積壓，見第 12 章。</p></li>
+        <li><h3>You cannot find the Administration entry</h3><p>Either your account is not an admin, or the entry is further down in the avatar menu. Check your role, or ask another admin to handle it.</p></li>
+        <li><h3>Resetting someone's password</h3><p>Find the user under Users, edit them and set a new password, then give the new password to them privately.</p></li>
+        <li><h3>Storage is almost full</h3><p>Check the usage first, clean out the trash and duplicate files, and only then consider whether to expand storage.</p></li>
+        <li><h3>Jobs are stuck</h3><p>Refresh the jobs page. If they stay stuck for a long time, the server may be short of resources or the queue may have a backlog; see Chapter 12.</p></li>
       </ol>
     </section>
 
     <section id="faq" data-nav="FAQ">
-      <h2 data-icon="faq">管理常見問題</h2>
-      <details class="faq"><summary>一般使用者看得到後台嗎？</summary><div class="body">看不到。只有 Admin 角色的帳號，頭像選單裡才會有 Administration 入口。</div></details>
-      <details class="faq"><summary>可以停用帳號而不刪除嗎？</summary><div class="body">可以。在 Users 把帳號停用（disable），對方就無法登入，但資料保留。比直接刪除安全。</div></details>
-      <details class="faq"><summary>刪除使用者會刪掉他的照片嗎？</summary><div class="body">要非常小心。刪除使用者可能連帶處理其資料，操作前務必確認，避免誤刪別人的回憶。</div></details>
-      <details class="faq"><summary>Jobs 可以手動跑嗎？</summary><div class="body">可以。Jobs 頁通常能手動觸發某類任務（如重新產生縮圖），適合修正特定問題時用。</div></details>
-      <details class="faq"><summary>更新 Immich 版本要注意什麼？</summary><div class="body">更新前先看官方 release notes（尤其重大版本），確認無破壞性變更，並先備份。見第 12 章。</div></details>
+      <h2 data-icon="faq">Admin FAQ</h2>
+      <details class="faq"><summary>Can regular users see the admin panel?</summary><div class="body">No. Only accounts with the Admin role have the Administration entry in the avatar menu.</div></details>
+      <details class="faq"><summary>Can I disable an account without deleting it?</summary><div class="body">Yes. Disable the account under Users; the person can no longer log in, but their data is kept. That is safer than deleting it outright.</div></details>
+      <details class="faq"><summary>Does deleting a user delete their photos?</summary><div class="body">Be very careful. Deleting a user may take their data with it, so always double-check before you do it, to avoid wiping out someone else's memories by mistake.</div></details>
+      <details class="faq"><summary>Can jobs be run manually?</summary><div class="body">Yes. The Jobs page usually lets you trigger a type of job manually (such as regenerating thumbnails), which is useful when you are fixing a specific problem.</div></details>
+      <details class="faq"><summary>What should I watch out for when updating Immich?</summary><div class="body">Read the official release notes first (especially for a major version), confirm there are no breaking changes, and back up before you update. See Chapter 12.</div></details>
     </section>
 
-    <section id="sources" data-nav="官方來源">
-      <h2 data-icon="records">官方來源</h2>
+    <section id="sources" data-nav="Official sources">
+      <h2 data-icon="records">Official sources</h2>
       <table class="data-table">
-        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <thead><tr><th>Source</th><th>What to verify</th></tr></thead>
         <tbody>
-          <tr><td><a href="https://immich.app/docs/administration/user-management" rel="noopener">Immich 文件：User Management</a></td><td>使用者與角色管理</td></tr>
-          <tr><td><a href="https://immich.app/docs/administration/jobs" rel="noopener">Immich 文件：Jobs</a></td><td>背景任務的種類與管理</td></tr>
+          <tr><td><a href="https://immich.app/docs/administration/user-management" rel="noopener">Immich docs: User Management</a></td><td>User and role management</td></tr>
+          <tr><td><a href="https://immich.app/docs/administration/jobs" rel="noopener">Immich docs: Jobs</a></td><td>The types of background jobs and how to manage them</td></tr>
         </tbody>
       </table>
     </section>
