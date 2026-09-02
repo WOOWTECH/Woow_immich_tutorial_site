@@ -57,13 +57,13 @@
     </ol>
     <div class="toc-in-chapter">
       <h2>This chapter</h2>
-      <a href="#why">為什麼要學</a>
-      <a href="#concept">帳號觀念</a>
-      <a href="#steps">登入步驟</a>
-      <a href="#profile">個人資料</a>
-      <a href="#troubleshoot">登入卡關</a>
+      <a href="#why">Why this matters</a>
+      <a href="#concept">Account basics</a>
+      <a href="#steps">Login steps</a>
+      <a href="#profile">Your account</a>
+      <a href="#troubleshoot">Login problems</a>
       <a href="#faq">FAQ</a>
-      <a href="#sources">官方來源</a>
+      <a href="#sources">Official sources</a>
     </div>
     <div class="toc-in-chapter">
       <h2>Appendices</h2>
@@ -75,82 +75,82 @@
     <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch2_login.html" hreflang="zh-Hant">Open the Chinese version</a></div>
     <div class="chapter-header">
       <div class="kicker">Chapter 2</div>
-      <h1>登入與帳號</h1>
-      <p class="lead">用瀏覽器打開 Immich 入口、登入你的帳號，並認識登入後看到的帳號資訊。讀完這章，你就能安全地進出這套相簿，也知道登入卡住時該往哪查。</p>
+      <h1>Login and accounts</h1>
+      <p class="lead">Open the Immich entry point in a browser, log in to your account, and get to know the account details you see after login. By the end of this chapter, you'll be able to get in and out of this photo library safely, and you'll know where to look when a login gets stuck.</p>
     </div>
 
-    <section id="why" data-nav="為什麼要學">
-      <h2 data-icon="why">登入是這套相簿的門</h2>
-      <p>Immich 是一套多人相簿：每個人有自己的帳號，登入後才看得到自己的照片。這道「門」同時保護你的回憶，也決定你之後能用到哪些功能。學會正確登入，是後面所有章節的起點。</p>
-      <p>登入本身很簡單，但細節藏在安全上：網址要對、密碼要保管好、用完要登出。這章把這些一起講清楚。</p>
-      <div class="callout"><strong>本章任務：</strong>完成一次登入、確認自己的帳號資訊、學會登出。全程不變更任何帳號或伺服器設定。</div>
+    <section id="why" data-nav="Why this matters">
+      <h2 data-icon="why">Logging in is the door to your photos</h2>
+      <p>Immich is a multi-user photo library: everyone has their own account, and you only see your own photos once you are logged in. This "door" protects your memories, and it also decides which features you can use later on. Logging in correctly is the starting point for every chapter that follows.</p>
+      <p>Logging in is simple in itself; the details are all about security: the URL has to be right, the password has to be kept safe, and you have to sign out when you are done. This chapter covers all of that in one place.</p>
+      <div class="callout"><strong>Chapter task:</strong> log in once, confirm your own account details, and learn how to sign out. Nothing in this chapter changes any account or server setting.</div>
     </section>
 
-    <section id="concept" data-nav="帳號觀念">
-      <h2 data-icon="concept">帳號從哪裡來、有什麼角色</h2>
-      <p>Immich 的帳號不是你自己註冊的，而是由<strong>管理員</strong>在伺服器端建立（見第 10 章）。你拿到的會是一組「電子郵件 ＋ 密碼」。</p>
+    <section id="concept" data-nav="Account basics">
+      <h2 data-icon="concept">Where accounts come from and what roles they have</h2>
+      <p>You do not register an Immich account yourself; an <strong>admin</strong> creates it on the server (see Chapter 10). What you receive is an "email + password" pair.</p>
       <table class="data-table">
-        <thead><tr><th>項目</th><th>說明</th><th>注意</th></tr></thead>
+        <thead><tr><th>Item</th><th>What it means</th><th>Watch out</th></tr></thead>
         <tbody>
-          <tr><td>電子郵件</td><td>登入用的唯一識別，例如 <code>you@example.com</code></td><td>不是拿來收信的，主要是登入識別</td></tr>
-          <tr><td>密碼</td><td>你設定的登入憑證</td><td>保管好，不要寫在公開處</td></tr>
-          <tr><td>角色</td><td>管理員（Admin）或一般使用者</td><td>角色決定你能不能用第 10 章的管理功能</td></tr>
+          <tr><td>Email</td><td>Your unique login identifier, for example <code>you@example.com</code></td><td>It is not for receiving mail; it is mainly the login identifier</td></tr>
+          <tr><td>Password</td><td>The login credential you set</td><td>Keep it safe, and never write it down anywhere public</td></tr>
+          <tr><td>Role</td><td>Admin or regular user</td><td>Your role decides whether you can use the admin features in Chapter 10</td></tr>
         </tbody>
       </table>
-      <div class="callout warn"><strong>密碼別共用：</strong>Immich 密碼不要跟你其他服務的密碼一樣。萬一某處外洩，其他帳號才不會一起遭殃。</div>
+      <div class="callout warn"><strong>Do not reuse passwords:</strong> your Immich password should not be the same as the one you use for any other service. If one of them ever leaks, the other accounts do not go down with it.</div>
     </section>
 
-    <section id="steps" data-nav="登入步驟">
-      <h2 data-icon="login">五步完成登入</h2>
+    <section id="steps" data-nav="Login steps">
+      <h2 data-icon="login">Five steps to log in</h2>
       <ol class="steps">
-        <li><h3>打開瀏覽器，輸入入口網址</h3><p>在網址列輸入 <code>https://woowtech-immich.woowtech.io</code>。注意是 <code>https</code>，且拼法要完整。看到 Immich 的登入畫面即可。</p></li>
-        <li><h3>輸入電子郵件</h3><p>在「Email」欄位輸入你的帳號電子郵件。欄位通常有提示文字「Email」。</p></li>
-        <li><h3>輸入密碼</h3><p>在「Password」欄位輸入密碼。密碼會以黑點顯示，避免旁人看到。</p></li>
-        <li><h3>按下登入</h3><p>按「Login」按鈕（或直接按 Enter）。成功後會跳轉到照片主畫面 <code>/photos</code>，左側出現導覽列。</p></li>
-        <li><h3>確認是自己的帳號</h3><p>點右上角的頭像，確認顯示的是你的名字與電子郵件。確認無誤，登入就完成了。</p></li>
+        <li><h3>Open a browser and enter the entry URL</h3><p>In the address bar, type <code>https://woowtech-immich.woowtech.io</code>. Make sure it is <code>https</code>, and spell it out in full. Once you see the Immich login screen, you are in the right place. Note: replace this with the URL of your own Immich server (the one WoowTech gave you, or your own).</p></li>
+        <li><h3>Enter your email</h3><p>Type your account email into the "Email" field. The field usually shows the placeholder text "Email".</p></li>
+        <li><h3>Enter your password</h3><p>Type your password into the "Password" field. It is shown as dots so that nobody next to you can read it.</p></li>
+        <li><h3>Press Login</h3><p>Click the "Login" button (or just press Enter). On success you land on the main photos screen, <code>/photos</code>, and the sidebar appears on the left.</p></li>
+        <li><h3>Confirm it is your account</h3><p>Click the avatar in the top right and check that it shows your name and email. If it does, the login is complete.</p></li>
       </ol>
-      <figure class="shot"><img src="../assets/screenshots/ch2/01_login_page.png" alt="Immich 登入頁面的 Email、Password 與 Login 按鈕" /><figcaption><strong>圖 2-1</strong>登入頁只有三個關鍵：Email、Password 與 Login；先確認網址是 https 再輸入帳號密碼。</figcaption></figure>
-      <div class="callout tip"><strong>記住登入：</strong>登入頁有「Remember me」之類的選項時，勾選後瀏覽器會幫你記住登入狀態，短時間內不用重打密碼。公用電腦則不要勾。</div>
+      <figure class="shot"><img src="../assets/screenshots/ch2/01_login_page.png" alt="The Immich login page, with the Email and Password fields and the Login button" /><figcaption><strong>Figure 2-1</strong> The login page has only three things that matter: Email, Password and Login. Check that the URL is https before you enter your email and password.</figcaption></figure>
+      <div class="callout tip"><strong>Stay signed in:</strong> if the login page has an option such as "Remember me", ticking it lets the browser keep you signed in, so you do not have to retype your password for a while. Do not tick it on a shared (public) computer.</div>
     </section>
 
-    <section id="profile" data-nav="個人資料">
-      <h2 data-icon="profile">登入後的帳號資訊與登出</h2>
-      <p>登入後，右上角的頭像就是你的帳號入口。點開它，你會看到：</p>
+    <section id="profile" data-nav="Your account">
+      <h2 data-icon="profile">Your account details after login, and signing out</h2>
+      <p>After login, the avatar in the top right is the entry point to your account. Click it and you'll see:</p>
       <ul>
-        <li><strong>帳號名稱與電子郵件</strong>：確認是不是你的帳號。</li>
-        <li><strong>個人設定（Account settings）</strong>：可以改顯示名稱、密碼、外觀等（依版本而定）。</li>
-        <li><strong>登出（Sign out / Logout）</strong>：離開這台裝置的登入狀態。</li>
-        <li><strong>管理員才有的入口</strong>：如果是管理員，會看到「Administration」進入後台（第 10 章）。</li>
+        <li><strong>Your name and email</strong>: check that this is your account.</li>
+        <li><strong>Account settings</strong>: change your display name, password, appearance and so on (depending on the version).</li>
+        <li><strong>Sign out / Logout</strong>: ends your login on this device.</li>
+        <li><strong>An admin-only entry</strong>: if you are an admin, you'll also see "Administration", which opens the admin panel (Chapter 10).</li>
       </ul>
-      <div class="callout danger"><strong>公用電腦必登出：</strong>在圖書館、公司共用電腦用完，一定要從頭像選單登出，並關閉瀏覽器。否則下一個人可能直接進你的相簿。</div>
+      <div class="callout danger"><strong>Always sign out on shared computers:</strong> when you are done on a library or a shared office computer, sign out from the avatar menu and close the browser. Otherwise the next person may walk straight into your photo library.</div>
     </section>
 
-    <section id="troubleshoot" data-nav="登入卡關">
-      <h2 data-icon="troubleshoot">登入常見卡關</h2>
+    <section id="troubleshoot" data-nav="Login problems">
+      <h2 data-icon="troubleshoot">Common login pitfalls</h2>
       <ol class="steps">
-        <li><h3>網址打不開</h3><p>確認網址完整無誤、網路正常。若顯示「無法連線」或「不安全」，先停下來，可能是網路或憑證問題，聯絡管理員。</p></li>
-        <li><h3>密碼錯誤</h3><p>檢查大小寫、鍵盤輸入法是否誤開全形、前後有沒有多餘空格。連錯太多次可能被暫時鎖定，稍等再試。</p></li>
-        <li><h3>忘了密碼</h3><p>Immich 沒有自助重設，需要請管理員在後台幫你重設密碼（第 10 章）。不要自行猜密碼。</p></li>
-        <li><h3>登入後畫面空白或轉圈</h3><p>重新整理一次；仍不行可能是伺服器忙碌或正在更新。稍等幾分鐘，或從 App 試試（第 9 章）。</p></li>
+        <li><h3>The URL will not open</h3><p>Check that the URL is complete and correct, and that your network is working. If the browser says "cannot connect" or "Not secure", stop there: it may be a network or certificate problem, so contact your admin.</p></li>
+        <li><h3>Wrong password</h3><p>Check the capitalization, whether Caps Lock or a different keyboard layout/input method is on, and whether there is a stray space at the start or end. Too many failed attempts in a row may lock you out temporarily; wait a little and try again.</p></li>
+        <li><h3>Forgot your password</h3><p>Immich has no self-service reset; ask your admin to reset your password in the admin panel (Chapter 10). Do not keep guessing.</p></li>
+        <li><h3>The screen is blank or keeps spinning after login</h3><p>Refresh once. If that does not help, the server may be busy or updating. Wait a few minutes, or try from the app (Chapter 9).</p></li>
       </ol>
     </section>
 
     <section id="faq" data-nav="FAQ">
-      <h2 data-icon="faq">登入常見問題</h2>
-      <details class="faq"><summary>為什麼我沒有帳號，要怎麼申請？</summary><div class="body">Immich 帳號由管理員建立，不能自己註冊。需要帳號時，向管理員提供你想用的電子郵件，由管理員在後台開通並給你初始密碼。</div></details>
-      <details class="faq"><summary>可以在手機上也登入同一個帳號嗎？</summary><div class="body">可以。同一個帳號可以在瀏覽器與手機 App 同時登入。手機 App 的設定方式見第 9 章。</div></details>
-      <details class="faq"><summary>「Remember me」要勾嗎？</summary><div class="body">自己的私人裝置可以勾，省去每次重打密碼；公用或共享裝置不要勾，用完記得登出。</div></details>
-      <details class="faq"><summary>登出後照片會不見嗎？</summary><div class="body">不會。登出只是離開這台裝置的登入狀態，照片仍存在伺服器上，下次登入就會看到。</div></details>
-      <details class="faq"><summary>我能自己改密碼嗎？</summary><div class="body">在右上角頭像 → 個人設定（Account settings）裡通常可以改密碼。若找不到，請管理員協助重設。</div></details>
+      <h2 data-icon="faq">Login FAQ</h2>
+      <details class="faq"><summary>Why don't I have an account, and how do I get one?</summary><div class="body">Immich accounts are created by an admin; you cannot register one yourself. When you need an account, give the admin the email you want to use, and the admin creates it in the admin panel and gives you an initial password.</div></details>
+      <details class="faq"><summary>Can I log in to the same account on my phone as well?</summary><div class="body">Yes. The same account can be logged in from a browser and the Immich mobile app at the same time. Chapter 9 explains how to set up the mobile app.</div></details>
+      <details class="faq"><summary>Should I tick "Remember me"?</summary><div class="body">On your own private device, yes; it saves you retyping the password every time. On a public or shared device, no; and remember to sign out when you are done.</div></details>
+      <details class="faq"><summary>Do my photos disappear when I sign out?</summary><div class="body">No. Signing out only ends your login on this device. The photos stay on the server, and you'll see them again the next time you log in.</div></details>
+      <details class="faq"><summary>Can I change my own password?</summary><div class="body">Usually yes, under the avatar in the top right → Account settings. If you cannot find it, ask your admin to reset it.</div></details>
     </section>
 
-    <section id="sources" data-nav="官方來源">
-      <h2 data-icon="records">官方來源</h2>
+    <section id="sources" data-nav="Official sources">
+      <h2 data-icon="records">Official sources</h2>
       <table class="data-table">
-        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <thead><tr><th>Source</th><th>What to verify</th></tr></thead>
         <tbody>
-          <tr><td><a href="https://immich.app/docs/features/authentication" rel="noopener">Immich 文件：Authentication</a></td><td>登入方式、密碼與帳號管理</td></tr>
-          <tr><td><a href="https://immich.app/docs/administration/user-management" rel="noopener">Immich 文件：User Management</a></td><td>使用者與角色的建立、停用與密碼重設</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/authentication" rel="noopener">Immich docs: Authentication</a></td><td>Login methods, passwords and account management</td></tr>
+          <tr><td><a href="https://immich.app/docs/administration/user-management" rel="noopener">Immich docs: User Management</a></td><td>Creating and disabling users and roles, and resetting passwords</td></tr>
         </tbody>
       </table>
     </section>

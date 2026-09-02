@@ -1,0 +1,10 @@
+{
+  "file": "ch2_login.html",
+  "entries": [
+    {
+      "unit": "#steps",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    }
+  ]
+}

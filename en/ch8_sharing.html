@@ -57,13 +57,13 @@
     </ol>
     <div class="toc-in-chapter">
       <h2>This chapter</h2>
-      <a href="#why">為什麼要學</a>
-      <a href="#concept">分享觀念</a>
-      <a href="#steps">分享步驟</a>
-      <a href="#revoke">收回與管理</a>
-      <a href="#troubleshoot">分享卡關</a>
+      <a href="#why">Why this matters</a>
+      <a href="#concept">Sharing basics</a>
+      <a href="#steps">Sharing steps</a>
+      <a href="#revoke">Manage and revoke</a>
+      <a href="#troubleshoot">Sharing problems</a>
       <a href="#faq">FAQ</a>
-      <a href="#sources">官方來源</a>
+      <a href="#sources">Official sources</a>
     </div>
     <div class="toc-in-chapter">
       <h2>Appendices</h2>
@@ -75,77 +75,77 @@
     <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch8_sharing.html" hreflang="zh-Hant">Open the Chinese version</a></div>
     <div class="chapter-header">
       <div class="kicker">Chapter 8</div>
-      <h1>分享相簿</h1>
-      <p class="lead">把一本相簿安全地分享給親友：產生分享連結、設定權限與期限、以及如何收回。讀完這章，你可以在不交出帳號密碼的前提下，讓別人看到你選定的照片。</p>
+      <h1>Share albums</h1>
+      <p class="lead">Share an album safely with family and friends: generate a shared link, set permissions and an expiry, and revoke it afterwards. By the end of this chapter, you'll be able to let other people see the photos you choose without handing over your account password.</p>
     </div>
 
-    <section id="why" data-nav="為什麼要學">
-      <h2 data-icon="why">分享是「給一把鑰匙」，不是「給一扇門」</h2>
-      <p>想讓親友看照片，最笨的方法是給帳號密碼——那等於把整個相簿都交出去。正確做法是用<strong>分享連結</strong>，只開你想開的那一本相簿，還能設期限、控制能不能下載。學會它，分享才不會變成洩漏。</p>
-      <div class="callout"><strong>本章任務：</strong>為一本相簿產生分享連結、設定權限，並學會收回。分享會「對外開放」，操作前先想清楚範圍。</div>
+    <section id="why" data-nav="Why this matters">
+      <h2 data-icon="why">Sharing hands over a key, not a door</h2>
+      <p>When you want family and friends to see your photos, the worst way to do it is to give them your account password — that hands over your whole photo library. The right way is a <strong>shared link</strong>: it opens only the one album you choose, and you can set an expiry and control whether downloads are allowed. Learn it, and sharing never turns into a leak.</p>
+      <div class="callout"><strong>Chapter task:</strong> generate a shared link for one album, set its permissions, and learn how to revoke it. Sharing opens something to the outside, so think through the scope before you act.</div>
     </section>
 
-    <section id="concept" data-nav="分享觀念">
-      <h2 data-icon="concept">分享的兩種對象與安全界線</h2>
+    <section id="concept" data-nav="Sharing basics">
+      <h2 data-icon="concept">Two kinds of recipients, and the security line</h2>
       <table class="data-table">
-        <thead><tr><th>對象</th><th>方式</th><th>風險</th></tr></thead>
+        <thead><tr><th>Recipient</th><th>Method</th><th>Risk</th></tr></thead>
         <tbody>
-          <tr><td><strong>站內其他使用者</strong></td><td>把相簿分享給同一個 Immich 的其他帳號</td><td>低，對方仍需登入</td></tr>
-          <tr><td><strong>外部的人（無帳號）</strong></td><td>產生公開分享連結，任何人拿到連結就能看</td><td>中，連結等於鑰匙，要控管</td></tr>
+          <tr><td><strong>Other users on this server</strong></td><td>Share the album with another account on the same Immich instance</td><td>Low: they still have to log in</td></tr>
+          <tr><td><strong>People outside (no account)</strong></td><td>Generate a public shared link; anyone who has the link can view it</td><td>Medium: the link is a key, so keep it under control</td></tr>
         </tbody>
       </table>
-      <div class="callout warn"><strong>連結就是鑰匙：</strong>公開連結一旦流出，任何拿到連結的人都能看。分享前先確認相簿裡沒有不想公開的照片。</div>
+      <div class="callout warn"><strong>The link is the key:</strong> once a public link gets out, anyone who has it can view the album. Before you share, make sure the album holds no photos you do not want public.</div>
     </section>
 
-    <section id="steps" data-nav="分享步驟">
-      <h2 data-icon="remote">六步完成一次分享</h2>
+    <section id="steps" data-nav="Sharing steps">
+      <h2 data-icon="remote">Six steps to share an album</h2>
       <ol class="steps">
-        <li><h3>選好要分享的相簿</h3><p>在 Albums 找到目標相簿，確認內容就是你想給對方看的。</p></li>
-        <li><h3>開啟分享</h3><p>在相簿的分享（Share）選單，選擇分享方式。</p></li>
-        <li><h3>選對象或產生連結</h3><p>站內使用者：選對方帳號；外部：產生分享連結。</p></li>
-        <li><h3>設定權限與期限</h3><p>依版本可設定能否下載、連結有效期限、是否要密碼等。</p></li>
-        <li><h3>送出連結</h3><p>把連結傳給對方（用你信任的管道）。提醒對方這是私密連結，勿轉傳。</p></li>
-        <li><h3>用完收回</h3><p>對方看完後，回到分享設定停用或刪除連結，鑰匙就失效了。</p></li>
+        <li><h3>Pick the album to share</h3><p>Find the album under Albums and confirm that its contents are exactly what you want the other person to see.</p></li>
+        <li><h3>Open sharing</h3><p>In the album's Share menu, choose how you want to share.</p></li>
+        <li><h3>Choose a recipient or generate a link</h3><p>For a user on this server: pick their account. For someone outside: generate a shared link.</p></li>
+        <li><h3>Set permissions and an expiry</h3><p>Depending on the version, you can set whether downloads are allowed, when the link expires, whether a password is required, and so on.</p></li>
+        <li><h3>Send the link</h3><p>Send the link to the recipient (over a channel you trust). Remind them that it is a private link and not to forward it.</p></li>
+        <li><h3>Revoke it when you are done</h3><p>Once they have seen the photos, go back to the sharing settings and disable or delete the link. The key stops working.</p></li>
       </ol>
-      <div class="callout danger"><strong>停止線：</strong>不要把分享連結貼到公開的社群、群組或網頁上。需要長期公開展示，才考慮更正式的公開方式，且要另外評估風險。</div>
+      <div class="callout danger"><strong>Hard stop:</strong> do not paste a shared link into public forums, group chats or web pages. Only if you need a long-term public showcase should you consider a more formal way of publishing, and that needs its own risk assessment.</div>
     </section>
 
-    <section id="revoke" data-nav="收回與管理">
-      <h2 data-icon="security">管理與收回分享</h2>
-      <p>左側的 <strong>Sharing</strong> 區塊會列出你分享出去、以及別人分享給你的相簿。你可以在這裡：</p>
+    <section id="revoke" data-nav="Manage and revoke">
+      <h2 data-icon="security">Manage and revoke shares</h2>
+      <p>The <strong>Sharing</strong> section in the sidebar lists the albums you have shared and the ones other people have shared with you. Here you can:</p>
       <ul>
-        <li>查看每個分享的對象與權限。</li>
-        <li>停用或刪除某個分享連結，讓它立刻失效。</li>
-        <li>調整權限（例如把「可下載」關掉）。</li>
+        <li>See the recipient and permissions of each share.</li>
+        <li>Disable or delete a shared link so it stops working immediately.</li>
+        <li>Adjust permissions (for example, turn off "download allowed").</li>
       </ul>
-      <div class="callout tip"><strong>養成收回習慣：</strong>分享連結像借出去的鑰匙，事後記得收回。尤其是臨時分享給廠商、活動單位的情況。</div>
+      <div class="callout tip"><strong>Make revoking a habit:</strong> a shared link is like a key you have lent out, so remember to take it back afterwards. That goes double for a one-off share with a vendor or an event organizer.</div>
     </section>
 
-    <section id="troubleshoot" data-nav="分享卡關">
-      <h2 data-icon="troubleshoot">分享常見卡關</h2>
+    <section id="troubleshoot" data-nav="Sharing problems">
+      <h2 data-icon="troubleshoot">Common sharing pitfalls</h2>
       <ol class="steps">
-        <li><h3>對方說連結打不開</h3><p>確認連結完整、沒被截斷；確認分享未被停用或過期。</p></li>
-        <li><h3>對方看不到某幾張照片</h3><p>檢查那幾張是否在分享的相簿裡；分享是以「相簿」為單位，不在相簿裡的自然看不到。</p></li>
-        <li><h3>想讓對方只能看不能下載</h3><p>在分享設定裡關閉「下載」權限（依版本而定）。</p></li>
-        <li><h3>忘了分享過什麼</h3><p>到 Sharing 區塊盤點，把不用的分享停用。</p></li>
+        <li><h3>The other person says the link will not open</h3><p>Check that the link is complete and was not cut off; check that the share has not been disabled and has not expired.</p></li>
+        <li><h3>The other person cannot see certain photos</h3><p>Check whether those photos are in the shared album. Sharing works per album, so anything not in the album is naturally not visible.</p></li>
+        <li><h3>You want them to view but not download</h3><p>Turn off the "download" permission in the sharing settings (depending on the version).</p></li>
+        <li><h3>You forgot what you have shared</h3><p>Take inventory in the Sharing section and disable the shares you no longer need.</p></li>
       </ol>
     </section>
 
     <section id="faq" data-nav="FAQ">
-      <h2 data-icon="faq">分享常見問題</h2>
-      <details class="faq"><summary>分享連結有期限嗎？</summary><div class="body">可以設定有效期限（依版本而定）。到期後連結自動失效，需重新產生。臨時分享建議設期限。</div></details>
-      <details class="faq"><summary>對方需要註冊 Immich 帳號嗎？</summary><div class="body">看分享方式。公開連結不需要帳號，有連結就能看；站內分享則需要對方已有帳號。</div></details>
-      <details class="faq"><summary>分享出去的照片，對方能刪除或修改嗎？</summary><div class="body">預設不行。分享通常是「唯讀」瀏覽，對方不能動你的原始照片。</div></details>
-      <details class="faq"><summary>我可以收回分享嗎？</summary><div class="body">可以，隨時停用或刪除分享連結即可，效果立刻生效。</div></details>
-      <details class="faq"><summary>別人分享給我的相簿在哪看？</summary><div class="body">在左側 Sharing 區塊，會列出分享給你的相簿。</div></details>
+      <h2 data-icon="faq">Sharing FAQ</h2>
+      <details class="faq"><summary>Do shared links expire?</summary><div class="body">You can set an expiration date (depending on the version). Once it passes, the link stops working automatically and you have to generate a new one. For a one-off share, set an expiry.</div></details>
+      <details class="faq"><summary>Does the other person need an Immich account?</summary><div class="body">It depends on how you share. A public link needs no account; anyone with the link can view. Sharing with another user requires that they already have an account.</div></details>
+      <details class="faq"><summary>Can the other person delete or edit the photos I share?</summary><div class="body">Not by default. A share is normally read-only viewing; the other person cannot touch your original photos.</div></details>
+      <details class="faq"><summary>Can I revoke a share?</summary><div class="body">Yes. Disable or delete the shared link at any time; it takes effect immediately.</div></details>
+      <details class="faq"><summary>Where do I see the albums other people have shared with me?</summary><div class="body">In the Sharing section in the sidebar, which lists the albums shared with you.</div></details>
     </section>
 
-    <section id="sources" data-nav="官方來源">
-      <h2 data-icon="records">官方來源</h2>
+    <section id="sources" data-nav="Official sources">
+      <h2 data-icon="records">Official sources</h2>
       <table class="data-table">
-        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <thead><tr><th>Source</th><th>What to verify</th></tr></thead>
         <tbody>
-          <tr><td><a href="https://immich.app/docs/features/albums#sharing" rel="noopener">Immich 文件：Sharing</a></td><td>相簿分享與權限</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/albums#sharing" rel="noopener">Immich docs: Sharing</a></td><td>Album sharing and permissions</td></tr>
         </tbody>
       </table>
     </section>

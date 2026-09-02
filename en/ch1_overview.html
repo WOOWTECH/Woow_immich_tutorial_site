@@ -57,13 +57,13 @@
     </ol>
     <div class="toc-in-chapter">
       <h2>This chapter</h2>
-      <a href="#why">為什麼要學</a>
-      <a href="#concept">Immich 是什麼</a>
-      <a href="#what">這套的樣貌</a>
-      <a href="#choices">帳號與公開</a>
-      <a href="#security">安全邊界</a>
+      <a href="#why">Why this matters</a>
+      <a href="#concept">What Immich is</a>
+      <a href="#what">This setup</a>
+      <a href="#choices">Roles and exposure</a>
+      <a href="#security">Security boundaries</a>
       <a href="#faq">FAQ</a>
-      <a href="#sources">官方來源</a>
+      <a href="#sources">Official sources</a>
     </div>
     <div class="toc-in-chapter">
       <h2>Appendices</h2>
@@ -75,99 +75,99 @@
     <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch1_overview.html" hreflang="zh-Hant">Open the Chinese version</a></div>
     <div class="chapter-header">
       <div class="kicker">Chapter 1</div>
-      <h1>開始前：把回憶收在自己家</h1>
-      <p class="lead">先弄清楚 Immich 是什麼、為什麼要自架相簿，以及在使用前要先想清楚的帳號角色與公開範圍。讀完這章，你會知道這套 WoowTech Immich 能為你做什麼，以及哪些界線不該跨。</p>
+      <h1>Before you start: keep your memories at home</h1>
+      <p class="lead">First, get clear on what Immich is, why you would self-host a photo library, and the account roles and public exposure you need to decide on before you start. By the end of this chapter, you'll know what this Immich setup can do for you, and which lines you must not cross.</p>
     </div>
 
-    <section id="why" data-nav="為什麼要學">
-      <h2 data-icon="why">為什麼要把照片收在自己家</h2>
-      <p>手機相簿是現代人最大的數位資產：家人合照、小孩成長、旅行紀錄，動輒幾萬張。這些回憶交給雲端服務很方便，但也有幾個讓人不放心的點：空間要月費、照片放別人機房、服務停掉或改規則時你只能跟著走。</p>
-      <p><strong>Immich</strong> 是把「Google 相簿的體驗」搬回自己家的方案。照片與影片存在你自己的伺服器，用瀏覽器或手機 App 就能像雲端相簿一樣瀏覽、搜尋、整理、分享，差別是資料在你手上。</p>
-      <div class="callout"><strong>本章目標：</strong>不是教你架伺服器，而是讓你在開始用之前，先看懂這套 WoowTech Immich 的樣貌、帳號角色與安全邊界。真正動手從第 2 章登入開始。</div>
-      <div class="callout warn"><strong>先講清楚：</strong>自架相簿的「安全」有一半是你自己負責。如果帳號密碼太弱、或把分享連結亂丟，再好的架構也擋不住。這套教學會反覆強調「最小暴露」。</div>
+    <section id="why" data-nav="Why this matters">
+      <h2 data-icon="why">Why keep your photos at home</h2>
+      <p>The photo library on your phone is the biggest digital asset most people own: family photos, the kids growing up, travel records, easily tens of thousands of pictures. Handing those memories to a cloud service is convenient, but a few things about it are unsettling: storage costs a monthly fee, your photos sit in someone else's data center, and when the service shuts down or changes its rules you have no choice but to go along.</p>
+      <p><strong>Immich</strong> is a way to bring "the Google Photos experience" back into your own home. Your photos and videos live on your own server, and from a browser or the Immich mobile app you can browse, search, organize and share them just like a cloud photo service; the difference is that the data stays in your hands.</p>
+      <div class="callout"><strong>Chapter goal:</strong> not to teach you how to set up a server, but to make sure that before you start using it you understand what this Immich setup looks like, the account roles and the security boundaries. The hands-on work starts with the login in Chapter 2.</div>
+      <div class="callout warn"><strong>To be clear:</strong> half of the "security" of a self-hosted photo library is your own responsibility. If your account password is weak, or you hand out shared links carelessly, even the best setup will not stop it. This guide will keep coming back to "minimal exposure".</div>
     </section>
 
-    <section id="concept" data-nav="Immich 是什麼">
-      <h2 data-icon="concept">Immich 是什麼</h2>
-      <p>Immich 是一個「自架（self-hosted）的相片與影片管理平台」，功能對應到熟悉的雲端相簿：</p>
+    <section id="concept" data-nav="What Immich is">
+      <h2 data-icon="concept">What Immich is</h2>
+      <p>Immich is a "self-hosted photo and video management platform"; its features map onto the cloud photo service you already know:</p>
       <table class="data-table">
-        <thead><tr><th>能力</th><th>Immich 對應的功能</th><th>你在什麼時候會用到</th></tr></thead>
+        <thead><tr><th>Capability</th><th>The Immich feature</th><th>When you'll use it</th></tr></thead>
         <tbody>
-          <tr><td>備份照片影片</td><td>手機 App 自動備份、Web 拖放上傳</td><td>換手機前、旅行回來、整理舊照片</td></tr>
-          <tr><td>瀏覽與整理</td><td>Timeline 時間軸、相簿（Albums）、收藏、封存</td><td>回顧、分類、把重要照片標出來</td></tr>
-          <tr><td>找照片</td><td>語意搜尋、臉孔辨識、人物、地點</td><td>想找「去年去海邊的照片」卻忘了日期</td></tr>
-          <tr><td>分享</td><td>相簿分享連結、權限控制</td><td>把聚會照片傳給親友，不用壓縮寄信</td></tr>
-          <tr><td>管理</td><td>多使用者、儲存空間、背景任務（jobs）</td><td>給家人各開一個帳號、觀察空間用量</td></tr>
+          <tr><td>Back up photos and videos</td><td>Automatic backup from the mobile app, drag-and-drop upload on the web</td><td>Before you switch phones, after a trip, when sorting old photos</td></tr>
+          <tr><td>Browse and organize</td><td>Timeline, albums (Albums), favorites, archive</td><td>Looking back, grouping, marking the important photos</td></tr>
+          <tr><td>Find photos</td><td>Semantic search, face recognition, people, places</td><td>You want "that photo from the beach last year" but forgot the date</td></tr>
+          <tr><td>Share</td><td>Album shared links, permission controls</td><td>Pass photos from a gathering to family and friends without compressing and emailing them</td></tr>
+          <tr><td>Manage</td><td>Multi-user, storage space, background jobs</td><td>Give each family member their own account, keep an eye on storage usage</td></tr>
         </tbody>
       </table>
-      <div class="callout tip"><strong>名字怎麼念：</strong>Immich 讀作「伊咪取」（近似），來自德文的「我」（ich）。不用太在意，跟著文件念「Immich」就好。</div>
+      <div class="callout tip"><strong>How to say it:</strong> Immich is pronounced roughly 'im-ich', with the ending like the German word for 'I' (ich). Do not overthink it; just say "Immich" as the docs spell it.</div>
     </section>
 
-    <section id="what" data-nav="這套的樣貌">
-      <h2 data-icon="what">這套 WoowTech Immich 長什麼樣子</h2>
-      <p>你現在要用的，是 WoowTech 已經架好、透過 <strong>Cloudflare Tunnel</strong> 對外提供的 Immich 實例，入口是：</p>
+    <section id="what" data-nav="This setup">
+      <h2 data-icon="what">What this Immich setup looks like</h2>
+      <p>You'll be using the Immich instance WoowTech has set up and exposes through <strong>Cloudflare Tunnel</strong>. The entry point is:</p>
       <pre class="code-block"><code>https://woowtech-immich.woowtech.io</code></pre>
-      <p>幾個你之後會一再看到的數字與樣貌（以撰寫當下為準，介面改版時以實際畫面為主）：</p>
+      <p>Note: replace this with the URL of your own Immich server (the one WoowTech gave you, or your own). A few numbers and details you'll keep seeing (accurate as of writing; when the interface changes, go by the actual screen):</p>
       <ul>
-        <li><strong>版本</strong>：Immich v2.5.x。右上角或伺服器狀態會顯示，官方隨時在更新。</li>
-        <li><strong>入口</strong>：不需要裝任何東西，瀏覽器打開網址就能用（第 2 章）。</li>
-        <li><strong>儲存</strong>：左下角「Storage space」會顯示已用／總容量，例如「61.3 GiB of 916.2 GiB used」。</li>
-        <li><strong>導覽</strong>：登入後左側有 Photos、Explore、Map、Sharing 與 Library（Favorites、Albums、Utilities、Archive、Locked Folder、Trash）等區塊（第 3 章會細講）。</li>
+        <li><strong>Version</strong>: Immich v2.5.x. You'll see it in the top right or in the server status; upstream releases new versions all the time.</li>
+        <li><strong>Entry point</strong>: nothing to install; open the URL in a browser and you can use it (Chapter 2).</li>
+        <li><strong>Storage</strong>: "Storage space" in the bottom left shows used / total capacity, for example "61.3 GiB of 916.2 GiB used".</li>
+        <li><strong>Navigation</strong>: after login, the sidebar on the left has Photos, Explore, Map, Sharing and Library (Favorites, Albums, Utilities, Archive, Locked Folder, Trash) among other sections (Chapter 3 goes into detail).</li>
       </ul>
-      <div class="callout"><strong>一句話記住架構：</strong>你（瀏覽器或手機 App）→ Cloudflare Tunnel（加密通道）→ WoowTech 伺服器上的 Immich。中間不需要開任何對外的 port，也不用記 IP。</div>
+      <div class="callout"><strong>The architecture in one line:</strong> you (a browser or the mobile app) → Cloudflare Tunnel (an encrypted tunnel) → Immich on the WoowTech server. No public port has to be opened in between, and there is no IP address to remember.</div>
     </section>
 
-    <section id="choices" data-nav="帳號與公開">
-      <h2 data-icon="compare">先想清楚：帳號角色與公開範圍</h2>
-      <p>開始用之前，有兩個觀念會決定你後續所有操作的安全感：<strong>誰有帳號</strong>、<strong>什麼東西公開</strong>。</p>
+    <section id="choices" data-nav="Roles and exposure">
+      <h2 data-icon="compare">Decide first: account roles and what is public</h2>
+      <p>Before you start, two ideas decide how safe everything you do afterwards will feel: <strong>who has an account</strong> and <strong>what is public</strong>.</p>
       <table class="data-table">
-        <thead><tr><th>角色</th><th>能做的事</th><th>適合誰</th></tr></thead>
+        <thead><tr><th>Role</th><th>What it can do</th><th>Who it suits</th></tr></thead>
         <tbody>
-          <tr><td><strong>管理員（Admin）</strong></td><td>管理使用者、儲存、背景任務、全站設定</td><td>負責維護伺服器的人（通常是 WoowTech）</td></tr>
-          <tr><td><strong>一般使用者</strong></td><td>備份、瀏覽、整理、分享自己的照片</td><td>家人、一般使用情境</td></tr>
+          <tr><td><strong>Admin</strong></td><td>Manage users, storage, background jobs and site-wide settings</td><td>Whoever maintains the server (usually WoowTech)</td></tr>
+          <tr><td><strong>Regular user</strong></td><td>Back up, browse, organize and share their own photos</td><td>Family members, everyday use</td></tr>
         </tbody>
       </table>
-      <p>公開範圍也有三種常見選擇，從最安全到最開放：</p>
+      <p>For what is public there are also three common choices, from the safest to the most open:</p>
       <ol class="steps">
-        <li><h3>完全不公開</h3><p>只有登入帳號的人才看得到，連入口都要先通過帳號驗證。這是預設、也是最安全的使用方式。</p></li>
-        <li><h3>只分享特定相簿</h3><p>用第 8 章的「分享連結」把某個相簿開給親友，其他人看不到你別的照片。</p></li>
-        <li><h3>大範圍公開</h3><p>把整個相簿牆或管理介面公開給網際網路。這套教學不建議，除非你非常清楚風險。</p></li>
+        <li><h3>Nothing public</h3><p>Only people who log in with an account can see anything; even the entry point requires account authentication first. This is the default, and the safest way to use it.</p></li>
+        <li><h3>Share specific albums only</h3><p>Use the shared links from Chapter 8 to open one album to family and friends; nobody gets to see the rest of your photos.</p></li>
+        <li><h3>Wide open</h3><p>Expose the whole photo grid or the admin panel to the internet. This guide advises against it, unless you understand the risks very clearly.</p></li>
       </ol>
-      <div class="callout danger"><strong>停止線：</strong>不要為了「方便」把管理介面、帳號密碼或整個相簿牆公開。需要給誰看，就只分享那一本相簿，用完還能收回。</div>
+      <div class="callout danger"><strong>Hard stop:</strong> do not make the admin panel, your password or the whole photo grid public just because it is convenient. Share only the one album the person needs to see, and revoke it afterwards.</div>
     </section>
 
-    <section id="security" data-nav="安全邊界">
-      <h2 data-icon="security">使用前的安全邊界</h2>
-      <p>Immich 的安全不是「架好就結束」，而是幾條你每次操作都要守住的線：</p>
+    <section id="security" data-nav="Security boundaries">
+      <h2 data-icon="security">Security boundaries before you start</h2>
+      <p>Security in Immich is not "done once it is set up"; it is a few lines you have to hold every time you use it:</p>
       <ul>
-        <li><strong>帳號密碼</strong>：用夠長、不重複的密碼；管理員帳號更是如此。不要把密碼寫在記事本或群組聊天裡。</li>
-        <li><strong>HTTPS</strong>：入口網址一定是 <code>https://</code> 開頭。看到瀏覽器警告「不安全」就停下來，不要繼續輸入帳號。</li>
-        <li><strong>分享連結</strong>：分享出去的連結就是一把鑰匙，誰拿到誰就能看。預設只給需要的人，用期限與權限控制。</li>
-        <li><strong>最小暴露</strong>：只公開必要的相簿，不公開整個站台；不把後台管理功能交給沒有需要的人。</li>
+        <li><strong>Account password</strong>: use a password that is long enough and not reused anywhere else; this goes double for the admin account. Never keep passwords in a notes app or a group chat.</li>
+        <li><strong>HTTPS</strong>: the entry URL always starts with <code>https://</code>. If the browser warns "Not secure", stop; do not go on typing your credentials.</li>
+        <li><strong>Shared links</strong>: a link you share is a key; whoever holds it can look. By default give it only to the people who need it, and control it with an expiry and permissions.</li>
+        <li><strong>Minimal exposure</strong>: make public only the albums that need to be, never the whole site; do not hand admin features to people who have no need for them.</li>
       </ul>
-      <div class="callout tip"><strong>判斷原則：</strong>任何「公開範圍」的決定，都先問一句「這個東西被陌生人看到，我能接受嗎？」不能接受，就收緊。</div>
+      <div class="callout tip"><strong>Rule of thumb:</strong> before any decision about what is public, ask one question first: "Could I live with a stranger seeing this?" If not, tighten it.</div>
     </section>
 
     <section id="faq" data-nav="FAQ">
-      <h2 data-icon="faq">開始前常見問題</h2>
-      <details class="faq"><summary>Immich 和 Google 相簿差在哪？</summary><div class="body">功能體驗很像，但 Immich 的照片與影片存在你自己（或 WoowTech）的伺服器上，不是 Google 的機房。資料掌控權在你，但備份與維護的責任也相對在你這邊。</div></details>
-      <details class="faq"><summary>我需要會寫程式或架伺服器嗎？</summary><div class="body">使用端完全不需要。你只要會開瀏覽器、會用 App。架設與維護由 WoowTech 負責，這套教學只教你怎麼「用」。</div></details>
-      <details class="faq"><summary>照片會不會被別人看到？</summary><div class="body">預設只有登入帳號的人看得到自己的照片。除非你自己開了分享連結或把相簿公開，否則外部看不到。使用時守住第 11 章的安全檢查即可。</div></details>
-      <details class="faq"><summary>儲存空間滿了怎麼辦？</summary><div class="body">先看左下角「Storage space」的用量，再整理（刪除重複、封存、清回收桶）。真正需要擴充時，聯絡管理員處理儲存，不要自己亂刪伺服器檔案。</div></details>
-      <details class="faq"><summary>入口網址打不開或顯示不安全，該怎麼辦？</summary><div class="body">先確認網址是 <code>https://woowtech-immich.woowtech.io</code>（注意 https 與完整拼法）。若瀏覽器顯示憑證警告，先停下來聯絡管理員，不要跳過警告繼續登入。</div></details>
+      <h2 data-icon="faq">Before you start FAQ</h2>
+      <details class="faq"><summary>How is Immich different from Google Photos?</summary><div class="body">The experience is very similar, but with Immich your photos and videos are stored on your own (or WoowTech's) server, not in Google's data centers. You control the data, but the responsibility for backups and maintenance is correspondingly on your side too.</div></details>
+      <details class="faq"><summary>Do I need to know how to code or set up a server?</summary><div class="body">Not at all, as a user. All you need is to be able to open a browser and use an app. WoowTech takes care of setup and maintenance; this guide only teaches you how to use it.</div></details>
+      <details class="faq"><summary>Will anyone else see my photos?</summary><div class="body">By default, only someone logged in with an account can see their own photos. Unless you create a shared link or make an album public yourself, nobody outside can see them. Just keep to the security checklist in Chapter 11 as you use it.</div></details>
+      <details class="faq"><summary>What if storage runs out?</summary><div class="body">First check the usage under "Storage space" in the bottom left, then tidy up (delete duplicates, archive, empty the trash). When you genuinely need more, contact the admin to expand storage; never delete files on the server yourself.</div></details>
+      <details class="faq"><summary>The entry URL will not open, or shows as not secure. What should I do?</summary><div class="body">First confirm the URL is <code>https://woowtech-immich.woowtech.io</code> (check for https and the full spelling). Note: replace this with the URL of your own Immich server (the one WoowTech gave you, or your own). If the browser shows a certificate warning, stop and contact the admin; do not skip past the warning and log in.</div></details>
     </section>
 
-    <section id="sources" data-nav="官方來源">
-      <h2 data-icon="records">官方來源</h2>
+    <section id="sources" data-nav="Official sources">
+      <h2 data-icon="records">Official sources</h2>
       <table class="data-table">
-        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <thead><tr><th>Source</th><th>What to verify</th></tr></thead>
         <tbody>
-          <tr><td><a href="https://immich.app/" rel="noopener">Immich 官網</a></td><td>產品定位、功能總覽、下載與文件入口</td></tr>
-          <tr><td><a href="https://immich.app/docs/overview/introduction" rel="noopener">Immich 文件：Introduction</a></td><td>自架相簿的基本概念與架構</td></tr>
-          <tr><td><a href="https://github.com/immich-app/immich" rel="noopener">Immich GitHub</a></td><td>版本、更新日誌、issue 與社群討論</td></tr>
+          <tr><td><a href="https://immich.app/" rel="noopener">Immich website</a></td><td>What it is, feature overview, downloads and where the docs live</td></tr>
+          <tr><td><a href="https://immich.app/docs/overview/introduction" rel="noopener">Immich docs: Introduction</a></td><td>Basic concepts and architecture of a self-hosted photo library</td></tr>
+          <tr><td><a href="https://github.com/immich-app/immich" rel="noopener">Immich on GitHub</a></td><td>Versions, changelog, issues and community discussion</td></tr>
         </tbody>
       </table>
-      <div class="callout"><strong>版本提示：</strong>本教學以 Immich v2.5.x 的介面為準；撰寫當下官方最新版是 v3.x，右上角可能出現「NEW VERSION AVAILABLE」的更新提示。介面改版時，以最新官方文件與實際畫面為準。</div>
+      <div class="callout"><strong>Version note:</strong> this guide is based on the Immich v2.5.x interface; at the time of writing the latest upstream release is v3.x, so a "NEW VERSION AVAILABLE" update notice may appear in the top right. When the interface changes, go by the latest official docs and the actual screen.</div>
     </section>
 
     <div class="pager">

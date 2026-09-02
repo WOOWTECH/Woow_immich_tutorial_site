@@ -57,13 +57,13 @@
     </ol>
     <div class="toc-in-chapter">
       <h2>This chapter</h2>
-      <a href="#why">為什麼要學</a>
-      <a href="#concept">上傳觀念</a>
-      <a href="#steps">上傳步驟</a>
-      <a href="#duplicates">重複偵測</a>
-      <a href="#troubleshoot">上傳卡關</a>
+      <a href="#why">Why this matters</a>
+      <a href="#concept">Upload basics</a>
+      <a href="#steps">Upload steps</a>
+      <a href="#duplicates">Duplicate detection</a>
+      <a href="#troubleshoot">Upload problems</a>
       <a href="#faq">FAQ</a>
-      <a href="#sources">官方來源</a>
+      <a href="#sources">Official sources</a>
     </div>
     <div class="toc-in-chapter">
       <h2>Appendices</h2>
@@ -75,74 +75,74 @@
     <div class="callout i18n-pending"><strong>This chapter has not been translated yet.</strong> You are reading the original Chinese text. <a href="../ch4_upload.html" hreflang="zh-Hant">Open the Chinese version</a></div>
     <div class="chapter-header">
       <div class="kicker">Chapter 4</div>
-      <h1>上傳照片與影片</h1>
-      <p class="lead">把電腦或手機裡的照片、影片放進 Immich。讀完這章，你會用拖放或上傳鈕把回憶送進伺服器，並看懂上傳進度、重複偵測與失敗重試。</p>
+      <h1>Upload photos and videos</h1>
+      <p class="lead">Get the photos and videos on your computer or phone into Immich. By the end of this chapter, you'll be able to send your memories to the server by drag and drop or with the Upload button, and you'll understand upload progress, duplicate detection and retrying after a failure.</p>
     </div>
 
-    <section id="why" data-nav="為什麼要學">
-      <h2 data-icon="why">照片要先進來，後面才談得上整理</h2>
-      <p>Immich 的價值從「把照片集中進來」開始。無論是從相機記憶卡、電腦資料夾還是手機，只要照片進到伺服器，後面的時間軸、相簿、AI 搜尋才派得上用場。這章先學會最直接的 Web 上傳。</p>
-      <div class="callout"><strong>本章任務：</strong>用瀏覽器上傳一批照片，看懂上傳進度與結果。手機自動備份是第 9 章，這章先掌握 Web 上傳的基本功。</div>
+    <section id="why" data-nav="Why this matters">
+      <h2 data-icon="why">Photos have to come in before you can organize them</h2>
+      <p>The value of Immich starts with getting your photos into one place. Whether they come from a camera memory card, a folder on your computer or your phone, the timeline, albums and AI search only become useful once the photos are on the server. This chapter starts with the most direct method: uploading from the web.</p>
+      <div class="callout"><strong>Chapter task:</strong> upload a batch of photos from a browser, and make sense of the upload progress and the result. Automatic backup from your phone is Chapter 9; this chapter covers the basics of uploading from the web.</div>
     </section>
 
-    <section id="concept" data-nav="上傳觀念">
-      <h2 data-icon="concept">上傳的兩種方式與背後的動作</h2>
+    <section id="concept" data-nav="Upload basics">
+      <h2 data-icon="concept">Two ways to upload, and what happens behind the scenes</h2>
       <table class="data-table">
-        <thead><tr><th>方式</th><th>怎麼做</th><th>適合情境</th></tr></thead>
+        <thead><tr><th>Method</th><th>How</th><th>Best for</th></tr></thead>
         <tbody>
-          <tr><td><strong>拖放（Drag &amp; drop）</strong></td><td>把檔案從資料夾直接拖進瀏覽器視窗</td><td>一次丟很多張、從相機記憶卡整理</td></tr>
-          <tr><td><strong>上傳鈕（Upload）</strong></td><td>點頂欄右側的 Upload，再選檔案</td><td>不習慣拖放、或想精準選檔</td></tr>
+          <tr><td><strong>Drag and drop</strong></td><td>Drag files from a folder straight into the browser window</td><td>Dropping many photos at once, or sorting through a camera memory card</td></tr>
+          <tr><td><strong>The Upload button</strong></td><td>Click Upload on the right of the top bar, then choose the files</td><td>When you are not comfortable with drag and drop, or want to pick files precisely</td></tr>
         </tbody>
       </table>
-      <p>上傳時，Immich 會做幾件事：讀取照片的 <strong>EXIF</strong>（拍攝時間、地點、相機型號）、產生縮圖、做重複偵測。照片上傳後，會依「拍攝時間」出現在時間軸上，而不是依上傳時間。</p>
-      <div class="callout tip"><strong>時間是以拍攝時間排的：</strong>如果你發現照片「跑到」過去某個日期，通常是 EXIF 裡的拍攝時間所致，屬正常現象。</div>
+      <p>During an upload, Immich does several things: it reads the photo's <strong>EXIF</strong> data (capture time, location, camera model), generates thumbnails, and runs duplicate detection. Once uploaded, a photo appears on the timeline by its capture time, not by its upload time.</p>
+      <div class="callout tip"><strong>Sorted by capture time:</strong> if a photo seems to have "jumped" to some date in the past, that is usually the capture time in its EXIF data, and it is normal.</div>
     </section>
 
-    <section id="steps" data-nav="上傳步驟">
-      <h2 data-icon="upload">六步完成一次 Web 上傳</h2>
+    <section id="steps" data-nav="Upload steps">
+      <h2 data-icon="upload">Six steps to upload from the web</h2>
       <ol class="steps">
-        <li><h3>登入並停在 Photos 頁</h3><p>照第 2 章登入，確認停在照片主畫面（<code>/photos</code>）。</p></li>
-        <li><h3>準備好要上傳的檔案</h3><p>在電腦上開好放照片的資料夾，可以一次選多個檔案或整個資料夾。</p></li>
-        <li><h3>拖進視窗，或點 Upload</h3><p>把檔案拖進瀏覽器畫面；或點頂欄右側的 Upload 按鈕，從對話框選檔。</p></li>
-        <li><h3>看進度</h3><p>上傳中通常會顯示進度條或計數。大檔或大量照片需要時間，不要急著關視窗。</p></li>
-        <li><h3>等待完成</h3><p>完成後，照片會出現在時間軸上。若顯示「重複」或略過，表示之前已傳過相同檔案。</p></li>
-        <li><h3>抽查結果</h3><p>點開幾張確認畫面、拍攝日期都正常。有問題先記下來，再對照第 12 章排錯。</p></li>
+        <li><h3>Log in and stay on the Photos page</h3><p>Log in as in Chapter 2, and make sure you are on the main photos screen (<code>/photos</code>).</p></li>
+        <li><h3>Get the files ready</h3><p>On your computer, open the folder that holds the photos. You can select several files at once, or a whole folder.</p></li>
+        <li><h3>Drag them into the window, or click Upload</h3><p>Drag the files into the browser window; or click the Upload button on the right of the top bar and choose the files in the dialog.</p></li>
+        <li><h3>Watch the progress</h3><p>While uploading, you'll usually see a progress bar or a counter. Large files or a large number of photos take time, so do not rush to close the window.</p></li>
+        <li><h3>Wait for it to finish</h3><p>When it is done, the photos appear on the timeline. If one is shown as a duplicate or skipped, the same file was uploaded before.</p></li>
+        <li><h3>Spot-check the result</h3><p>Open a few photos and check that the image and the capture date look right. If something is off, write it down first, then troubleshoot with Chapter 12.</p></li>
       </ol>
-      <div class="callout warn"><strong>上傳中別關瀏覽器：</strong>上傳是即時進行的，關掉分頁會中斷未完成的上傳。等進度走完再離開。</div>
+      <div class="callout warn"><strong>Do not close the browser mid-upload:</strong> the upload runs live, and closing the tab interrupts anything that has not finished. Wait for the progress to complete before you leave.</div>
     </section>
 
-    <section id="duplicates" data-nav="重複偵測">
-      <h2 data-icon="compare">重複偵測：同樣的照片不會傳兩次</h2>
-      <p>Immich 預設會做<strong>重複偵測</strong>：如果伺服器上已經有一模一樣的檔案，再次上傳時會被略過，避免浪費空間。這對「重複拖同一個資料夾」的情況很有幫助。</p>
-      <div class="callout"><strong>注意：</strong>重複偵測是比對檔案內容（雜湊值），不是比對「看起來像不像」。同一張照片被後製過、改過尺寸，就會被當成不同檔案。</div>
+    <section id="duplicates" data-nav="Duplicate detection">
+      <h2 data-icon="compare">Duplicate detection: the same photo is never uploaded twice</h2>
+      <p>By default, Immich runs <strong>duplicate detection</strong>: if an identical file is already on the server, uploading it again is skipped, so no space is wasted. This helps a lot when you drag the same folder in more than once.</p>
+      <div class="callout"><strong>Warning:</strong> duplicate detection compares file contents (a hash), not whether two photos "look alike". The same photo that has been edited or resized counts as a different file.</div>
     </section>
 
-    <section id="troubleshoot" data-nav="上傳卡關">
-      <h2 data-icon="troubleshoot">上傳常見卡關</h2>
+    <section id="troubleshoot" data-nav="Upload problems">
+      <h2 data-icon="troubleshoot">Common upload pitfalls</h2>
       <ol class="steps">
-        <li><h3>上傳到一半失敗</h3><p>先確認網路穩定，再重試。大檔影片失敗機率較高，可以分批上傳。</p></li>
-        <li><h3>照片沒出現在時間軸</h3><p>先到搜尋或相簿看看，可能是拍攝日期把它排到過去。用第 7 章的搜尋找找看。</p></li>
-        <li><h3>顯示儲存空間不足</h3><p>表示伺服器快滿了。先清理重複、回收桶，或聯絡管理員（第 10 章）。</p></li>
-        <li><h3>影片上傳很慢</h3><p>影片檔案大、需要轉碼產生縮圖，本來就慢。耐心等待，或改用第 9 章的手機 App 背景備份。</p></li>
+        <li><h3>The upload fails partway through</h3><p>Check that your network is stable first, then retry. Large video files fail more often; upload them in batches.</p></li>
+        <li><h3>The photos do not show up on the timeline</h3><p>Check search or your albums first; the capture date may have placed them somewhere in the past. Try the search from Chapter 7.</p></li>
+        <li><h3>It says there is not enough storage space</h3><p>The server is nearly full. Clean up duplicates and the trash first, or contact your admin (Chapter 10).</p></li>
+        <li><h3>Video uploads are slow</h3><p>Video files are large and need transcoding to generate thumbnails, so they are slow by nature. Be patient, or switch to background backup from the Immich mobile app in Chapter 9.</p></li>
       </ol>
     </section>
 
     <section id="faq" data-nav="FAQ">
-      <h2 data-icon="faq">上傳常見問題</h2>
-      <details class="faq"><summary>支援哪些檔案格式？</summary><div class="body">常見的 JPG、PNG、HEIC、GIF、WebP，以及 MP4、MOV 等影片格式都可上傳。完整清單以官方文件為準。</div></details>
-      <details class="faq"><summary>一次可以傳多少張？</summary><div class="body">沒有硬性張數限制，但一次傳太多會拉長上傳時間、佔用記憶體。建議分批，每批幾百張為宜。</div></details>
-      <details class="faq"><summary>上傳後可以刪掉電腦上的原始檔嗎？</summary><div class="body">可以，但建議先確認照片都正確上傳、並有伺服器端的備份，再刪本機原始檔，避免兩頭落空。</div></details>
-      <details class="faq"><summary>會壓縮我的照片嗎？</summary><div class="body">Immich 預設保留原檔，同時另產生縮圖與轉碼檔供快速瀏覽，不會為了節省空間而破壞原圖品質。</div></details>
-      <details class="faq"><summary>為什麼有些照片的日期不對？</summary><div class="body">通常是原始檔的 EXIF 拍攝時間缺失或被改過。可以在照片資訊面板檢查與修正，見第 5 章。</div></details>
+      <h2 data-icon="faq">Upload FAQ</h2>
+      <details class="faq"><summary>Which file formats are supported?</summary><div class="body">The common ones: JPG, PNG, HEIC, GIF and WebP, plus video formats such as MP4 and MOV. The official docs have the full list.</div></details>
+      <details class="faq"><summary>How many photos can I upload at once?</summary><div class="body">There is no hard limit, but uploading too many at once makes the upload take longer and uses more memory. Upload in batches; a few hundred per batch is a good size.</div></details>
+      <details class="faq"><summary>Can I delete the original files on my computer after uploading?</summary><div class="body">Yes, but first confirm that every photo uploaded correctly and that the server side is backed up, and only then delete the local originals. Otherwise you could end up with neither copy.</div></details>
+      <details class="faq"><summary>Does it compress my photos?</summary><div class="body">By default, Immich keeps the original file and generates separate thumbnails and transcoded copies for quick browsing. It never degrades the original quality to save space.</div></details>
+      <details class="faq"><summary>Why is the date wrong on some photos?</summary><div class="body">Usually the capture time in the original file's EXIF data is missing or was changed. You can check and correct it in the photo's info panel; see Chapter 5.</div></details>
     </section>
 
-    <section id="sources" data-nav="官方來源">
-      <h2 data-icon="records">官方來源</h2>
+    <section id="sources" data-nav="Official sources">
+      <h2 data-icon="records">Official sources</h2>
       <table class="data-table">
-        <thead><tr><th>來源</th><th>查證重點</th></tr></thead>
+        <thead><tr><th>Source</th><th>What to verify</th></tr></thead>
         <tbody>
-          <tr><td><a href="https://immich.app/docs/features/upload" rel="noopener">Immich 文件：Upload</a></td><td>上傳方式、支援格式與限制</td></tr>
-          <tr><td><a href="https://immich.app/docs/features/libraries" rel="noopener">Immich 文件：Libraries</a></td><td>資料庫與外部儲存的概念</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/upload" rel="noopener">Immich docs: Upload</a></td><td>Upload methods, supported formats and limits</td></tr>
+          <tr><td><a href="https://immich.app/docs/features/libraries" rel="noopener">Immich docs: Libraries</a></td><td>Database and external storage concepts</td></tr>
         </tbody>
       </table>
     </section>

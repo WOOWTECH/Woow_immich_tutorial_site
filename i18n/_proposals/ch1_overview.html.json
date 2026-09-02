@@ -1,0 +1,16 @@
+{
+  "file": "ch1_overview.html",
+  "_note": "Localize substitution per /home/user/out/terms_immich.txt (hosted-instance hostname -> your-immich.example). Entries are ordered #what before #faq on purpose: apply_code_translations.js requires each zh block to occur exactly once in en/ at apply time, and the bare <code> block occurs twice until the #what <pre> has been replaced. If the orchestrator decides the en site targets the same hosted instance, drop this file and remove the two 'Note: replace this with the URL…' sentences from en/ch1_overview.html #what and #faq.",
+  "entries": [
+    {
+      "unit": "#what",
+      "zh": "<pre class=\"code-block\"><code>https://woowtech-immich.woowtech.io</code></pre>",
+      "en": "<pre class=\"code-block\"><code>https://your-immich.example</code></pre>"
+    },
+    {
+      "unit": "#faq",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    }
+  ]
+}
