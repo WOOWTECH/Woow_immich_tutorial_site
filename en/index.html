@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <!-- i18n:css --><link rel="stylesheet" href="../assets/css/i18n.css" /><!-- /i18n:css -->
   <style>
-    /* hub 專用（index.html 由人手維護，build_nav 不碰這一頁） */
+    /* hub only (index.html is hand-maintained; build_nav injects only the i18n chrome here) */
     .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
     .res-card {
       display: flex; flex-direction: column;
@@ -71,7 +71,7 @@
     </div>
 
     <section class="chapter-index">
-      <h2 class="index-title">Four handbooks</h2>
+      <h2 class="index-title">The four handbooks</h2>
       <div class="res-grid">
 
         <div class="res-card">
@@ -89,7 +89,7 @@
           <span class="tile"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#6183FC" d="M11 6H14L17.29 2.7A1 1 0 0 1 18.71 2.7L21.29 5.29A1 1 0 0 1 21.29 6.7L19 9H11V11A1 1 0 0 1 10 12A1 1 0 0 1 9 11V8A2 2 0 0 1 11 6M5 11V15L2.71 17.29A1 1 0 0 0 2.71 18.7L5.29 21.29A1 1 0 0 0 6.71 21.29L11 17H15A1 1 0 0 0 16 16V15H17A1 1 0 0 0 18 14V13H19A1 1 0 0 0 20 12V11H13V12A2 2 0 0 1 11 14H9A2 2 0 0 1 7 12V9Z"/></svg></span>
           <h3>Sales Handbook</h3>
           <div class="aud">For customers and resellers · single page</div>
-          <p>Bring the whole family's photos and videos home: what Immich can do, the two options (built into HAOS, or cloud PaaS), a day-in-the-life scenario and a side-by-side comparison of the two, in plain language for customers.</p>
+          <p>Bring the whole family's photos and videos home: what Immich can do, the two deployment options — Option A, on your HAOS box, set up by WoowTech; Option B, cloud PaaS, managed by WoowTech — a day-in-the-life scenario and a side-by-side comparison, in plain language for customers.</p>
           <div class="res-actions">
             <a class="btn-pill" href="sales.html">Read online <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#FFFFFF" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/></svg></a>
             <a class="btn-ghost" href="sales.html" download="immich-sales-handbook.html"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#3F63E8" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/></svg> Download HTML</a>
@@ -111,7 +111,7 @@
           <span class="tile"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#6183FC" d="M22,13.5C22,15.26 20.7,16.72 19,16.96V20A2,2 0 0,1 17,22H13.2V21.7A2.7,2.7 0 0,0 10.5,19C9,19 7.8,20.21 7.8,21.7V22H4A2,2 0 0,1 2,20V16.2H2.3C3.79,16.2 5,15 5,13.5C5,12 3.79,10.8 2.3,10.8H2V7A2,2 0 0,1 4,5H7.04C7.28,3.3 8.74,2 10.5,2C12.26,2 13.72,3.3 13.96,5H17A2,2 0 0,1 19,7V10.04C20.7,10.28 22,11.74 22,13.5M17,15H18.5A1.5,1.5 0 0,0 20,13.5A1.5,1.5 0 0,0 18.5,12H17V7H12V5.5A1.5,1.5 0 0,0 10.5,4A1.5,1.5 0 0,0 9,5.5V7H4V9.12C5.76,9.8 7,11.5 7,13.5C7,15.5 5.75,17.2 4,17.88V20H6.12C6.8,18.25 8.5,17 10.5,17C12.5,17 14.2,18.25 14.88,20H17V15Z"/></svg></span>
           <h3>Skill Handbook</h3>
           <div class="aud">For advanced users · catalog + quick reference</div>
-          <p>Install a skill someone else has already built, and your AI agent can organize photos for you. A selection of useful skills and popular collections, with an install quick reference, compatibility notes and safety rules (surveyed 2026-08).</p>
+          <p>Install a skill someone else has already built, and your AI agent can organize photos for you. Hand-picked useful skills and popular collections, with an install quick reference, compatibility notes and safety rules (surveyed 2026-08).</p>
           <div class="res-actions">
             <a class="btn-pill" href="skills.html">Read online <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#FFFFFF" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/></svg></a>
             <a class="btn-ghost" href="skills.html" download="immich-skill-handbook.html"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#3F63E8" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/></svg> Download HTML</a>
@@ -121,7 +121,7 @@
       </div>
 
       <div class="dl-note">
-        The Sales Handbook, Prompt Library and Skill Handbook are each a <strong>self-contained single-file HTML</strong>: every icon is embedded, so once downloaded they open offline and can be forwarded as they are. The Onboarding tutorial is a multi-page site, so we recommend reading it online; download the full site zip if you need it offline.
+        The Sales Handbook, Prompt Library and Skill Handbook are each a <strong>self-contained single-file HTML page</strong>: every icon is embedded, so once downloaded they open offline and can be forwarded as they are. The Onboarding tutorial is a multi-page site, so we recommend reading it online; download the full site zip if you need it offline.
       </div>
     </section>
 

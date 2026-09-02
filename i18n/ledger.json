@@ -2,1240 +2,1446 @@
  "_readme": "Translation ledger. Key = <locale>:<file>#<unit> or <locale>:chapters.json:<path>. status: pending | complete | stale | manual | localized | excluded | failed. sourceHash = hash of the zh unit; targetHash = hash of the translated unit. Maintained by scripts/check_i18n.js — do not hand-edit hashes.",
  "units": {
   "en:index.html#main": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a3b71ac9bc8baf5e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3deec2378060a5f2",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:tutorial.html#main": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6c2d8515811f0610",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e114e747c65dceb1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "fab338ec7e3223fa",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "602867962b784de1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "fc1d60da65f4e7de",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "422d4935c6ab75b3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6fa61227d3e83444",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "66b992d61a57876a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#what": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "5e80cbacb7e1b47c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "92b4a14d27610040",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#choices": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "9cf178d6b1d9c3cc",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0a413a091549fcea",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#security": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "cbdfd6c37e085a2f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "16fed84d04239972",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "3391b2d8d71da4b3",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "29d956c5a3ec03d9",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "bc54b4eed3f6db17",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "95891fcfe8c762c3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "af0d74550b5776ab",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "9b9c2428343a501b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c3c67e170702a1f0",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "da65976c7bbadda0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "145fc18bf03c6509",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "40205a74b0be40b4",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "3e45f6396cecdb29",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c0b616328f9b2d8d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#profile": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "04ca1b8b40caf54f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "df776b517e0903e3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "9f90c91460832854",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "69997d6bf201d541",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "30e9d80716aaae28",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "199569f3e9a96032",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "53820c259b124faa",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e31645fb66e3c5e1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "03d74de0d73cdfb4",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "5eacedbd0c1859e9",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1687e57e6895e0be",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "ab4620fe8194aedd",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "3f21ff0007991d2c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "06b9ac5dcfa7a3dd",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e00f244a8e3d1794",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "abd16035111eb7e0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#sidebar": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e84162af596d98f8",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a49235eb0c13c906",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "2861967112f323fa",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d9032c9da5207ed2",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "398674db3563374e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4f3416ce14a123b1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch3_first_open.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "0f97a9c45052d571",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "60bd50560e79737a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "7da70adc07d92db2",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8000ffb5aebbd6d2",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "0efaf50b410ff505",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "90f6c3d25a89a81d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c2599632db70066e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "1fbbf7087b2a0e86",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "5485f3931d4df1ed",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7dcdd83a6373dd66",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#duplicates": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "5c1a2f41ead3c91c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "82edab04ac004a12",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "44c42865bce4b784",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "54154f3c80e4b25e",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "fedbda4516580296",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3e7fccbd24ba6162",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch4_upload.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "df3283f211a0b33c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c0f229770d53f119",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "31bebbbcd0c254e5",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "f8603005da985314",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "754bee4a8369d076",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d286915f8dd9272c",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "9b0b5cc895ab0f23",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "749b0d5eb2611a76",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "3f93d4d31f92bfd9",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8a2e25e98142a773",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#favorites": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "51483c02fdf884ea",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8b89b7b1125c0d65",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b8c711eddebf969a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "112c36e22042f503",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "33184e4e2fb272b0",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "f8138a5d9b4e3025",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch5_timeline.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "3cae7e4ca8acd636",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "ac0951093dbfd708",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "dbc7d48791d7519b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3e174c62e9c91f30",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c8f65b9f089bc08c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0e0553c7d08836ae",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "05c8baeb46610567",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "880c89ae0f84b688",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "20efab32fba0e05a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "12aa3acde63434a0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#archive": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "70e3eedea593e58b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0b465a7257f29455",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e498ddecb496f8ca",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "84a3c54f3f6eceed",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b5a24906e454433c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a7db746faca1fdae",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch6_albums.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "f455e15f99f0098a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "ab0f19a3ae419fbc",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "745707394282e72b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0ade944f1c53bad5",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "8bfa957df36b2242",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "860b66662568fb67",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c01144bf2e753463",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4edef71171f9977a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c3c646c5fe8c2e5a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "eb677f8a480afc85",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#people": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "714f0a8f9601c1f6",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "04a02d1c367cd99a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d30cbe7e170abb2b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7b2a98bb22c0888a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "697d66c191dd658c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b2ac29b77375ac1a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch7_search_ai.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "603bd7064b73f316",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "959f86e7ea99c12b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d7d6d39b741ab417",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "676515898e72486b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "78d76ab74ce958d3",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "da0459c64d71b1aa",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a90737ca4cce37c6",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4e21a119ad61131b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "11822c1986bd7831",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "bea7c712e32de1c0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#revoke": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1ba95955b136700c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4b555ab6ba44f540",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "683d1ec80e04a2fd",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "450516778e83ebdb",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "60ccde04c52f125f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b2b1bc7c560c2043",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch8_sharing.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "f05675bea7d1d899",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d7edbe3141713e7a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "69b5d75c89445335",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0a561cce113b3a5b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a5522e266f42c1a0",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "1003cc8b68fe5427",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a8fba0293f04566d",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a69f86d73b3eedc7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e189fd04fbb033fe",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c6598d6a9c2ca136",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#settings": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "72877c73babe2a4c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d900e3789801f8cb",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "4a4be19c2de5d99a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "f82a2d5256834b4e",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "78e9877df715f117",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b07e2616e78f434e",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d4d2ac7ce4d6190c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c80d67bf56271933",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d225b29c64670657",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8a419b4556505635",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6d2a59e0b66570ea",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "54a86042bd5ba6a3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "8707becf9c20f740",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "9ade272d7389eec3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "301e430c920df60f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "072209c431657c1a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#jobs": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "36737f35f68c14c7",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7ca26820a697e98c",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "bdee655634113bd7",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8b29d7d4d003b883",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "aa59294ba704607a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0d34962fba68c3b7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch10_admin.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "312e25e85cf2f3e1",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0ca1e4bf66c97d78",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d08c8691dca7e6e2",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8391655d270209e0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "52fe299f94fda091",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "62b7df959a921914",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d1f7deedbe0425db",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7d7a8f0e54ecfeb3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6aefb4ea98103656",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "5dac7a8dff23c9f4",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#habits": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1b8dc09e7142f3f9",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e98faf2d563ff2ad",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#troubleshoot": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b9671d925d6bb684",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "1dca85261e9c2a7d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "676bd37803071217",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d2649e99ea8c517a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e7e30c50b3f0b97f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "bc2c4f876395d5ba",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "586bcb1aba44adfc",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "6fb22ac3475c3734",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "bc235f01172c7bec",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b8d1b082120258b7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#concept": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "cbf9cc06aae420c8",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a7b4916af5f58844",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#steps": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "7f48103b216be71b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "97b689c520f0e2f3",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#cases": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "12031561441e31b2",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "516beb584a3a0122",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#update": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "15e60d6aad06b874",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "366928834dedd6c1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "cdc88f283a1533cf",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3b904cb996bfb457",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:ch12_troubleshooting.html#sources": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "7555d806a8a724d9",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3880657763430cc5",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "3b966fbe944ae13b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "9dc72fda70b5bad5",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "2925babf069579b3",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4b4cde58c07e33a5",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#what": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e3071bce476fe00a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c9f9fef7a15f2366",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#abilities": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "deb65cbf5f1bfacc",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c335a353e8df3252",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#privacy": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "949a10ac0127a00a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "2efe905efc6f18ec",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#day": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "87097e38d745465c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "6b241206577a5b7b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#compare": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "76b6209c35cbb2ad",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7c39226300f4d1b1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c2442f5d3f62a8ef",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "779bb3b33a4f2309",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:sales.html#cta": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "8b6eb3bfcf428dc2",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "dcc8ad775c7b7bda",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b5d12cf70bda9400",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "2375106c2010e227",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1c2f462fa16d9585",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "45de757a24abbdf1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#howto": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b12af9bd75d509f1",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "2740f6ee1de2f359",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-album": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "674fb911d1f016fd",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "55cd54bf5f5e4c23",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-face": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e3c58e0acb35f24d",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "db20087214117100",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-search": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "facf32dc84382775",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3632bca2def02966",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-io": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c71ba3695c6a427c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c1eb94160b2bd8a6",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-backup": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "8aef204219b8ac0d",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8641965f991c024d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-share": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "138e242dab519011",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e528b0f4f082a0d1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-meta": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "34d8751e7e529f7c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e4988c3e02e579c8",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#cat-ops": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "822f940d8260297b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e910610918d807f9",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:prompts.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "dc5fc7fe5c01a115",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0f314c0a40b09a0f",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#header": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "f1ea55b561e4ae39",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "f3711ffe5b1d7840",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#why": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "8061ef4a1471ed75",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "1b6a022c60318b4a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#install": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "202f56d5fcf9a4c5",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d70a86c04d878ed9",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#picks": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "74917f357e70ece4",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "2f45af68291c331c",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#collections": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "8848b177f9fe3c24",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "5b705d7dcde2e213",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#compat": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "637958763203603c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "1557008955b3c7e7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#safety": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "9905376b8a3db188",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "bf587bf7fc453199",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#spec": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "da2ac88bc409ece1",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "9a97a652499fbd07",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:skills.html#faq": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "77dacd08de01da67",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "ecc7b058209843c7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:site.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "017b68cd2dc821ac",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3bdab9e4daf300d9",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:site.brand": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "5fafe2e8b8005419",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b9ab77d860814c9a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:site.subtitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "f9810ec6b23db81b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "f986614a7ad72494",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:site.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a23ceed5cda9d66f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "634179832a6712f0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:site.footerMeta": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a07cf51400a4d9d1",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d6db124b22dde070",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:hub.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "bcb271a8b7054a73",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3f85ca7bdcded287",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch1_overview.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "52367e68b58bad8d",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "74e492d5d0df0bab",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch1_overview.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "52367e68b58bad8d",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "74e492d5d0df0bab",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch1_overview.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "92e5cfdaf7a0c74e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8e28de56a5544d42",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch1_overview.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "78c941facc9b61c3",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8ef7cf4c426d38a2",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch1_overview.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1e6b3f5be20cc7b0",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b5ab9f8651b63c89",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch1_overview.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6915defe4276fd8f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "171fc534a675f5a7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch2_login.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "f1f88b217f7ca9cc",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "85e75e4941b4eb17",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch2_login.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "f1f88b217f7ca9cc",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "85e75e4941b4eb17",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch2_login.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "672287a87212b939",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4156386cda87e32a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch2_login.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a03302e59e6ffa10",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "410808c03ab3b535",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch2_login.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "dfa3e4f4c2c4e631",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "73c3490161ab93a6",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch2_login.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6915defe4276fd8f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "171fc534a675f5a7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch3_first_open.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b76e964b9c243c93",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a48e56c84934151d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch3_first_open.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b76e964b9c243c93",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a48e56c84934151d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch3_first_open.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e5ec49c6f94b58ad",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7bad53299658d6bd",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch3_first_open.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a26a24811d9deec9",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "39579f3e60f37417",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch3_first_open.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "327bf1fdd5873fad",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4ab346a8c464d732",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch3_first_open.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6915defe4276fd8f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "171fc534a675f5a7",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch4_upload.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e5d2a434658f7d05",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "9caf9c5af76eb499",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch4_upload.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "bd241cad1e2164dd",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "865e89de78d94c74",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch4_upload.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "25873039193c8a49",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "050d91bdc4e32b6c",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch4_upload.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d2e7e4b83914e6e6",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a507b2ed80df5592",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch4_upload.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a82bccd222b2c919",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "5ad20f65c01cb226",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch4_upload.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "72a3f621e1723e52",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b32064d8b2544e7a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch5_timeline.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "736816a3bd4da37a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "1398ca2ff107b589",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch5_timeline.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c3935de60e4800ec",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "9dcff98e275f0cb9",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch5_timeline.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "50b148eb88d520dd",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8c75297bf25d2005",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch5_timeline.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "419998f17238fbde",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "7c1adaa7e58a7d3a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch5_timeline.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b855afee7ded5763",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "2f1ccb6f7a443fed",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch5_timeline.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "72a3f621e1723e52",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b32064d8b2544e7a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch6_albums.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c84d4384c14bef8c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "2f0a4bfe2c90026c",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch6_albums.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "c84d4384c14bef8c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "57bca6e1c6d4f3c1",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch6_albums.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a5da225c423a4ab5",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8c1c8a951f67162d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch6_albums.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "ed78ab63a13400f4",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "bc4eff3e9e401436",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch6_albums.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "6ec5835763a92a26",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0f90bfe3ca270d33",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch6_albums.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "72a3f621e1723e52",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b32064d8b2544e7a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch7_search_ai.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "ba01349cc433ea24",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "6bc715386d517de0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch7_search_ai.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "bf9b2ce598506849",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "6bc715386d517de0",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch7_search_ai.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "69328f765d65998e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "13614230c140086b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch7_search_ai.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "79345660e2de209e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b37f74644df390fc",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch7_search_ai.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "afda91bd9c53897b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a37a9db46d54c4de",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch7_search_ai.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "72a3f621e1723e52",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b32064d8b2544e7a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch8_sharing.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "caa5a320d2386b15",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "0252f524fc94d222",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch8_sharing.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "caa5a320d2386b15",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "bbedc70e985fe0b6",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch8_sharing.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "53c9649de4893e9f",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "8af514b9b7810871",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch8_sharing.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b8fb5c84a6867701",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "f46d6eddefdf7f27",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch8_sharing.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "d567d6688ef1b009",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "4d3a8975bbb1e35b",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch8_sharing.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "72a3f621e1723e52",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "b32064d8b2544e7a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch9_mobile_app.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "85bb7dccde1fec09",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3b896d9e280f622a",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch9_mobile_app.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1b9bcc3c56322594",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "429bbfa117e2f108",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch9_mobile_app.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "e23b98bea71289f7",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "82eb27c09f1ffa89",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch9_mobile_app.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "0cfa78575637b55b",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "ea1dded4d0835bad",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch9_mobile_app.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "47d18dc68621bbed",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3077c69511cfb915",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch9_mobile_app.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "67710c5a67dbab0e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a7e307dc55522c50",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch10_admin.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "ab11d1486f1f8b2c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "502d9f3ec97225bc",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch10_admin.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "ab11d1486f1f8b2c",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "502d9f3ec97225bc",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch10_admin.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "1e08a028af6d0e95",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "07cc0c318957954f",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch10_admin.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "40ccd527d5f0ef7a",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d33f42b97b085801",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch10_admin.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "7006c8d876973078",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "987b6ef5782e9483",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch10_admin.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "67710c5a67dbab0e",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "a7e307dc55522c50",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch11_security.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "a3df383343e33035",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "db3bbbe3ded68a65",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch11_security.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "024d9c0693bb5418",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "147bf977ab0a8f12",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch11_security.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "579354a042d15403",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "e434f9bfb9f68900",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch11_security.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "71dabf1e58b7cc17",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "3055a117da706db5",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch11_security.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "425a8f65a4865995",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "25884fa97f351b16",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch11_security.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "259748aef03d66f6",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d24bf4744d1da23e",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch12_troubleshooting.html.title": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "73f6e0142431a095",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "71ad4dfbe7335eca",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch12_troubleshooting.html.navLabel": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "73f6e0142431a095",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "c3af076f92c5ed8d",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch12_troubleshooting.html.pagerTitle": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "400052435ecadaf0",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d76f02359351fece",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch12_troubleshooting.html.card": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "9326a3d3fd1374f4",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "5ad017c51e108c96",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch12_troubleshooting.html.description": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "b2014109919a2f73",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "bac344545d95b654",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   },
   "en:chapters.json:ch12_troubleshooting.html.part": {
-   "status": "pending",
+   "status": "complete",
    "sourceHash": "259748aef03d66f6",
-   "targetHash": null,
-   "registeredAt": "2026-09-01"
+   "targetHash": "d24bf4744d1da23e",
+   "registeredAt": "2026-09-01",
+   "translatedAt": "2026-09-02"
   }
  }
 }

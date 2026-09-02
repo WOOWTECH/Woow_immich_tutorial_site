@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Immich AI Agent Skill Handbook · WoowTech</title>
-  <meta name="description" content="A catalog of AI agent skills for managing Immich photos: hand-picked skills and popular collections, an install quick reference, the SKILL.md spec and the safety rules (2026-08 ecosystem survey)." />
+  <meta name="description" content="A catalog of AI agent skills for managing Immich photos: hand-picked, useful skills and popular collections, an install quick reference, the SKILL.md spec and the safety rules (2026-08 ecosystem survey)." />
   <meta name="author" content="WoowTech" />
   <meta name="theme-color" content="#6183FC" />
   <link rel="canonical" href="https://immich-guide.woowtech.io/en/skills.html" />
@@ -105,7 +105,7 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
 
       <section id="why" data-nav="What a skill is">
         <h2 data-icon="why">What a skill is and why install one</h2>
-        <p>Think of a skill as a playbook (SOP) for the AI: a <code>SKILL.md</code> file that spells out "which task this is for, which steps to follow, which tools to use, and what to watch out for". Once the agent has read it, it can do one more thing, and it does it the same way every time instead of guessing.</p>
+        <p>Think of a skill as a "playbook (SOP) for the AI": a <code>SKILL.md</code> file that spells out "which task this is for, which steps to follow, which tools to use, and what to watch out for". Once the agent has read it, it can do one more thing, and it does it the same way every time instead of guessing.</p>
         <p>For Immich, the common cases are: organizing albums in bulk, naming faces, duplicate detection, taking inventory of backups, and fixing metadata. Install the matching skill and you only have to say what you want; the agent follows the SOP.</p>
       </section>
 
@@ -123,13 +123,13 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
         <h2 data-icon="ai">Hand-picked photo management skills (for families)</h2>
         <p>The list below is organized around the real needs you hit when managing a family photo library, and names the kinds of skill worth looking for. Star counts follow whatever GitHub shows today (2026-08); before you install, make sure the repo is still maintained.</p>
 
-        <div class="skill-card"><h3>Batch album organizing</h3><div class="meta">Category: organizing · calls the Immich REST API</div><p>Sorts photos into albums automatically by "time + place + people" rules, with duplicate detection and a dry-run mode (report first, then act).</p></div>
+        <div class="skill-card"><h3>Batch album organizing</h3><div class="meta">Category: organizing · calls the Immich REST API</div><p>Sorts photos into albums automatically by "time + place + people" rules, with duplicate detection and a dry-run mode (report first, then execute).</p></div>
         <div class="skill-card"><h3>Face naming workflow</h3><div class="meta">Category: organizing · calls /api/people</div><p>Names unnamed people in bulk, merges people that look like duplicates, and produces a "to confirm" list for you to check.</p></div>
         <div class="skill-card"><h3>Metadata repair</h3><div class="meta">Category: organizing · EXIF / GPS</div><p>Fills in missing capture times and locations and fixes time zones, producing a comparison table for you to confirm before anything is written.</p></div>
         <div class="skill-card"><h3>Backup and disaster recovery</h3><div class="meta">Category: operations · database + files</div><p>Takes inventory of backup status, produces restore drill steps, and estimates capacity growth.</p></div>
-        <div class="skill-card"><h3>Shared link security check</h3><div class="meta">Category: security · shared links</div><p>Scans every shared link and flags the risky ones: no expiry, no password, sensitive content.</p></div>
+        <div class="skill-card"><h3>Sharing security check</h3><div class="meta">Category: security · shared links</div><p>Scans every shared link and flags the risky ones: no expiry, no password, sensitive content.</p></div>
 
-        <div class="callout warn"><strong>Stars and names: check GitHub first:</strong> the ecosystem moves fast. The kinds of skill listed on this page are the stable needs; verify the actual repo names and star counts again before you install.</div>
+        <div class="callout warn"><strong>Star counts and names follow whatever GitHub shows:</strong> the ecosystem moves fast. The "kinds" of skill listed on this page are the stable needs; verify the actual repo names and star counts again before you install.</div>
       </section>
 
       <section id="collections" data-nav="Popular collections">
@@ -152,14 +152,14 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
         <h2 data-icon="what">Compatibility notes</h2>
         <ul>
           <li><strong>Version alignment:</strong> the Immich API changes from version to version (this guide covers v2.5.x). If a skill hard-codes API paths, it may need updating after you upgrade Immich.</li>
-          <li><strong>Permissions:</strong> most operations need an admin API key or that user's own API key; a skill is only useful if it can get a token.</li>
+          <li><strong>Permissions:</strong> most operations need an admin's API key or that user's own API key; a skill is only useful if it can get a token.</li>
           <li><strong>AI models:</strong> semantic search skills depend on the ML model installed on the server. If the model is not set up, the skill has nothing to work with.</li>
         </ul>
       </section>
 
       <section id="safety" data-nav="Safety rules">
         <h2 data-icon="security">Safety rules</h2>
-        <div class="callout danger"><strong>Never let a skill delete directly:</strong> every skill operation goes through "report first → you confirm → then execute", and anything deleted goes to the trash first.</div>
+        <div class="callout danger"><strong>Never let a skill delete directly:</strong> every skill operation must go through "report first → you confirm → then execute", and anything deleted always goes to the trash first.</div>
         <div class="callout warn"><strong>Keep tokens private:</strong> before you install a third-party skill, check whether it sends your API key or your photo paths anywhere outside. Do not install a skill whose origin you cannot trace.</div>
         <div class="callout"><strong>Dry run first:</strong> for a batch operation, ask the skill for a "will affect N photos" preview first, and only let it run once the preview looks right.</div>
       </section>
@@ -169,20 +169,20 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
         <p>To write an Immich skill of your own, the core of it is a single <code>SKILL.md</code> file:</p>
         <pre class="code-block">---
 name: immich-album-organizer
-description: 依時間＋地點＋人物規則批次整理 Immich 相簿，附乾跑模式
+description: Batch-organize Immich albums by time + place + people rules, with a dry-run mode
 ---
-# 用途
-照使用者規則把照片分類進相簿。
+# Purpose
+Sort photos into albums according to the user's rules.
 
-## 步驟
-1. 先讀取相簿與照片 metadata
-2. 套用分類規則，產生「預覽清單」（影響 N 張）
-3. 等使用者確認後才呼叫 API 執行
-4. 回報結果與例外
+## Steps
+1. Read album and photo metadata first
+2. Apply the sorting rules and produce a "preview list" (N photos affected)
+3. Call the API only after the user confirms
+4. Report the results and any exceptions
 
-## 安全
-- 永不直接刪除，一律移回收桶
-- 批次操作前必須先回報影響範圍</pre>
+## Safety
+- Never delete directly; always move to the trash
+- Report the scope before any batch operation</pre>
         <p>For the full spec, see the skill documentation of the agent you use.</p>
       </section>
 
@@ -191,7 +191,7 @@ description: 依時間＋地點＋人物規則批次整理 Immich 相簿，附�
         <div class="callout"><strong>How is a skill different from an app or an integration?</strong><br>An app is a program with an interface, an integration wires two services together, and a skill is the manual that teaches the AI how to do something. Install it and the agent can do the work itself.</div>
         <div class="callout"><strong>Can the wrong skill break my photo library?</strong><br>It can. That is why the safety rules matter most: install only from sources you trust, always dry run first, and send deletions to the trash.</div>
         <div class="callout"><strong>Can I write my own skill?</strong><br>You can. Follow the SKILL.md skeleton above and spell out the Steps and Safety sections clearly.</div>
-        <div class="callout"><strong>Which skill is worth installing first?</strong><br>Duplicate detection plus batch organizing is the pair people use most; you feel the gain in space and tidiness right away.</div>
+        <div class="callout"><strong>Which skill is worth installing first?</strong><br>"Duplicate detection + batch organizing" is the pair people use most; you feel the gain in space and tidiness right away.</div>
       </section>
 
       <footer class="site-footer">

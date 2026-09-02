@@ -1,4 +1,251 @@
 {
   "_readme": "code 區塊的例外清單：只有列在這裡的 <pre>/<code>/<kbd> 才允許與 zh 不同（通常是程式碼裡的中文註解或中文佔位值）。zh 那邊改了就會對不上而紅燈。由 scripts/apply_code_translations.js 維護。",
-  "allow": []
+  "allow": [
+    {
+      "file": "ch11_security.html",
+      "unit": "#steps",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    },
+    {
+      "file": "ch1_overview.html",
+      "unit": "#what",
+      "zh": "<pre class=\"code-block\"><code>https://woowtech-immich.woowtech.io</code></pre>",
+      "en": "<pre class=\"code-block\"><code>https://your-immich.example</code></pre>"
+    },
+    {
+      "file": "ch1_overview.html",
+      "unit": "#faq",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    },
+    {
+      "file": "ch2_login.html",
+      "unit": "#steps",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    },
+    {
+      "file": "ch9_mobile_app.html",
+      "unit": "#steps",
+      "zh": "<code>https://woowtech-immich.woowtech.io</code>",
+      "en": "<code>https://your-immich.example</code>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-album",
+      "zh": "<pre>幫我建立一本相簿叫做「2026 沖繩旅行」，然後把 2026 年 7 月拍攝、地點在沖繩的照片都加進去。</pre>",
+      "en": "<pre>Create an album called \"Okinawa trip 2026\", then add every photo taken in July 2026 with a location in Okinawa. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-album",
+      "zh": "<pre>列出我所有的相簿，每本顯示名稱、照片數量、最近更新時間。</pre>",
+      "en": "<pre>List all of my albums, showing the name, the photo count and the last update time for each one. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-album",
+      "zh": "<pre>把相簿「雜項」裡拍攝時間在 2020 年以前、且不在任何其他相簿的照片，整理到一本新的「舊照片封存」相簿。</pre>",
+      "en": "<pre>Take the photos in the album \"Misc\" that were taken before 2020 and are not in any other album, and organize them into a new album called \"Old photos archive\". Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-album",
+      "zh": "<pre>掃描整個圖庫，找出內容重複的照片，列出清單（不要刪除），等我確認後再處理。</pre>",
+      "en": "<pre>Scan the whole library and find the photos whose contents are duplicates. List them (do not delete anything) and wait for my confirmation before you do anything else. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-album",
+      "zh": "<pre>統計我每本相簿的照片數與總容量，用表格呈現，並標出前 5 大的相簿。</pre>",
+      "en": "<pre>Count the photos and the total size of each of my albums, present it as a table, and flag the 5 largest albums. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-face",
+      "zh": "<pre>列出所有還沒命名的人物，各附一張代表照片連結，讓我能快速命名。</pre>",
+      "en": "<pre>List every person who has not been named yet, each with a link to one representative photo, so I can name them quickly. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-face",
+      "zh": "<pre>幫我合併人物：把所有疑似同一個人的「未命名人物」合併到已命名的「爸爸」名下。</pre>",
+      "en": "<pre>Merge people for me: merge all the \"unnamed people\" who look like the same person under the already-named \"Dad\". Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-face",
+      "zh": "<pre>找出「媽媽」在 2023 到 2024 年間的所有照片，按時間排序，告訴我總共有幾張。</pre>",
+      "en": "<pre>Find every photo of \"Mom\" taken between 2023 and 2024, sort them by time, and tell me how many there are in total. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-face",
+      "zh": "<pre>把人物 ID 對應的未命名人物，依我給的名單批次命名（先列出對照表讓我確認）。</pre>",
+      "en": "<pre>Batch-name the unnamed people that match the person IDs, using the list I give you (show me the mapping table first so I can confirm). Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-face",
+      "zh": "<pre>找出「同一個人被拆成多個人物」的可疑狀況，列出可能該合併的人物群組。</pre>",
+      "en": "<pre>Find the suspicious cases where \"one person has been split into several people\", and list the groups of people that probably should be merged. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-search",
+      "zh": "<pre>幫我找「海邊的夕陽」相關的照片，依相關度排序，前 20 張即可。</pre>",
+      "en": "<pre>Find photos related to \"sunset at the beach\", sorted by relevance; the top 20 is enough. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-search",
+      "zh": "<pre>找出 2025 年 12 月 24 日到 12 月 26 日之間拍攝的所有照片。</pre>",
+      "en": "<pre>Find every photo taken between December 24 and December 26, 2025. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-search",
+      "zh": "<pre>找出所有 GPS 地點在「東京」附近的照片，用地點分組列出。</pre>",
+      "en": "<pre>Find every photo whose GPS location is near \"Tokyo\", and list them grouped by place. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-search",
+      "zh": "<pre>找出「2024 年、有阿嬤、在廚房」的照片，這三個條件都要符合。</pre>",
+      "en": "<pre>Find the photos that match \"2024, with Grandma, in the kitchen\". All three conditions have to be true. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-search",
+      "zh": "<pre>列出所有沒有 GPS 地點資訊的照片數量，並告訴我佔全庫比例。</pre>",
+      "en": "<pre>List how many photos have no GPS location data, and tell me what share of the whole library that is. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-io",
+      "zh": "<pre>把相簿「婚禮」的所有原始檔打包，產生下載連結。</pre>",
+      "en": "<pre>Package every original file in the album \"Wedding\" and produce a download link. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-io",
+      "zh": "<pre>把 2023 年整年的照片，依月份分資料夾整理成一個下載清單。</pre>",
+      "en": "<pre>Take the photos from all of 2023 and organize them into one download list, with a folder per month. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-io",
+      "zh": "<pre>我有一個資料夾要匯入 Immich（路徑待我提供），幫我規畫批次匯入步驟，並確認重複偵測會開。</pre>",
+      "en": "<pre>I have a folder to import into Immich (I will give you the path). Plan the batch import steps for me, and confirm that duplicate detection will be on. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-io",
+      "zh": "<pre>檢查最近一次匯入的照片，是否有檔案損毀或 metadata 缺失，列出問題清單。</pre>",
+      "en": "<pre>Check the photos from the most recent import for corrupted files or missing metadata, and list the problems. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-backup",
+      "zh": "<pre>盤點目前 Immich 的備份狀態：資料庫、照片原檔、設定檔各別有沒有備份機制，缺口在哪。</pre>",
+      "en": "<pre>Take inventory of the current Immich backup status: whether the database, the original photo files and the config files each have a backup mechanism, and where the gaps are. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-backup",
+      "zh": "<pre>寫一份 Immich 災難還原演練步驟：假設伺服器掛了，要怎麼從備份把照片與資料庫還原回來。</pre>",
+      "en": "<pre>Write an Immich disaster recovery drill: assume the server is down, and describe how to restore the photos and the database from a backup. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-backup",
+      "zh": "<pre>依目前照片成長速度（我過去一年新增 X GB），預估多久會用到儲存上限。</pre>",
+      "en": "<pre>Based on the current rate of photo growth (I added X GB over the past year), estimate how long it will be until I hit the storage limit. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-backup",
+      "zh": "<pre>找出可以安全釋放空間的項目：重複照片、回收桶、轉碼暫存，各別估出可釋放容量。</pre>",
+      "en": "<pre>Find the items where space can safely be freed: duplicate photos, the trash, transcoding temp files. Estimate how much each one would free. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-share",
+      "zh": "<pre>列出我所有「已分享」的相簿與連結，標出哪些是公開連結、哪些有期限、哪些快過期。</pre>",
+      "en": "<pre>List all of my \"shared\" albums and links, and flag which of them are public links, which have an expiry and which are about to expire. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-share",
+      "zh": "<pre>幫相簿「家庭聚會 2026」建立一個分享連結，設 7 天有效、允許下載。</pre>",
+      "en": "<pre>Create a shared link for the album \"Family gathering 2026\", valid for 7 days, with download allowed. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-share",
+      "zh": "<pre>把相簿「家庭聚會 2026」的所有分享連結停用，並確認不再可存取。</pre>",
+      "en": "<pre>Disable every shared link on the album \"Family gathering 2026\", and confirm it is no longer accessible. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-share",
+      "zh": "<pre>檢查有沒有「意外公開」的相簿：沒設期限、沒設密碼、內容含敏感資訊的，列出來。</pre>",
+      "en": "<pre>Check whether any album is \"accidentally public\": no expiry, no password, sensitive content. List them. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-meta",
+      "zh": "<pre>找出沒有拍攝時間（EXIF 缺失）的照片，用檔名裡的日期補上拍攝時間（先給我看前 10 張的對照）。</pre>",
+      "en": "<pre>Find the photos with no capture time (missing EXIF), and fill the capture time in from the date in the file name (show me the first 10 side by side first). Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-meta",
+      "zh": "<pre>把相簿「京都行」裡沒有 GPS 的照片，批次補上地點「京都」，先列出會影響幾張。</pre>",
+      "en": "<pre>Batch-fill the place \"Kyoto\" onto the photos in the album \"Kyoto trip\" that have no GPS, and list how many photos this will affect first. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-meta",
+      "zh": "<pre>把搜尋結果「貓」的所有照片加上自訂標籤「寵物」，先回報數量讓我確認。</pre>",
+      "en": "<pre>Add the custom tag \"pets\" to every photo in the search results for \"cat\", and report the count first so I can confirm. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-meta",
+      "zh": "<pre>找出拍攝時間時區錯誤（例如出國沒調時區）的照片，依我給的時差批次修正。</pre>",
+      "en": "<pre>Find the photos whose capture time is in the wrong time zone (a trip abroad where the time zone was never changed, for example), and batch-correct them by the offset I give you. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-ops",
+      "zh": "<pre>檢查 Immich 的背景 jobs 狀態，找出卡住或失敗的任務，並建議處理方式。</pre>",
+      "en": "<pre>Check the status of Immich's background jobs, find the ones that are stuck or failed, and suggest how to handle them. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-ops",
+      "zh": "<pre>有幾張照片縮圖一直模糊，找出原因（是否轉碼 jobs 沒跑完），並建議重跑哪些 job。</pre>",
+      "en": "<pre>A few photos have thumbnails that stay blurry. Find the cause (whether the transcoding jobs have not finished), and suggest which jobs to re-run. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-ops",
+      "zh": "<pre>儲存空間低於 20% 時，幫我列出釋放空間的優先順序清單。</pre>",
+      "en": "<pre>When storage space drops below 20%, list the priority order for freeing space. Answer in English.</pre>"
+    },
+    {
+      "file": "prompts.html",
+      "unit": "#cat-ops",
+      "zh": "<pre>做一次 Immich 健康檢查：伺服器、資料庫、儲存、jobs，各項回報狀態與建議。</pre>",
+      "en": "<pre>Run an Immich health check: server, database, storage, jobs. Report the status and a recommendation for each. Answer in English.</pre>"
+    },
+    {
+      "file": "skills.html",
+      "unit": "#spec",
+      "zh": "<pre class=\"code-block\">---\nname: immich-album-organizer\ndescription: 依時間＋地點＋人物規則批次整理 Immich 相簿，附乾跑模式\n---\n# 用途\n照使用者規則把照片分類進相簿。\n\n## 步驟\n1. 先讀取相簿與照片 metadata\n2. 套用分類規則，產生「預覽清單」（影響 N 張）\n3. 等使用者確認後才呼叫 API 執行\n4. 回報結果與例外\n\n## 安全\n- 永不直接刪除，一律移回收桶\n- 批次操作前必須先回報影響範圍</pre>",
+      "en": "<pre class=\"code-block\">---\nname: immich-album-organizer\ndescription: Batch-organize Immich albums by time + place + people rules, with a dry-run mode\n---\n# Purpose\nSort photos into albums according to the user's rules.\n\n## Steps\n1. Read album and photo metadata first\n2. Apply the sorting rules and produce a \"preview list\" (N photos affected)\n3. Call the API only after the user confirms\n4. Report the results and any exceptions\n\n## Safety\n- Never delete directly; always move to the trash\n- Report the scope before any batch operation</pre>"
+    }
+  ]
 }

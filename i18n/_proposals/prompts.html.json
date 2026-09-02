@@ -1,6 +1,6 @@
 {
   "file": "prompts.html",
-  "_note": "policy.json: prompts.html = rewrite. The 35 prompt bodies are frozen by gate B, so they are proposed here instead of being edited in en/prompts.html. Each rewritten prompt ends with 'Answer in English.' (headscale precedent), keeps every CLI/API/UI string and every number, date, count and percentage verbatim, and uses the sample values fixed in /home/user/out/terms_immich.txt (「2026 沖繩旅行」 = \"Okinawa trip 2026\", 「雜項」 = \"Misc\", 「舊照片封存」 = \"Old photos archive\", 「爸爸」 = \"Dad\", 「媽媽」 = \"Mom\", 「未命名人物」 = \"unnamed people\", 「海邊的夕陽」 = \"sunset at the beach\", 「東京」 = \"Tokyo\", 「2024 年、有阿嬤、在廚房」 = \"2024, with Grandma, in the kitchen\", 「婚禮」 = \"Wedding\", 「家庭聚會 2026」 = \"Family gathering 2026\", 「京都行」/「京都」 = \"Kyoto trip\"/\"Kyoto\", 「貓」/「寵物」 = \"cat\"/\"pets\", 「已分享」 = \"shared\", 「意外公開」 = \"accidentally public\", X GB kept, 前 20 張/前 10 張/前 5 大 = the top 20/the first 10/the 5 largest, 人物 ID = person IDs). Entries are in document order; each zh block occurs exactly once in en/prompts.html. Em dashes are written as ASCII hyphens so the block stays plain text that copies cleanly.",
+  "_note": "policy.json: prompts.html = rewrite. The 35 prompt bodies are frozen by gate B, so they are proposed here instead of being edited in en/prompts.html. Each rewritten prompt ends with 'Answer in English.' (headscale precedent), keeps every CLI/API/UI string and every number, date, count and percentage verbatim, and uses the sample values fixed in /home/user/out/terms_immich.txt (「2026 沖繩旅行」 = \"Okinawa trip 2026\", 「雜項」 = \"Misc\", 「舊照片封存」 = \"Old photos archive\", 「爸爸」 = \"Dad\", 「媽媽」 = \"Mom\", 「未命名人物」 = \"unnamed people\", 「海邊的夕陽」 = \"sunset at the beach\", 「東京」 = \"Tokyo\", 「2024 年、有阿嬤、在廚房」 = \"2024, with Grandma, in the kitchen\", 「婚禮」 = \"Wedding\", 「家庭聚會 2026」 = \"Family gathering 2026\", 「京都行」/「京都」 = \"Kyoto trip\"/\"Kyoto\", 「貓」/「寵物」 = \"cat\"/\"pets\", 「已分享」 = \"shared\", 「意外公開」 = \"accidentally public\", X GB kept, 前 20 張/前 10 張/前 5 大 = the top 20/the first 10/the 5 largest, 人物 ID = person IDs). Entries are in document order; each zh block occurs exactly once in en/prompts.html. Chinese punctuation is converted per i18n/STYLE.en.md (「：」 -> \": \", 「、」 -> \", \", 「，」 -> a comma or a sentence break); no dash characters are introduced.",
   "entries": [
     {
       "unit": "#cat-album",
@@ -35,7 +35,7 @@
     {
       "unit": "#cat-face",
       "zh": "<pre>幫我合併人物：把所有疑似同一個人的「未命名人物」合併到已命名的「爸爸」名下。</pre>",
-      "en": "<pre>Merge people for me: merge every \"unnamed people\" entry that looks like the same person under the already-named \"Dad\". Answer in English.</pre>"
+      "en": "<pre>Merge people for me: merge all the \"unnamed people\" who look like the same person under the already-named \"Dad\". Answer in English.</pre>"
     },
     {
       "unit": "#cat-face",
@@ -70,7 +70,7 @@
     {
       "unit": "#cat-search",
       "zh": "<pre>找出「2024 年、有阿嬤、在廚房」的照片，這三個條件都要符合。</pre>",
-      "en": "<pre>Find the photos that match \"2024, with Grandma, in the kitchen\" - all three conditions have to be true. Answer in English.</pre>"
+      "en": "<pre>Find the photos that match \"2024, with Grandma, in the kitchen\". All three conditions have to be true. Answer in English.</pre>"
     },
     {
       "unit": "#cat-search",
@@ -115,7 +115,7 @@
     {
       "unit": "#cat-backup",
       "zh": "<pre>找出可以安全釋放空間的項目：重複照片、回收桶、轉碼暫存，各別估出可釋放容量。</pre>",
-      "en": "<pre>Find the items where space can safely be freed - duplicate photos, the trash, transcoding temp files - and estimate how much each one would free. Answer in English.</pre>"
+      "en": "<pre>Find the items where space can safely be freed: duplicate photos, the trash, transcoding temp files. Estimate how much each one would free. Answer in English.</pre>"
     },
     {
       "unit": "#cat-share",
@@ -135,7 +135,7 @@
     {
       "unit": "#cat-share",
       "zh": "<pre>檢查有沒有「意外公開」的相簿：沒設期限、沒設密碼、內容含敏感資訊的，列出來。</pre>",
-      "en": "<pre>Check whether any album is \"accidentally public\": no expiry, no password, or sensitive content. List them. Answer in English.</pre>"
+      "en": "<pre>Check whether any album is \"accidentally public\": no expiry, no password, sensitive content. List them. Answer in English.</pre>"
     },
     {
       "unit": "#cat-meta",
@@ -175,7 +175,7 @@
     {
       "unit": "#cat-ops",
       "zh": "<pre>做一次 Immich 健康檢查：伺服器、資料庫、儲存、jobs，各項回報狀態與建議。</pre>",
-      "en": "<pre>Run an Immich health check: server, database, storage, jobs - report the status and a recommendation for each. Answer in English.</pre>"
+      "en": "<pre>Run an Immich health check: server, database, storage, jobs. Report the status and a recommendation for each. Answer in English.</pre>"
     }
   ]
 }
