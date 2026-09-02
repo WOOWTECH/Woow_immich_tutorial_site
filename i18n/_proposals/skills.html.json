@@ -1,0 +1,11 @@
+{
+  "file": "skills.html",
+  "_note": "Code freeze (gate B): the SKILL.md sample in #spec is the only <pre> on this page and it is the only CJK left in en/skills.html. Wording follows /home/user/out/terms_immich.txt (skills.html#spec SKILL.md). The surrounding prose in en/skills.html#faq already refers to the 'Steps' and 'Safety' sections by their English names, so accepting this proposal makes the page self-consistent.",
+  "entries": [
+    {
+      "unit": "#spec",
+      "zh": "<pre class=\"code-block\">---\nname: immich-album-organizer\ndescription: 依時間＋地點＋人物規則批次整理 Immich 相簿，附乾跑模式\n---\n# 用途\n照使用者規則把照片分類進相簿。\n\n## 步驟\n1. 先讀取相簿與照片 metadata\n2. 套用分類規則，產生「預覽清單」（影響 N 張）\n3. 等使用者確認後才呼叫 API 執行\n4. 回報結果與例外\n\n## 安全\n- 永不直接刪除，一律移回收桶\n- 批次操作前必須先回報影響範圍</pre>",
+      "en": "<pre class=\"code-block\">---\nname: immich-album-organizer\ndescription: Batch-organize Immich albums by time + place + people rules, with a dry-run mode\n---\n# Purpose\nSort photos into albums according to the user's rules.\n\n## Steps\n1. Read album and photo metadata first\n2. Apply the sorting rules and produce a \"preview list\" (N photos affected)\n3. Call the API only after the user confirms\n4. Report the results and any exceptions\n\n## Safety\n- Never delete directly; always move to the trash\n- Report the scope before any batch operation</pre>"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Immich API/MCP 提示詞庫 · WoowTech</title>
-  <meta name="description" content="40+ 條「透過 API/MCP 控制 Immich」的自然語言提示詞：相簿管理、人臉批次、時間地點搜尋、匯入匯出、備份策略、共享連結、metadata 批次、排錯，每條可複製。" />
+  <title>Immich API/MCP Prompt Library · WoowTech</title>
+  <meta name="description" content="35 natural-language prompts for driving Immich through the API or MCP: album management, batch face operations, search by time and place, import and export, backup strategy, shared links, batch metadata editing and troubleshooting. Every prompt is ready to copy." />
   <meta name="author" content="WoowTech" />
   <meta name="theme-color" content="#6183FC" />
   <link rel="canonical" href="https://immich-guide.woowtech.io/en/prompts.html" />
@@ -69,123 +69,123 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <a class="brand" href="tutorial.html">Immich 指南</a>
-      <div class="brand-sub">把回憶收在自己家</div>
+      <a class="brand" href="tutorial.html">Immich Guide</a>
+      <div class="brand-sub">Keep your memories at home</div>
       <!-- i18n:switch --><nav class="lang-switch" aria-label="Language"><a href="../prompts.html" lang="zh-Hant" hreflang="zh-Hant">中文</a><a class="active" href="prompts.html" lang="en" aria-current="page">EN</a></nav><!-- /i18n:switch -->
-      <a class="hub-link" href="index.html">◂ 資源總覽</a>
-      <h2>本頁</h2>
+      <a class="hub-link" href="index.html">◂ Resource Hub</a>
+      <h2>This page</h2>
       <div class="toc-in-chapter">
-        <a href="#why">這本是什麼</a>
-        <a href="#howto">怎麼用</a>
-        <a href="#cat-album">相簿管理</a>
-        <a href="#cat-face">人臉／人物</a>
-        <a href="#cat-search">搜尋</a>
-        <a href="#cat-io">匯入匯出</a>
-        <a href="#cat-backup">備份策略</a>
-        <a href="#cat-share">共享連結</a>
-        <a href="#cat-meta">metadata</a>
-        <a href="#cat-ops">排錯維運</a>
-        <a href="#faq">常見問題</a>
+        <a href="#why">What this is</a>
+        <a href="#howto">How to use</a>
+        <a href="#cat-album">Albums</a>
+        <a href="#cat-face">Faces and people</a>
+        <a href="#cat-search">Search</a>
+        <a href="#cat-io">Import and export</a>
+        <a href="#cat-backup">Backup strategy</a>
+        <a href="#cat-share">Shared links</a>
+        <a href="#cat-meta">Metadata</a>
+        <a href="#cat-ops">Troubleshooting</a>
+        <a href="#faq">FAQ</a>
       </div>
     </aside>
 
     <main class="content">
       <div class="chapter-header">
         <span class="kicker-script">talk to your photos</span>
-        <div class="kicker">WoowTech · Immich API/MCP 提示詞庫</div>
-        <h1>用一句話，控制你的相簿</h1>
-        <p class="lead">透過 Immich 的 REST API 或 MCP server，把下面這些自然語言提示詞交給 AI agent，讓它幫你整理相簿、找人臉、批次改 metadata、盤點備份。每一條都能複製，改成你家的說法就能用。</p>
+        <div class="kicker">WoowTech · Immich API/MCP Prompt Library</div>
+        <h1>Command your photo library in one sentence</h1>
+        <p class="lead">Hand the natural-language prompts below to an AI agent and let it organize albums, find faces, edit metadata in bulk and take inventory of your backups for you, through the Immich REST API or an MCP server. Copy any of them, reword them to match your own household, and they are ready to use.</p>
       </div>
 
-      <section id="why" data-nav="這本是什麼">
-        <h2 data-icon="why">這本是什麼</h2>
-        <p>Immich 有一整套 REST API（<code>/api/albums</code>、<code>/api/search/metadata</code>、<code>/api/people</code> 等）。把這些 API 包成 MCP 工具後，AI agent 就能用自然語言幫你操作相簿。這本是「你要對 agent 說的話」的範本庫。</p>
-        <div class="callout"><strong>前提：</strong>這些提示詞需要你的環境已接好 Immich MCP 或 API 存取權。第一次使用前，先確認 agent 能連到你的 Immich 伺服器。</div>
+      <section id="why" data-nav="What this is">
+        <h2 data-icon="why">What this handbook is</h2>
+        <p>Immich has a full REST API (<code>/api/albums</code>, <code>/api/search/metadata</code>, <code>/api/people</code> and so on). Wrap those endpoints as MCP tools and an AI agent can work on your photo library in natural language. This handbook is the template library for "what you say to the agent".</p>
+        <div class="callout"><strong>Prerequisite:</strong> these prompts need an environment that already has Immich MCP or API access wired up. Before you use them for the first time, confirm the agent can reach your Immich server.</div>
       </section>
 
-      <section id="howto" data-nav="怎麼用">
-        <h2 data-icon="steps">怎麼用這些提示詞</h2>
-        <p>複製 → 貼進你的 agent → 把「我家」這類佔位詞換成真實說法 → 送出。關鍵是講清楚「範圍」與「要做什麼」，避免 agent 誤動整庫。</p>
-        <div class="callout"><strong>安全習慣：</strong>任何「刪除、批次修改、分享」類的動作，都先要求 agent 回報「將影響 N 張照片」讓你確認，再執行。</div>
+      <section id="howto" data-nav="How to use">
+        <h2 data-icon="steps">How to use these prompts</h2>
+        <p>Copy → paste into your agent → replace placeholder words like "my home" with your own wording → send. What matters is being clear about the scope and the action, so the agent does not touch the whole library by mistake.</p>
+        <div class="callout"><strong>Safety habit:</strong> for any "delete, bulk edit, share" action, make the agent report "this will affect N photos" and wait for your confirmation before it runs.</div>
       </section>
 
-      <section id="cat-album" data-nav="相簿管理">
-        <h2 data-icon="album">相簿管理</h2>
-        <div class="prompt-card"><div class="p-label">建立相簿</div><pre>幫我建立一本相簿叫做「2026 沖繩旅行」，然後把 2026 年 7 月拍攝、地點在沖繩的照片都加進去。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">列出相簿</div><pre>列出我所有的相簿，每本顯示名稱、照片數量、最近更新時間。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">整理相簿</div><pre>把相簿「雜項」裡拍攝時間在 2020 年以前、且不在任何其他相簿的照片，整理到一本新的「舊照片封存」相簿。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">找重複</div><pre>掃描整個圖庫，找出內容重複的照片，列出清單（不要刪除），等我確認後再處理。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">相簿統計</div><pre>統計我每本相簿的照片數與總容量，用表格呈現，並標出前 5 大的相簿。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-album" data-nav="Albums">
+        <h2 data-icon="album">Album management</h2>
+        <div class="prompt-card"><div class="p-label">Create an album</div><pre>幫我建立一本相簿叫做「2026 沖繩旅行」，然後把 2026 年 7 月拍攝、地點在沖繩的照片都加進去。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">List albums</div><pre>列出我所有的相簿，每本顯示名稱、照片數量、最近更新時間。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Tidy up an album</div><pre>把相簿「雜項」裡拍攝時間在 2020 年以前、且不在任何其他相簿的照片，整理到一本新的「舊照片封存」相簿。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Find duplicates</div><pre>掃描整個圖庫，找出內容重複的照片，列出清單（不要刪除），等我確認後再處理。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Album statistics</div><pre>統計我每本相簿的照片數與總容量，用表格呈現，並標出前 5 大的相簿。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-face" data-nav="人臉／人物">
-        <h2 data-icon="ai">人臉／人物</h2>
-        <div class="prompt-card"><div class="p-label">盤點未命名人物</div><pre>列出所有還沒命名的人物，各附一張代表照片連結，讓我能快速命名。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">合併人物</div><pre>幫我合併人物：把所有疑似同一個人的「未命名人物」合併到已命名的「爸爸」名下。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">找某人的照片</div><pre>找出「媽媽」在 2023 到 2024 年間的所有照片，按時間排序，告訴我總共有幾張。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">批次命名</div><pre>把人物 ID 對應的未命名人物，依我給的名單批次命名（先列出對照表讓我確認）。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">檢查辨識異常</div><pre>找出「同一個人被拆成多個人物」的可疑狀況，列出可能該合併的人物群組。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-face" data-nav="Faces and people">
+        <h2 data-icon="ai">Faces and people</h2>
+        <div class="prompt-card"><div class="p-label">Inventory unnamed people</div><pre>列出所有還沒命名的人物，各附一張代表照片連結，讓我能快速命名。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Merge people</div><pre>幫我合併人物：把所有疑似同一個人的「未命名人物」合併到已命名的「爸爸」名下。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Find one person's photos</div><pre>找出「媽媽」在 2023 到 2024 年間的所有照片，按時間排序，告訴我總共有幾張。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Batch naming</div><pre>把人物 ID 對應的未命名人物，依我給的名單批次命名（先列出對照表讓我確認）。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Check for recognition problems</div><pre>找出「同一個人被拆成多個人物」的可疑狀況，列出可能該合併的人物群組。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-search" data-nav="搜尋">
-        <h2 data-icon="search">時間／地點／語意搜尋</h2>
-        <div class="prompt-card"><div class="p-label">語意搜尋</div><pre>幫我找「海邊的夕陽」相關的照片，依相關度排序，前 20 張即可。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">時間範圍</div><pre>找出 2025 年 12 月 24 日到 12 月 26 日之間拍攝的所有照片。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">地點</div><pre>找出所有 GPS 地點在「東京」附近的照片，用地點分組列出。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">組合條件</div><pre>找出「2024 年、有阿嬤、在廚房」的照片，這三個條件都要符合。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">無地點照片</div><pre>列出所有沒有 GPS 地點資訊的照片數量，並告訴我佔全庫比例。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-search" data-nav="Search">
+        <h2 data-icon="search">Time, place and semantic search</h2>
+        <div class="prompt-card"><div class="p-label">Semantic search</div><pre>幫我找「海邊的夕陽」相關的照片，依相關度排序，前 20 張即可。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Date range</div><pre>找出 2025 年 12 月 24 日到 12 月 26 日之間拍攝的所有照片。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Place</div><pre>找出所有 GPS 地點在「東京」附近的照片，用地點分組列出。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Combined filters</div><pre>找出「2024 年、有阿嬤、在廚房」的照片，這三個條件都要符合。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Photos with no location</div><pre>列出所有沒有 GPS 地點資訊的照片數量，並告訴我佔全庫比例。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-io" data-nav="匯入匯出">
-        <h2 data-icon="steps">匯入／匯出</h2>
-        <div class="prompt-card"><div class="p-label">匯出相簿</div><pre>把相簿「婚禮」的所有原始檔打包，產生下載連結。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">批次下載</div><pre>把 2023 年整年的照片，依月份分資料夾整理成一個下載清單。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">外部匯入</div><pre>我有一個資料夾要匯入 Immich（路徑待我提供），幫我規畫批次匯入步驟，並確認重複偵測會開。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">檢查完整性</div><pre>檢查最近一次匯入的照片，是否有檔案損毀或 metadata 缺失，列出問題清單。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-io" data-nav="Import and export">
+        <h2 data-icon="steps">Import and export</h2>
+        <div class="prompt-card"><div class="p-label">Export an album</div><pre>把相簿「婚禮」的所有原始檔打包，產生下載連結。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Bulk download</div><pre>把 2023 年整年的照片，依月份分資料夾整理成一個下載清單。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">External import</div><pre>我有一個資料夾要匯入 Immich（路徑待我提供），幫我規畫批次匯入步驟，並確認重複偵測會開。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Check integrity</div><pre>檢查最近一次匯入的照片，是否有檔案損毀或 metadata 缺失，列出問題清單。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-backup" data-nav="備份策略">
-        <h2 data-icon="security">備份策略</h2>
-        <div class="prompt-card"><div class="p-label">備份盤點</div><pre>盤點目前 Immich 的備份狀態：資料庫、照片原檔、設定檔各別有沒有備份機制，缺口在哪。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">備份演練</div><pre>寫一份 Immich 災難還原演練步驟：假設伺服器掛了，要怎麼從備份把照片與資料庫還原回來。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">容量預估</div><pre>依目前照片成長速度（我過去一年新增 X GB），預估多久會用到儲存上限。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">清理建議</div><pre>找出可以安全釋放空間的項目：重複照片、回收桶、轉碼暫存，各別估出可釋放容量。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-backup" data-nav="Backup strategy">
+        <h2 data-icon="security">Backup strategy</h2>
+        <div class="prompt-card"><div class="p-label">Backup inventory</div><pre>盤點目前 Immich 的備份狀態：資料庫、照片原檔、設定檔各別有沒有備份機制，缺口在哪。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Restore drill</div><pre>寫一份 Immich 災難還原演練步驟：假設伺服器掛了，要怎麼從備份把照片與資料庫還原回來。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Capacity forecast</div><pre>依目前照片成長速度（我過去一年新增 X GB），預估多久會用到儲存上限。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Cleanup suggestions</div><pre>找出可以安全釋放空間的項目：重複照片、回收桶、轉碼暫存，各別估出可釋放容量。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-share" data-nav="共享連結">
-        <h2 data-icon="steps">共享連結</h2>
-        <div class="prompt-card"><div class="p-label">盤點分享</div><pre>列出我所有「已分享」的相簿與連結，標出哪些是公開連結、哪些有期限、哪些快過期。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">建立分享</div><pre>幫相簿「家庭聚會 2026」建立一個分享連結，設 7 天有效、允許下載。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">收回分享</div><pre>把相簿「家庭聚會 2026」的所有分享連結停用，並確認不再可存取。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">安全檢查</div><pre>檢查有沒有「意外公開」的相簿：沒設期限、沒設密碼、內容含敏感資訊的，列出來。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-share" data-nav="Shared links">
+        <h2 data-icon="steps">Shared links</h2>
+        <div class="prompt-card"><div class="p-label">Inventory shares</div><pre>列出我所有「已分享」的相簿與連結，標出哪些是公開連結、哪些有期限、哪些快過期。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Create a share</div><pre>幫相簿「家庭聚會 2026」建立一個分享連結，設 7 天有效、允許下載。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Revoke a share</div><pre>把相簿「家庭聚會 2026」的所有分享連結停用，並確認不再可存取。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Security check</div><pre>檢查有沒有「意外公開」的相簿：沒設期限、沒設密碼、內容含敏感資訊的，列出來。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-meta" data-nav="metadata">
-        <h2 data-icon="steps">metadata 批次編輯</h2>
-        <div class="prompt-card"><div class="p-label">補拍攝時間</div><pre>找出沒有拍攝時間（EXIF 缺失）的照片，用檔名裡的日期補上拍攝時間（先給我看前 10 張的對照）。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">補地點</div><pre>把相簿「京都行」裡沒有 GPS 的照片，批次補上地點「京都」，先列出會影響幾張。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">批次加標籤</div><pre>把搜尋結果「貓」的所有照片加上自訂標籤「寵物」，先回報數量讓我確認。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">修正時區</div><pre>找出拍攝時間時區錯誤（例如出國沒調時區）的照片，依我給的時差批次修正。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-meta" data-nav="Metadata">
+        <h2 data-icon="steps">Batch metadata editing</h2>
+        <div class="prompt-card"><div class="p-label">Fill in capture times</div><pre>找出沒有拍攝時間（EXIF 缺失）的照片，用檔名裡的日期補上拍攝時間（先給我看前 10 張的對照）。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Fill in places</div><pre>把相簿「京都行」裡沒有 GPS 的照片，批次補上地點「京都」，先列出會影響幾張。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Batch tagging</div><pre>把搜尋結果「貓」的所有照片加上自訂標籤「寵物」，先回報數量讓我確認。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Fix time zones</div><pre>找出拍攝時間時區錯誤（例如出國沒調時區）的照片，依我給的時差批次修正。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="cat-ops" data-nav="排錯維運">
-        <h2 data-icon="faq">排錯與維運</h2>
-        <div class="prompt-card"><div class="p-label">jobs 卡住</div><pre>檢查 Immich 的背景 jobs 狀態，找出卡住或失敗的任務，並建議處理方式。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">縮圖問題</div><pre>有幾張照片縮圖一直模糊，找出原因（是否轉碼 jobs 沒跑完），並建議重跑哪些 job。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">儲存告警</div><pre>儲存空間低於 20% 時，幫我列出釋放空間的優先順序清單。</pre><button class="copy-btn">複製</button></div>
-        <div class="prompt-card"><div class="p-label">健康檢查</div><pre>做一次 Immich 健康檢查：伺服器、資料庫、儲存、jobs，各項回報狀態與建議。</pre><button class="copy-btn">複製</button></div>
+      <section id="cat-ops" data-nav="Troubleshooting">
+        <h2 data-icon="faq">Troubleshooting and operations</h2>
+        <div class="prompt-card"><div class="p-label">Stuck jobs</div><pre>檢查 Immich 的背景 jobs 狀態，找出卡住或失敗的任務，並建議處理方式。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Thumbnail problems</div><pre>有幾張照片縮圖一直模糊，找出原因（是否轉碼 jobs 沒跑完），並建議重跑哪些 job。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Storage alert</div><pre>儲存空間低於 20% 時，幫我列出釋放空間的優先順序清單。</pre><button class="copy-btn">Copy</button></div>
+        <div class="prompt-card"><div class="p-label">Health check</div><pre>做一次 Immich 健康檢查：伺服器、資料庫、儲存、jobs，各項回報狀態與建議。</pre><button class="copy-btn">Copy</button></div>
       </section>
 
-      <section id="faq" data-nav="常見問題">
-        <h2 data-icon="faq">常見問題</h2>
-        <div class="callout"><strong>提示詞要怎麼改才不會誤動整庫？</strong><br>永遠加上「範圍」與「先回報、再執行」兩句話。例如「先列出會影響的照片數量，等我確認再執行」。</div>
-        <div class="callout"><strong>AI 找不到某個 API 端點？</strong><br>Immich 版本不同，API 路徑會微調。先讓 agent 用 <code>search</code> 查 OpenAPI spec，再寫程式。</div>
-        <div class="callout"><strong>中文搜尋沒反應？</strong><br>語意搜尋模型要支援中文。先用英文或簡單關鍵字測，確定模型能力再調整提示詞。</div>
-        <div class="callout"><strong>可以讓 agent 直接刪照片嗎？</strong><br>可以，但強烈建議關掉「直接刪除」，改成「移到回收桶 + 回報」，多一層保護。</div>
+      <section id="faq" data-nav="FAQ">
+        <h2 data-icon="faq">FAQ</h2>
+        <div class="callout"><strong>How do I edit a prompt so it does not touch the whole library by accident?</strong><br>Always add the scope and a "report first, then execute" step. For example: "list how many photos this will affect and wait for my confirmation before you run it".</div>
+        <div class="callout"><strong>The agent cannot find an API endpoint?</strong><br>API paths shift slightly between Immich versions. Have the agent look the OpenAPI spec up with <code>search</code> first, then write the code.</div>
+        <div class="callout"><strong>Search in a language other than English returns nothing?</strong><br>The semantic search model has to support that language. Test with English or simple keywords first, confirm what the model can do, then adjust the prompt.</div>
+        <div class="callout"><strong>Can I let the agent delete photos directly?</strong><br>You can, but we strongly recommend turning off direct deletion and using "move to the trash + report" instead, for one more layer of protection.</div>
       </section>
 
       <footer class="site-footer">
-        <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">WoowTech</a> 製作，以 CC BY 4.0 授權釋出。Immich 為其權利人的商標，本站與其無隸屬關係。</p>
+        <p>Immich self-hosted photo library guide is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">WoowTech</a> and released under CC BY 4.0. Immich is a trademark of its owner; this site is not affiliated with it.</p>
       </footer>
     </main>
   </div>
@@ -193,7 +193,7 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
     document.querySelectorAll('.copy-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var txt = btn.parentElement.querySelector('pre').innerText;
-        function done() { btn.textContent = '已複製'; setTimeout(function () { btn.textContent = '複製'; }, 1500); }
+        function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1500); }
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(txt).then(done, function () { fallback(); });
         } else { fallback(); }

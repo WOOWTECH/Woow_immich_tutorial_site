@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Immich AI Agent Skill 手冊 · WoowTech</title>
-  <meta name="description" content="Immich 照片管理相關的 AI agent skill 型錄：精選實用 skill 與熱門集合、安裝速查、SKILL.md 規格與安全守則（2026-08 生態調查）。" />
+  <title>Immich AI Agent Skill Handbook · WoowTech</title>
+  <meta name="description" content="A catalog of AI agent skills for managing Immich photos: hand-picked skills and popular collections, an install quick reference, the SKILL.md spec and the safety rules (2026-08 ecosystem survey)." />
   <meta name="author" content="WoowTech" />
   <meta name="theme-color" content="#6183FC" />
   <link rel="canonical" href="https://immich-guide.woowtech.io/en/skills.html" />
@@ -78,95 +78,95 @@ footer.site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid 
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <a class="brand" href="tutorial.html">Immich 指南</a>
-      <div class="brand-sub">把回憶收在自己家</div>
+      <a class="brand" href="tutorial.html">Immich Guide</a>
+      <div class="brand-sub">Keep your memories at home</div>
       <!-- i18n:switch --><nav class="lang-switch" aria-label="Language"><a href="../skills.html" lang="zh-Hant" hreflang="zh-Hant">中文</a><a class="active" href="skills.html" lang="en" aria-current="page">EN</a></nav><!-- /i18n:switch -->
-      <a class="hub-link" href="index.html">◂ 資源總覽</a>
-      <h2>本頁</h2>
+      <a class="hub-link" href="index.html">◂ Resource Hub</a>
+      <h2>This page</h2>
       <div class="toc-in-chapter">
-        <a href="#why">Skill 是什麼</a>
-        <a href="#install">怎麼裝</a>
-        <a href="#picks">精選 skill</a>
-        <a href="#collections">熱門集合</a>
-        <a href="#compat">相容性須知</a>
-        <a href="#safety">安全守則</a>
-        <a href="#spec">SKILL.md 規格</a>
-        <a href="#faq">常見問題</a>
+        <a href="#why">What a skill is</a>
+        <a href="#install">How to install</a>
+        <a href="#picks">Hand-picked skills</a>
+        <a href="#collections">Popular collections</a>
+        <a href="#compat">Compatibility</a>
+        <a href="#safety">Safety rules</a>
+        <a href="#spec">SKILL.md spec</a>
+        <a href="#faq">FAQ</a>
       </div>
     </aside>
 
     <main class="content">
       <div class="chapter-header">
         <span class="kicker-script">teach your agent photos</span>
-        <div class="kicker">WoowTech · Immich Skill 手冊</div>
-        <h1>讓 AI agent 會整理照片</h1>
-        <p class="lead">Skill 是教 AI agent 一項專門手藝的「說明書」。裝上照片管理相關的 skill，你的 agent 就會照著最佳做法幫你整理、搜尋、備份 Immich。這本收錄精選 skill、熱門集合與安裝速查（2026-08 生態調查）。</p>
+        <div class="kicker">WoowTech · Immich Skill Handbook</div>
+        <h1>Teach your AI agent to organize photos</h1>
+        <p class="lead">A skill is the instruction manual that teaches an AI agent one specific craft. Install a photo management skill and your agent will organize, search and back up Immich for you, following best practice. This handbook collects hand-picked skills, popular collections and an install quick reference (2026-08 ecosystem survey).</p>
       </div>
 
-      <section id="why" data-nav="Skill 是什麼">
-        <h2 data-icon="why">Skill 是什麼，為什麼要裝</h2>
-        <p>Skill 可以想成「給 AI 的 SOP 手冊」：一份 <code>SKILL.md</code> 檔寫明「遇到什麼任務、照什麼步驟、用什麼工具、注意什麼」。agent 讀到它，就多會一件事，而且做法穩定、不會每次憑空亂猜。</p>
-        <p>對 Immich 來說，常見的 skill 場景：批次整理相簿、人臉命名、重複偵測、備份盤點、metadata 修正。裝了對應 skill，這些事你只要下指令，agent 就會照 SOP 做。</p>
+      <section id="why" data-nav="What a skill is">
+        <h2 data-icon="why">What a skill is and why install one</h2>
+        <p>Think of a skill as a playbook (SOP) for the AI: a <code>SKILL.md</code> file that spells out "which task this is for, which steps to follow, which tools to use, and what to watch out for". Once the agent has read it, it can do one more thing, and it does it the same way every time instead of guessing.</p>
+        <p>For Immich, the common cases are: organizing albums in bulk, naming faces, duplicate detection, taking inventory of backups, and fixing metadata. Install the matching skill and you only have to say what you want; the agent follows the SOP.</p>
       </section>
 
-      <section id="install" data-nav="怎麼裝">
-        <h2 data-icon="steps">怎麼裝（3 分鐘版）</h2>
-        <div class="callout"><strong>前提：</strong>你的 agent 要支援 skill（例如 Pi Agent、Claude Code 等）。不同 agent 的裝法略異，但概念相同：把 skill 資料夾放進 skills 目錄即可。</div>
+      <section id="install" data-nav="How to install">
+        <h2 data-icon="steps">How to install (the 3-minute version)</h2>
+        <div class="callout"><strong>Prerequisite:</strong> your agent has to support skills (Pi Agent, Claude Code and the like). The install steps differ a little from agent to agent, but the idea is the same: drop the skill folder into the skills directory.</div>
         <ol>
-          <li>找到 skill 的 GitHub repo，記下網址。</li>
-          <li>在你的 agent 的 skill 安裝面板，貼上 repo 網址或選取目錄。</li>
-          <li>安裝後，確認 skill 出現在可用清單（或系統提示裡）。</li>
+          <li>Find the skill's GitHub repo and note the URL.</li>
+          <li>In your agent's skill install panel, paste the repo URL or pick the directory.</li>
+          <li>After installing, check that the skill shows up in the available list (or in the system prompt).</li>
         </ol>
       </section>
 
-      <section id="picks" data-nav="精選 skill">
-        <h2 data-icon="ai">精選照片管理 skill（家庭視角）</h2>
-        <p>以下依「家庭相簿管理」會遇到的真實需求，整理值得一找的 skill 類型。星數以 GitHub 現況為準（2026-08），安裝前務必確認 repo 仍在維護。</p>
+      <section id="picks" data-nav="Hand-picked skills">
+        <h2 data-icon="ai">Hand-picked photo management skills (for families)</h2>
+        <p>The list below is organized around the real needs you hit when managing a family photo library, and names the kinds of skill worth looking for. Star counts follow whatever GitHub shows today (2026-08); before you install, make sure the repo is still maintained.</p>
 
-        <div class="skill-card"><h3>相簿批次整理</h3><div class="meta">分類：整理 · 觸發 Immich REST API</div><p>照「時間＋地點＋人物」規則自動分類照片進相簿，附重複偵測與乾跑模式（先回報再動手）。</p></div>
-        <div class="skill-card"><h3>人臉命名工作流</h3><div class="meta">分類：整理 · 觸發 /api/people</div><p>把未命名人物批次命名、合併疑似重複人物，並產出「待確認清單」給你核對。</p></div>
-        <div class="skill-card"><h3>metadata 修復</h3><div class="meta">分類：整理 · EXIF／GPS</div><p>補拍攝時間、補地點、修時區，先產生對照表確認後才寫入。</p></div>
-        <div class="skill-card"><h3>備份與災難還原</h3><div class="meta">分類：維運 · 資料庫＋檔案</div><p>盤點備份狀態、產出還原演練步驟、估算容量成長。</p></div>
-        <div class="skill-card"><h3>分享安全檢查</h3><div class="meta">分類：安全 · 分享連結</div><p>掃描所有分享連結，標出無期限、無密碼、內容敏感的風險項目。</p></div>
+        <div class="skill-card"><h3>Batch album organizing</h3><div class="meta">Category: organizing · calls the Immich REST API</div><p>Sorts photos into albums automatically by "time + place + people" rules, with duplicate detection and a dry-run mode (report first, then act).</p></div>
+        <div class="skill-card"><h3>Face naming workflow</h3><div class="meta">Category: organizing · calls /api/people</div><p>Names unnamed people in bulk, merges people that look like duplicates, and produces a "to confirm" list for you to check.</p></div>
+        <div class="skill-card"><h3>Metadata repair</h3><div class="meta">Category: organizing · EXIF / GPS</div><p>Fills in missing capture times and locations and fixes time zones, producing a comparison table for you to confirm before anything is written.</p></div>
+        <div class="skill-card"><h3>Backup and disaster recovery</h3><div class="meta">Category: operations · database + files</div><p>Takes inventory of backup status, produces restore drill steps, and estimates capacity growth.</p></div>
+        <div class="skill-card"><h3>Shared link security check</h3><div class="meta">Category: security · shared links</div><p>Scans every shared link and flags the risky ones: no expiry, no password, sensitive content.</p></div>
 
-        <div class="callout warn"><strong>星數與名稱以 GitHub 現況為準：</strong>生態變化快，本頁列的「類型」是穩定需求，實際 repo 名稱與星數請安裝前重新查證。</div>
+        <div class="callout warn"><strong>Stars and names: check GitHub first:</strong> the ecosystem moves fast. The kinds of skill listed on this page are the stable needs; verify the actual repo names and star counts again before you install.</div>
       </section>
 
-      <section id="collections" data-nav="熱門集合">
-        <h2 data-icon="what">熱門集合與工具（不只 skill）</h2>
-        <p>除了 agent skill，Immich 生態還有這些常用的輔助工具與集合，值得一起認識：</p>
+      <section id="collections" data-nav="Popular collections">
+        <h2 data-icon="what">Popular collections and tools (not just skills)</h2>
+        <p>Beyond agent skills, the Immich ecosystem has these commonly used helper tools and collections, and they are worth knowing about too:</p>
         <table class="data-table">
-          <thead><tr><th>工具／集合</th><th>用途</th><th>何時用</th></tr></thead>
+          <thead><tr><th>Tool / collection</th><th>What it is for</th><th>When to use it</th></tr></thead>
           <tbody>
-            <tr><td><strong>immich-app/immich</strong></td><td>官方主 repo（伺服器＋App）</td><td>查文件、看更新、回報 issue</td></tr>
-            <tr><td><strong>immich-cli</strong></td><td>命令列工具</td><td>批次上傳、腳本化操作</td></tr>
-            <tr><td><strong>immich-go</strong></td><td>Go 寫的上傳工具</td><td>大量照片快速匯入</td></tr>
-            <tr><td><strong>immich-power-tools</strong></td><td>社群進階工具集合</td><td>批次整理、進階 metadata</td></tr>
-            <tr><td><strong>Home Assistant 整合</strong></td><td>把 Immich 接進 HA</td><td>自動化：偵測到新照片就通知等</td></tr>
-            <tr><td><strong>Frigate（NVR）整合</strong></td><td>監視器影像＋相簿</td><td>把監視畫面快照存進 Immich</td></tr>
+            <tr><td><strong>immich-app/immich</strong></td><td>The official main repo (server + app)</td><td>Read the docs, follow releases, report issues</td></tr>
+            <tr><td><strong>immich-cli</strong></td><td>Command-line tool</td><td>Bulk uploads, scripted operations</td></tr>
+            <tr><td><strong>immich-go</strong></td><td>An upload tool written in Go</td><td>Fast import of large photo sets</td></tr>
+            <tr><td><strong>immich-power-tools</strong></td><td>A community collection of advanced tools</td><td>Batch organizing, advanced metadata</td></tr>
+            <tr><td><strong>Home Assistant integration</strong></td><td>Connects Immich to HA</td><td>Automations: notify you when a new photo shows up, and so on</td></tr>
+            <tr><td><strong>Frigate (NVR) integration</strong></td><td>Camera footage + photo library</td><td>Save camera snapshots into Immich</td></tr>
           </tbody>
         </table>
       </section>
 
-      <section id="compat" data-nav="相容性須知">
-        <h2 data-icon="what">相容性須知</h2>
+      <section id="compat" data-nav="Compatibility">
+        <h2 data-icon="what">Compatibility notes</h2>
         <ul>
-          <li><strong>版本對齊：</strong>Immich API 隨版本變動（本教學為 v2.5.x），skill 若寫死 API 路徑，升級 Immich 後可能要跟著更新。</li>
-          <li><strong>權限：</strong>多數操作需要 admin 或該使用者的 API key；skill 要能拿到 token 才有用。</li>
-          <li><strong>AI 模型：</strong>語意搜尋類 skill 依賴伺服器裝的 ML 模型，模型沒裝好，skill 也無從發揮。</li>
+          <li><strong>Version alignment:</strong> the Immich API changes from version to version (this guide covers v2.5.x). If a skill hard-codes API paths, it may need updating after you upgrade Immich.</li>
+          <li><strong>Permissions:</strong> most operations need an admin API key or that user's own API key; a skill is only useful if it can get a token.</li>
+          <li><strong>AI models:</strong> semantic search skills depend on the ML model installed on the server. If the model is not set up, the skill has nothing to work with.</li>
         </ul>
       </section>
 
-      <section id="safety" data-nav="安全守則">
-        <h2 data-icon="security">安全守則</h2>
-        <div class="callout danger"><strong>永不讓 skill 直接刪除：</strong>任何 skill 的操作都要走「先回報 → 你確認 → 再執行」，刪除一律先進回收桶。</div>
-        <div class="callout warn"><strong>token 不外流：</strong>裝第三方 skill 前，檢查它會不會把 API key、照片路徑傳到外部。來路不明的 skill 不要裝。</div>
-        <div class="callout"><strong>乾跑優先：</strong>批次操作先要求 skill 產出「將影響 N 張」的預覽，確認無誤才放行。</div>
+      <section id="safety" data-nav="Safety rules">
+        <h2 data-icon="security">Safety rules</h2>
+        <div class="callout danger"><strong>Never let a skill delete directly:</strong> every skill operation goes through "report first → you confirm → then execute", and anything deleted goes to the trash first.</div>
+        <div class="callout warn"><strong>Keep tokens private:</strong> before you install a third-party skill, check whether it sends your API key or your photo paths anywhere outside. Do not install a skill whose origin you cannot trace.</div>
+        <div class="callout"><strong>Dry run first:</strong> for a batch operation, ask the skill for a "will affect N photos" preview first, and only let it run once the preview looks right.</div>
       </section>
 
-      <section id="spec" data-nav="SKILL.md 規格">
-        <h2 data-icon="what">SKILL.md 規格速查</h2>
-        <p>想自己寫一個 Immich skill，核心就是一份 <code>SKILL.md</code>：</p>
+      <section id="spec" data-nav="SKILL.md spec">
+        <h2 data-icon="what">SKILL.md quick reference</h2>
+        <p>To write an Immich skill of your own, the core of it is a single <code>SKILL.md</code> file:</p>
         <pre class="code-block">---
 name: immich-album-organizer
 description: 依時間＋地點＋人物規則批次整理 Immich 相簿，附乾跑模式
@@ -183,19 +183,19 @@ description: 依時間＋地點＋人物規則批次整理 Immich 相簿，附�
 ## 安全
 - 永不直接刪除，一律移回收桶
 - 批次操作前必須先回報影響範圍</pre>
-        <p>詳細規格請參考你使用的 agent 的 skill 文件。</p>
+        <p>For the full spec, see the skill documentation of the agent you use.</p>
       </section>
 
-      <section id="faq" data-nav="常見問題">
-        <h2 data-icon="faq">常見問題</h2>
-        <div class="callout"><strong>Skill 和 App／整合有什麼不同？</strong><br>App 是「有介面的程式」，整合是「兩個服務串接」，Skill 是「教 AI 怎麼做」的說明書，裝了讓 agent 自己會操作。</div>
-        <div class="callout"><strong>裝錯 skill 會弄壞我的相簿嗎？</strong><br>有可能。所以安全守則最重要：只裝可信來源、永遠先乾跑、刪除先進回收桶。</div>
-        <div class="callout"><strong>我能自己寫 skill 嗎？</strong><br>能。照上面的 SKILL.md 骨架，把「步驟」和「安全」寫清楚即可。</div>
-        <div class="callout"><strong>哪個 skill 最值得先裝？</strong><br>「重複偵測 + 批次整理」最常用，能立刻感受到空間與整理的效益。</div>
+      <section id="faq" data-nav="FAQ">
+        <h2 data-icon="faq">FAQ</h2>
+        <div class="callout"><strong>How is a skill different from an app or an integration?</strong><br>An app is a program with an interface, an integration wires two services together, and a skill is the manual that teaches the AI how to do something. Install it and the agent can do the work itself.</div>
+        <div class="callout"><strong>Can the wrong skill break my photo library?</strong><br>It can. That is why the safety rules matter most: install only from sources you trust, always dry run first, and send deletions to the trash.</div>
+        <div class="callout"><strong>Can I write my own skill?</strong><br>You can. Follow the SKILL.md skeleton above and spell out the Steps and Safety sections clearly.</div>
+        <div class="callout"><strong>Which skill is worth installing first?</strong><br>Duplicate detection plus batch organizing is the pair people use most; you feel the gain in space and tidiness right away.</div>
       </section>
 
       <footer class="site-footer">
-        <p>《Immich 自架相簿指南》由 <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">WoowTech</a> 製作，以 CC BY 4.0 授權釋出。Immich 為其權利人的商標，本站與其無隸屬關係。</p>
+        <p>Immich self-hosted photo library guide is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">WoowTech</a> and released under CC BY 4.0. Immich is a trademark of its owner; this site is not affiliated with it.</p>
       </footer>
     </main>
   </div>

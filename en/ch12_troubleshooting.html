@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chapter 12 · 排錯與維護 · Immich 自架相簿指南</title>
-  <meta name="description" content="Immich 排錯教學：上傳失敗、縮圖、jobs、更新與備份。" />
-  <meta name="author" content="woowtech" />
+  <title>Chapter 12 · Troubleshooting and maintenance · Immich self-hosted photo library guide</title>
+  <meta name="description" content="Immich troubleshooting guide: upload failures, thumbnails, jobs, updates and backups." />
+  <meta name="author" content="WoowTech" />
   <link rel="canonical" href="https://immich-guide.woowtech.io/en/ch12_troubleshooting.html" />
   <meta name="robots" content="noindex, follow" />
   <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Immich 自架相簿指南" />
+  <meta property="og:site_name" content="Immich self-hosted photo library guide" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="zh_TW" />
-  <meta property="og:title" content="Chapter 12 · 排錯與維護 · Immich 自架相簿指南" />
-  <meta property="og:description" content="Immich 排錯教學：上傳失敗、縮圖、jobs、更新與備份。" />
+  <meta property="og:title" content="Chapter 12 · Troubleshooting and maintenance · Immich self-hosted photo library guide" />
+  <meta property="og:description" content="Immich troubleshooting guide: upload failures, thumbnails, jobs, updates and backups." />
   <meta property="og:url" content="https://immich-guide.woowtech.io/en/ch12_troubleshooting.html" />
   <meta property="og:image" content="https://immich-guide.woowtech.io/assets/og/immich-guide.en.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Chapter 12 · 排錯與維護 · Immich 自架相簿指南" />
-  <meta name="twitter:description" content="Immich 排錯教學：上傳失敗、縮圖、jobs、更新與備份。" />
+  <meta name="twitter:title" content="Chapter 12 · Troubleshooting and maintenance · Immich self-hosted photo library guide" />
+  <meta name="twitter:description" content="Immich troubleshooting guide: upload failures, thumbnails, jobs, updates and backups." />
   <meta name="twitter:image" content="https://immich-guide.woowtech.io/assets/og/immich-guide.en.png" />
   <meta name="theme-color" content="#6183FC" />
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.en" />
@@ -32,28 +32,28 @@
 <body>
 <div class="layout">
   <aside class="sidebar">
-    <a class="brand" href="tutorial.html">Immich 指南</a>
-    <div class="brand-sub">把回憶收在自己家</div>
+    <a class="brand" href="tutorial.html">Immich Guide</a>
+    <div class="brand-sub">Keep your memories at home</div>
     <nav class="lang-switch" aria-label="Language"><a href="../ch12_troubleshooting.html" lang="zh-Hant" hreflang="zh-Hant">中文</a><a class="active" href="ch12_troubleshooting.html" lang="en" aria-current="page">EN</a></nav>
-    <a class="hub-link" href="index.html">◂ 資源總覽</a>
+    <a class="hub-link" href="index.html">◂ Resource Hub</a>
     <h2>Chapters</h2>
     <ol>
-      <li class="part-label">基礎：認識與登入</li>
-      <li data-i18n="pending"><a href="ch1_overview.html">開始前</a></li>
-      <li data-i18n="pending"><a href="ch2_login.html">登入與帳號</a></li>
-      <li data-i18n="pending"><a href="ch3_first_open.html">第一次開啟</a></li>
-      <li class="part-label">使用：整理與分享</li>
-      <li data-i18n="pending"><a href="ch4_upload.html">上傳照片影片</a></li>
-      <li data-i18n="pending"><a href="ch5_timeline.html">時間軸瀏覽</a></li>
-      <li data-i18n="pending"><a href="ch6_albums.html">相簿管理</a></li>
-      <li data-i18n="pending"><a href="ch7_search_ai.html">搜尋與 AI</a></li>
-      <li data-i18n="pending"><a href="ch8_sharing.html">分享相簿</a></li>
-      <li class="part-label">進階：App 與管理</li>
-      <li data-i18n="pending"><a href="ch9_mobile_app.html">行動 App</a></li>
-      <li data-i18n="pending"><a href="ch10_admin.html">管理員設定</a></li>
-      <li class="part-label">維護：安全與排錯</li>
-      <li data-i18n="pending"><a href="ch11_security.html">安全檢查</a></li>
-      <li data-i18n="pending"><a href="ch12_troubleshooting.html" class="active">排錯與維護</a></li>
+      <li class="part-label">Basics: orientation and login</li>
+      <li data-i18n="pending"><a href="ch1_overview.html">Before you start</a></li>
+      <li data-i18n="pending"><a href="ch2_login.html">Login and accounts</a></li>
+      <li data-i18n="pending"><a href="ch3_first_open.html">First open</a></li>
+      <li class="part-label">Everyday use: organize and share</li>
+      <li data-i18n="pending"><a href="ch4_upload.html">Upload</a></li>
+      <li data-i18n="pending"><a href="ch5_timeline.html">Timeline</a></li>
+      <li data-i18n="pending"><a href="ch6_albums.html">Albums</a></li>
+      <li data-i18n="pending"><a href="ch7_search_ai.html">Search and AI</a></li>
+      <li data-i18n="pending"><a href="ch8_sharing.html">Sharing</a></li>
+      <li class="part-label">Advanced: the app and admin</li>
+      <li data-i18n="pending"><a href="ch9_mobile_app.html">Mobile app</a></li>
+      <li data-i18n="pending"><a href="ch10_admin.html">Admin settings</a></li>
+      <li class="part-label">Maintenance: security and troubleshooting</li>
+      <li data-i18n="pending"><a href="ch11_security.html">Security check</a></li>
+      <li data-i18n="pending"><a href="ch12_troubleshooting.html" class="active">Troubleshooting</a></li>
     </ol>
     <div class="toc-in-chapter">
       <h2>This chapter</h2>
@@ -76,13 +76,13 @@
     <div class="chapter-header">
       <div class="kicker">Chapter 12</div>
       <h1>Troubleshooting and maintenance</h1>
-      <p class="lead">When you run into a failed upload, blurry thumbnails, stuck jobs or a version update, work through the problem in order and leave notes that someone else can pick up. By the end of this chapter, you'll no longer be gambling on "just restart it and see"; you'll find where the problem is, systematically.</p>
+      <p class="lead">When you run into problems like a failed upload, blurry thumbnails, stuck jobs or a version update, work through the problem in order and leave notes that someone else can pick up. By the end of this chapter, you'll no longer be gambling on "just restart it and see"; you'll systematically find where the problem is.</p>
     </div>
 
     <section id="why" data-nav="Why this matters">
       <h2 data-icon="why">Find evidence before you fix anything</h2>
-      <p>When something goes wrong with your photo library, the most common mistake is to gamble: restart it, upload again, delete things at random. Those actions usually wash away the most useful clues. The right approach is to calmly write down the symptom first, work through the layers, and only act once you have evidence.</p>
-      <div class="callout"><strong>Chapter task:</strong> learn a layered troubleshooting routine, use it on the common problems (uploads, thumbnails, jobs, updates), and leave notes that someone else can pick up.</div>
+      <p>When something goes wrong with your photo library, the most common mistake is to gamble: "restart it", "upload again", "delete things at random". Those actions usually wash away the most useful clues. The right approach is to calmly write down the symptom first, work through the layers, and only act once you have evidence.</p>
+      <div class="callout"><strong>Chapter task:</strong> learn a layered troubleshooting routine, use it on common problems such as uploads, thumbnails, jobs and updates, and leave notes that someone else can pick up.</div>
     </section>
 
     <section id="concept" data-nav="Layered approach">
@@ -96,18 +96,18 @@
           <tr><td><strong>The data layer</strong></td><td>Thumbnails, AI analysis, backup</td><td>Blurry thumbnails, search finds nothing, backup does not run</td></tr>
         </tbody>
       </table>
-      <div class="callout tip"><strong>Narrow the scope first:</strong> asking "Is it just me, or is it everyone?" immediately tells you whether the problem is on your device or on the server.</div>
+      <div class="callout tip"><strong>Narrow the scope first:</strong> asking "Is it just me, or is it everyone?" immediately tells you whether the problem is "your device" or "the server".</div>
     </section>
 
     <section id="steps" data-nav="Troubleshooting steps">
       <h2 data-icon="steps">Six steps to troubleshoot</h2>
       <ol class="steps">
         <li><h3>Write down the symptom and the time</h3><p>Note when it happened, what you were doing, and what error message you saw. Without a time there is no trail to follow.</p></li>
-        <li><h3>Confirm the scope</h3><p>Try another device, or ask someone else to try, to tell whether it is a problem with your own device or with the whole server.</p></li>
+        <li><h3>Confirm the scope</h3><p>Try another device, or ask someone else to try, to tell whether it is a problem with your own device or one that affects the whole site.</p></li>
         <li><h3>Check layer by layer, outside in</h3><p>Network → entry point → server status → data layer; rule out one layer at a time.</p></li>
-        <li><h3>Find the first clear error</h3><p>Error messages, job status, storage usage: find the first point where things went wrong, and do not get dragged along by the chain of errors that followed.</p></li>
+        <li><h3>Find the first clear error</h3><p>Error messages, the status of the jobs, storage usage: find the first point where things went wrong, and do not get dragged along by the chain of errors that followed.</p></li>
         <li><h3>Make the smallest fix</h3><p>Change only the one variable most likely to be the cause, then verify. Do not change many things at once.</p></li>
-        <li><h3>Write it down</h3><p>Record "symptom → diagnosis → action → result", so you can hand it over later or refer back to it if the problem comes back.</p></li>
+        <li><h3>Leave a record</h3><p>Record "symptom → diagnosis → action → result", so you can hand it over later or refer back to it if the problem comes back.</p></li>
       </ol>
     </section>
 
@@ -128,21 +128,21 @@
 
     <section id="update" data-nav="Updates and backups">
       <h2 data-icon="restore">Updates and backups</h2>
-      <p><strong>Updates (admins)</strong>: when "NEW VERSION AVAILABLE" appears at the top right, a new version is out. Before you update, always:</p>
+      <p><strong>Updates (admins)</strong>: when "NEW VERSION AVAILABLE" appears in the top right, a new version is out. Before you update, always:</p>
       <ul>
         <li>Read the official release notes first and confirm there are no breaking changes (especially for a major-version upgrade, such as v2 → v3).</li>
         <li>Back up the database and the settings before you update.</li>
-        <li>Update during an off-peak window, so you do not disrupt the family.</li>
+        <li>Update during an off-peak window, so you do not disrupt your family while they are using it.</li>
       </ul>
       <p><strong>Backups</strong>: the biggest fear with a self-hosted photo library is something happening to the server. Admins should check regularly that the backup mechanism (the database and the photo files) is actually running, and do a restore drill when needed.</p>
-      <div class="callout danger"><strong>Back up before you update:</strong> "it broke, and we only found out after the update" is the most painful scenario there is. Without a backup, do not touch a major-version update.</div>
+      <div class="callout danger"><strong>Back up before you update:</strong> "It broke, and you only found out after the update" is the most painful scenario. Without a backup, do not touch a major-version update.</div>
     </section>
 
     <section id="faq" data-nav="FAQ">
       <h2 data-icon="faq">Troubleshooting FAQ</h2>
       <details class="faq"><summary>The problem keeps coming back. How do I avoid that?</summary><div class="body">Keep the "symptom → diagnosis → action → result" notes from last time. When it comes back, compare against the notes; you can usually pin it down quickly instead of groping in the dark all over again.</div></details>
       <details class="faq"><summary>Can I restart the server myself?</summary><div class="body">That depends on whether you have access to the server. Regular users do not, and should not restart it on a whim; ask the admin to handle it, and write down the symptom first.</div></details>
-      <details class="faq"><summary>How long should I wait when jobs are stuck?</summary><div class="body">First check whether the Jobs page is still moving (progress is being made). With a large number of photos, several hours is normal; you only need to step in when it has stopped completely.</div></details>
+      <details class="faq"><summary>How long should I wait when jobs are stuck?</summary><div class="body">First check the Jobs page to see whether the jobs are still moving (whether there is progress). With a large number of photos, several hours is normal; you only need to step in when it has stopped completely.</div></details>
       <details class="faq"><summary>How do I report a problem to the admin?</summary><div class="body">Include the time, what you did, the error message you saw (redact sensitive information in screenshots), and the scope (just you, or everyone). The more complete it is, the easier it is to deal with.</div></details>
       <details class="faq"><summary>The interface changed after an update and I cannot find a feature. What now?</summary><div class="body">Interface changes are normal. Read the official release notes and the latest docs first. This guide is based on v2.5.x; where they differ, the latest version wins.</div></details>
     </section>
@@ -162,7 +162,7 @@
     <div class="pager">
       <a class="prev" href="ch11_security.html">
         <span class="label">← Previous</span>
-        <span class="title">11 · 安全與最小暴露</span>
+        <span class="title">11 · Security and minimal exposure</span>
       </a>
       <a class="next" href="tutorial.html">
         <span class="label">Contents →</span>
@@ -171,8 +171,8 @@
     </div>
 
     <footer class="site-footer">
-      <p>Immich 自架相簿指南 is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">woowtech</a> and released under <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> — share and adapt freely, with attribution.</p>
-      <p class="footer-meta">截圖取自 Immich 官方介面。Immich 為其權利人的商標，本站與其無隸屬關係。 · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">Source &amp; errata</a></p>
+      <p>Immich self-hosted photo library guide is produced by <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">WoowTech</a> and released under <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> — share and adapt freely, with attribution.</p>
+      <p class="footer-meta">Screenshots are from the official Immich interface. Immich is a trademark of its owner; this site is not affiliated with it. · <a href="https://github.com/WOOWTECH/Woow_immich_tutorial_site" rel="noopener">Source &amp; errata</a></p>
     </footer>
   </main>
 </div>
