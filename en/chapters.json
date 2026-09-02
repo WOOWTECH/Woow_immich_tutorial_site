@@ -9,7 +9,7 @@
     "locale": "en_US",
     "description": "12 章繁體中文 Immich 自架相簿教學：從登入、上傳、時間軸、相簿、AI 搜尋、分享，到行動 App、管理員設定、安全與排錯。",
     "footerMeta": "截圖取自 Immich 官方介面。Immich 為其權利人的商標，本站與其無隸屬關係。",
-    "ogImage": "assets/screenshots/ch3/01_webui_overview.en.png",
+    "ogImage": "assets/og/immich-guide.en.png",
     "license": {
       "name": "CC BY 4.0",
       "url": "https://creativecommons.org/licenses/by/4.0/deed.en",
