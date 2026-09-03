@@ -2,7 +2,7 @@
   "_readme": "Site glossary for en/ of the Immich guide (v2). shared = WoowTech series names and chrome terms reused across the 13 sites (unchanged from the kit seed); terms = Immich domain terms with their zh variants (upstream immich.app/docs and the Immich web/mobile UI wording win); keepEnglish = never translate/rephrase; forbid = words the reviewer rejects; decisions = the binding cross-page wording agreed BEFORE the 12 chapters and 5 hub pages were translated in parallel: every h2, data-nav label, callout label, table header, code placeholder, chapter title and localize substitution. The plain-text twin of decisions is /home/user/out/terms_immich.txt. Existing shared/principles/keepEnglish/forbid seed entries are kept verbatim; Immich-specific ones are appended.",
   "version": 2,
   "principles": [
-    "Upstream English UI/docs wording wins (headscale.net, tailscale.com/kb).",
+    "Upstream English Immich UI/docs wording wins (immich.app/docs and the Immich web/mobile UI).",
     "Product names, CLI commands, config keys, file names, hostnames and placeholders stay verbatim; Chinese placeholders become <your-…> style.",
     "US spelling; sentence case for headings, nav and buttons; Title Case for product and WoowTech series names.",
     "Second person 'you'; direct, like a senior engineer onboarding a beginner; no 'In this chapter we will', no marketing adjectives, no emoji.",

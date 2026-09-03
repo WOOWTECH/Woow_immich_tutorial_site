@@ -57,15 +57,28 @@ for (const f of fs.existsSync(propDir) ? fs.readdirSync(propDir).filter((x) => x
       continue;
     }
     const n = html.split(e.zh).length - 1;
+    const key = (w) => `${w.file}|${w.unit}|${w.zh}`;
+    const entry = { file: prop.file, unit: e.unit, zh: e.zh, [code]: e.en };
+    const idx = wl.allow.findIndex((w) => key(w) === key(entry));
+    if (n === 0) {
+      const unit = i18n.extractUnits(html).find((u) => u.key === e.unit);
+      const targetCount = unit ? unit.html.split(e.en).length - 1 : 0;
+      const alreadyAllowed = idx >= 0 && wl.allow[idx][code] === e.en;
+      if (targetCount === 1 && alreadyAllowed) {
+        skipped++;
+        console.log(`· ${prop.file} ${e.unit}: 已套用且白名單相符，略過`);
+        continue;
+      }
+      console.error(`✗ ${prop.file} ${e.unit}: 原文區塊未出現，且目標單元不是唯一且已登錄的譯文（目標出現 ${targetCount} 次），跳過`);
+      rejected++;
+      continue;
+    }
     if (n !== 1) {
       console.error(`✗ ${prop.file} ${e.unit}: 原文區塊在 ${code}/ 出現 ${n} 次（需要剛好 1 次），跳過`);
       rejected++;
       continue;
     }
     html = html.replace(e.zh, e.en);
-    const key = (w) => `${w.file}|${w.unit}|${w.zh}`;
-    const entry = { file: prop.file, unit: e.unit, zh: e.zh, [code]: e.en };
-    const idx = wl.allow.findIndex((w) => key(w) === key(entry));
     if (idx >= 0) wl.allow[idx] = { ...wl.allow[idx], ...entry };
     else wl.allow.push(entry);
     applied++;

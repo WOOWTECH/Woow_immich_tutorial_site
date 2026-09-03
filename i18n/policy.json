@@ -4,6 +4,26 @@
     "policy": "translate"
   },
   "units": {
+    "ch1_overview.html#what": {
+      "policy": "localize",
+      "brief": "Use the example host and add a visible note telling readers to replace it with their own Immich server URL."
+    },
+    "ch1_overview.html#faq": {
+      "policy": "localize",
+      "brief": "Use the example host and add a visible note telling readers to replace it with their own Immich server URL."
+    },
+    "ch2_login.html#steps": {
+      "policy": "localize",
+      "brief": "Use the example host and add a visible note telling readers to replace it with their own Immich server URL."
+    },
+    "ch9_mobile_app.html#steps": {
+      "policy": "localize",
+      "brief": "Use the example host and add a visible note telling readers to replace it with their own Immich server URL."
+    },
+    "ch11_security.html#steps": {
+      "policy": "localize",
+      "brief": "Use the example host and add a visible note telling readers to replace it with their own Immich server URL."
+    },
     "sales.html": {
       "policy": "transcreate",
       "brief": "Overseas edition: no TWD, no Taiwan-only framing, real contact channel; Option A (self-hosted) / Option B (managed by WoowTech). Prices, currency, CTA and contact channel are placeholders until the business brief arrives."

@@ -37,11 +37,11 @@
    "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#what": {
-   "status": "complete",
+   "status": "localized",
    "sourceHash": "5e80cbacb7e1b47c",
-   "targetHash": "92b4a14d27610040",
+   "targetHash": "825175045930932e",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:ch1_overview.html#choices": {
    "status": "complete",
@@ -58,11 +58,11 @@
    "translatedAt": "2026-09-02"
   },
   "en:ch1_overview.html#faq": {
-   "status": "complete",
+   "status": "localized",
    "sourceHash": "3391b2d8d71da4b3",
-   "targetHash": "29d956c5a3ec03d9",
+   "targetHash": "ff4272879dc95621",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:ch1_overview.html#sources": {
    "status": "complete",
@@ -93,11 +93,11 @@
    "translatedAt": "2026-09-02"
   },
   "en:ch2_login.html#steps": {
-   "status": "complete",
+   "status": "localized",
    "sourceHash": "3e45f6396cecdb29",
-   "targetHash": "c0b616328f9b2d8d",
+   "targetHash": "f31ec03dc04f33f6",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:ch2_login.html#profile": {
    "status": "complete",
@@ -485,11 +485,11 @@
    "translatedAt": "2026-09-02"
   },
   "en:ch9_mobile_app.html#steps": {
-   "status": "complete",
+   "status": "localized",
    "sourceHash": "e189fd04fbb033fe",
-   "targetHash": "c6598d6a9c2ca136",
+   "targetHash": "d55b8877f4f32133",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:ch9_mobile_app.html#settings": {
    "status": "complete",
@@ -597,11 +597,11 @@
    "translatedAt": "2026-09-02"
   },
   "en:ch11_security.html#steps": {
-   "status": "complete",
+   "status": "localized",
    "sourceHash": "6aefb4ea98103656",
-   "targetHash": "5dac7a8dff23c9f4",
+   "targetHash": "0631c1a68ee539e2",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:ch11_security.html#habits": {
    "status": "complete",
@@ -690,65 +690,65 @@
   "en:sales.html#header": {
    "status": "complete",
    "sourceHash": "3b966fbe944ae13b",
-   "targetHash": "9dc72fda70b5bad5",
+   "targetHash": "0819f28658db22ae",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#why": {
    "status": "complete",
    "sourceHash": "2925babf069579b3",
-   "targetHash": "4b4cde58c07e33a5",
+   "targetHash": "854c1205f46dc96f",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#what": {
    "status": "complete",
    "sourceHash": "e3071bce476fe00a",
    "targetHash": "c9f9fef7a15f2366",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#abilities": {
    "status": "complete",
    "sourceHash": "deb65cbf5f1bfacc",
-   "targetHash": "c335a353e8df3252",
+   "targetHash": "ae0a8721ab8b1c53",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#privacy": {
    "status": "complete",
    "sourceHash": "949a10ac0127a00a",
-   "targetHash": "2efe905efc6f18ec",
+   "targetHash": "d329e57553175749",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#day": {
    "status": "complete",
    "sourceHash": "87097e38d745465c",
-   "targetHash": "6b241206577a5b7b",
+   "targetHash": "9e3381ce228c47ad",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#compare": {
    "status": "complete",
    "sourceHash": "76b6209c35cbb2ad",
-   "targetHash": "7c39226300f4d1b1",
+   "targetHash": "0da97727fd2b60f6",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#faq": {
    "status": "complete",
    "sourceHash": "c2442f5d3f62a8ef",
-   "targetHash": "779bb3b33a4f2309",
+   "targetHash": "70a3b064a410938e",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:sales.html#cta": {
    "status": "complete",
    "sourceHash": "8b6eb3bfcf428dc2",
-   "targetHash": "dcc8ad775c7b7bda",
+   "targetHash": "565c1a079a2c6e74",
    "registeredAt": "2026-09-01",
-   "translatedAt": "2026-09-02"
+   "translatedAt": "2026-09-03"
   },
   "en:prompts.html#header": {
    "status": "complete",
